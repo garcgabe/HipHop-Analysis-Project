@@ -1,7 +1,15 @@
+
+# This code asks how many songs by each artist you want fetched from Genius
+# It uses artist from artists.txt and gets the song, 
+# popularity index (based on pageviews) and the pageviews themselves
+# To truncate artists, you have to go into the .txt file and 
+# put "stop" where you want to stop
+
+
 import lyricsgenius as lg
 import pandas as pd
 
-fetch_number = 1
+fetch_number = input("How many songs by each artists?")
 artists = []
 
 class geniusWrapper():

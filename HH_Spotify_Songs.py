@@ -17,8 +17,6 @@ class spotWrapper():
     def getAudioFeatures(self, song_id):
         return self.spot.audio_features(song_id)
 
-
-
 def get_fuzz_ratio(var1, var2):
     return fuzz.ratio(var1, var2)
 
