@@ -177,7 +177,7 @@ def add_song_metrics(df):
     return df  
 
 if __name__ == "__main__":
-    print("fix")
+    //print("fix")
     #CHANGE to read from Dim Artist
     #genius_dataframe = pd.read_excel("GeniusData.xlsx")
    # spotify_dataframe = call_data(genius_dataframe)

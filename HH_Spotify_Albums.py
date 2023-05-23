@@ -2,6 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
 import psycopg2 as pg
+import sys
 
 class spotWrapper():
     def __init__(self):
@@ -23,14 +24,15 @@ def connect():
     )
     return connection_var
 
-spot = spotWrapper()
+
+
+def create_df():
+    spot = spotWrapper()
 ###
 ### these need to change to read artist info from the DB
 ###
-spot_artists = pd.read_excel("/Users/garcgabe/Desktop/HipHop-Analysis-Project/SpotifyArtists.xlsx").drop("Unnamed: 0", axis=1)
-artists_uri = spot_artists[['spotify_name','artist_uri']]
-
-def create_df():
+    spot_artists = pd.read_excel("/Users/garcgabe/Desktop/HipHop-Analysis-Project/SpotifyArtists.xlsx").drop("Unnamed: 0", axis=1)
+    artists_uri = spot_artists[['spotify_name','artist_uri']]
     # title of each column
     columns = ["album_uri", "album_name", "total_tracks", "release_date", 
             "artist_uris", "artist_names"]
@@ -42,6 +44,8 @@ def create_df():
         search_tree = spot.getAlbums(name_uri)['items']
         for j in range(0,len(search_tree)):
             search_tree_split = search_tree[j]
+            #print(search_tree_split.keys())
+            #sys.exit()
             all_artists, all_uris = ([] for x in range(2))
             number_of_artists = len(search_tree_split["artists"])
             for artist_num in range(0,number_of_artists):
@@ -62,3 +66,8 @@ def create_df():
     return pd.concat([pd.Series(album_uri), pd.Series(album_name), pd.Series(total_tracks),
                                         pd.Series(release_date), pd.Series(artist_uris), pd.Series(artist_names)], 
                                         axis=1, keys=columns)
+
+if __name__=="__main__":
+    album_data = create_df()
+    album_data.to_excel("SpotifyAlbums.xlsx")
+    print(album_data)

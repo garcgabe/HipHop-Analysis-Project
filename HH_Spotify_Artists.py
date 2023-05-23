@@ -51,5 +51,7 @@ def fetch_artists():
     
 if __name__=="__main__":
     df = fetch_artists()
+    # just until loaded into SQL
+    df.to_excel("SpotifyArtists.xlsx")
     print(df)
     
