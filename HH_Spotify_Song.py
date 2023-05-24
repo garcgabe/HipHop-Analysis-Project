@@ -61,40 +61,7 @@ def call_data(all_albums, all_artists):
                                         pd.Series(artist_names), pd.Series(explicit), pd.Series(preview_url)], 
                                         axis=1, keys=columns)
     # pass DF through to get song metrics based on unique song_uri
-    return add_song_metrics(song_df)
-
-
-
-def add_song_metrics(df):
-    dance, energy, loudness, valence, tempo, instru, speech = ([] for i in range(7))
-
-    spot = spotWrapper()
-    for i in range(0, len(df)):
-        # simple logging to check progress
-        if( i%250 == 0):
-            print("Song Number: " + str(i)+"/"+str(len(df)) )
-        # get song_uri to uniquely identify song and search for features
-        uri = df.loc[i]["song_uri"]
-        spot_audio = spot.getAudioFeatures(uri)
-
-        # add song data to lists of metrics
-        dance.append(spot_audio[0]['danceability'])
-        energy.append(spot_audio[0]['energy'])
-        loudness.append(spot_audio[0]['loudness'])
-        valence.append(spot_audio[0]['valence'])
-        tempo.append(spot_audio[0]['tempo'])
-        instru.append(spot_audio[0]['instrumentalness'])
-        speech.append(spot_audio[0]['speechiness'])
-
-    # Add arrays of song characteristics into main DF and return
-    df['dance'] = dance
-    df['energy'] = energy
-    df['loudness'] = loudness
-    df['valence'] = valence
-    df['tempo'] = tempo
-    df['instru'] = instru
-    df['speech'] = speech
-    return df  
+    return song_df
 
 if __name__ == "__main__":
     #CHANGE to read from Dim Artist and Dim Albums
