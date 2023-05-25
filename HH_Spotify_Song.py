@@ -1,7 +1,8 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
-from fuzzywuzzy import fuzz
+import time, sys
+
 
 class spotWrapper():
     def __init__(self):
@@ -61,7 +62,10 @@ def call_data(all_albums, all_artists):
                                         pd.Series(artist_names), pd.Series(explicit), pd.Series(preview_url)], 
                                         axis=1, keys=columns)
     # pass DF through to get song metrics based on unique song_uri
+    print("Main DF Finsihed. Onto Song Metrics.")
+    song_df.to_excel("SpotifySongs.xlsx")
     return song_df
+
 
 if __name__ == "__main__":
     #CHANGE to read from Dim Artist and Dim Albums

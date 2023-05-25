@@ -39,12 +39,12 @@ def create_df():
 
     # init empty lists to load then concat into DF
     album_uri, album_name, total_tracks, release_date, artist_uris, artist_names  = ([] for i in range (6))
-    for i in range(0,len(artists_uri)-25):
+    for i in range(0,len(artists_uri)):
         name_uri = artists_uri["artist_uri"][i]
-        search_tree = spot.getAlbums(name_uri)['items']
+        search_tree = spot.getAlbums(name_uri)["items"]
         for j in range(0,len(search_tree)):
             search_tree_split = search_tree[j]
-            #print(search_tree_split.keys())
+            #print(search_tree_split)
             #sys.exit()
             all_artists, all_uris = ([] for x in range(2))
             number_of_artists = len(search_tree_split["artists"])
