@@ -21,10 +21,14 @@ class spotWrapper():
 
 def call_data(all_albums, all_artists):
     spot = spotWrapper()
-    print("getting songs for: " + str(len(all_albums)) + " albums.")
+    print("Fetching songs for: " + str(len(all_albums)) + " albums.")
     song_uri, song_name, album_uri, artist_uris, artist_names, explicit, preview_url = ([] for i in range(7))
     columns = ["song_uri", "song_name", "album_uri", "artist_uris", "artist_names", "explicit", "preview_url"]
+    counter = 0
     for idx in all_albums:
+        counter+=1
+        if(counter%25 == 0):
+            print("Album #: "+str(counter))
         # search on album URI   
         album_data = spot.getAlbumsTracks(idx)["items"]
         # temp arrays to hold multiple artist names and their uris
@@ -62,8 +66,6 @@ def call_data(all_albums, all_artists):
                                         pd.Series(artist_names), pd.Series(explicit), pd.Series(preview_url)], 
                                         axis=1, keys=columns)
     # pass DF through to get song metrics based on unique song_uri
-    print("Main DF Finsihed. Onto Song Metrics.")
-    song_df.to_excel("SpotifySongs.xlsx")
     return song_df
 
 
@@ -81,7 +83,7 @@ if __name__ == "__main__":
     spot_songs = call_data(spot_album_uris, spot_artist_names)
 
     #persist dataframe in excel
-    spot_songs.to_excel("interm_songs.xlsx")
+    spot_songs.to_excel("SpotifySongs.xlsx")
 
     print(spot_songs)
     #spot_songs.to_excel("SpotifySongs.xlsx")

@@ -24,18 +24,21 @@ def readArtists():
     return artists
 
 def fetch_artists():
+    print("Beginning artist fetch...")
     spot = spotWrapper()
     artists = readArtists()
 
     # title of each column
     columns = ["artist_name", "spotify_name", "artist_uri", "spotify_popularity", 
-            "spotify_followers","genres"]
+            "spotify_followers","genres", "image"]
     # init empty lists to load then concat into DF
-    artist_name, spotify_name, artist_uri, genres, spotify_popularity, spotify_followers  = ([] for i in range (6))
+    artist_name, spotify_name, artist_uri, genres, spotify_popularity, spotify_followers, images  = ([] for i in range (7))
 
     for i in range(0,len(artists)):
         # for each Name from Genius, search under artists and return data 
         search_name = artists[i]
+        if(i%5==0):
+            print(f"{i}: {search_name}")
         search_name_tree = spot.searchArtist(search_name)['artists']['items'][0]
 
         artist_name.append(search_name)
@@ -44,9 +47,10 @@ def fetch_artists():
         genres.append(search_name_tree["genres"])
         spotify_popularity.append(search_name_tree["popularity"])
         spotify_followers.append(search_name_tree["followers"]["total"])
+        images.append(search_name_tree["images"][0]["url"])
 
     return pd.concat([pd.Series(artist_name), pd.Series(spotify_name), pd.Series(artist_uri),
-                                        pd.Series(spotify_popularity), pd.Series(spotify_followers), pd.Series(genres)], 
+                                        pd.Series(spotify_popularity), pd.Series(spotify_followers), pd.Series(genres), pd.Series(images)], 
                                         axis=1, keys=columns)
     
 if __name__=="__main__":
@@ -54,4 +58,3 @@ if __name__=="__main__":
     # just until loaded into SQL
     df.to_excel("SpotifyArtists.xlsx")
     print(df)
-    

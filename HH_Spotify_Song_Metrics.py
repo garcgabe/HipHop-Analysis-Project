@@ -21,7 +21,10 @@ def get_song_metrics(df):
     spot = spotWrapper()
     dance, energy, loudness, valence, tempo, instru, speech = ([] for i in range(7))
     all_uris = df["song_uri"]
-    length = len(all_uris)
+    print(df)
+    columns = ["dance", "energy", "loudness", "valence", "tempo", "instru", "speech"]
+    print(columns)
+    length = 2#len(all_uris)
     for i in range(0,length):
         print(i)
         if(i%50 == 0):
@@ -48,11 +51,16 @@ def get_song_metrics(df):
             tempo.append(spot_audio[0]['tempo'])
             instru.append(spot_audio[0]['instrumentalness'])
             speech.append(spot_audio[0]['speechiness'])
-    return pd.concat([df, pd.Series(dance), pd.Series(energy), pd.Series(loudness),pd.Series(valence),
-                                        pd.Series(tempo), pd.Series(instru), pd.Series(speech)], 
-                                        axis=1)
+    new_df = pd.concat([pd.Series(dance), pd.Series(energy), pd.Series(loudness),pd.Series(valence),
+                                        pd.Series(tempo), pd.Series(instru), pd.Series(speech)],
+                                axis=1, keys=columns)
+    df = df.reset_index(drop=True)
+    #new_df = new_df.reset_index(drop=True)
+    return pd.concat([df, new_df], axis=1)
+                                        
 
 if __name__=="__main__":
     main = pd.read_excel("SpotifySongs.xlsx")
     with_metrics = get_song_metrics(main)
     print(with_metrics)
+    with_metrics.to_excel("SpotifySongsMetrics.xlsx")

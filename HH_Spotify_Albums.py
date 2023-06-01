@@ -13,7 +13,6 @@ class spotWrapper():
     def getAlbums(self, uri):
         return self.spot.artist_albums(uri, album_type="album")
     
-
     
 def connect():
     connection_var = pg.connect(
@@ -35,11 +34,13 @@ def create_df():
     artists_uri = spot_artists[['spotify_name','artist_uri']]
     # title of each column
     columns = ["album_uri", "album_name", "total_tracks", "release_date", 
-            "artist_uris", "artist_names"]
-
+            "artist_uris", "artist_names", "images"]
+    print("Beginning album fetch...")
     # init empty lists to load then concat into DF
-    album_uri, album_name, total_tracks, release_date, artist_uris, artist_names  = ([] for i in range (6))
+    album_uri, album_name, total_tracks, release_date, artist_uris, artist_names, images  = ([] for i in range (7))
     for i in range(0,len(artists_uri)):
+        name_real = artists_uri["spotify_name"][i]
+        print(f"Searching for albums by {name_real}...")
         name_uri = artists_uri["artist_uri"][i]
         search_tree = spot.getAlbums(name_uri)["items"]
         for j in range(0,len(search_tree)):
@@ -62,9 +63,10 @@ def create_df():
             album_name.append(search_tree_split["name"].strip().split("\n")[0])
             total_tracks.append(str(search_tree_split["total_tracks"]))
             release_date.append(search_tree_split["release_date"])
+            images.append(search_tree_split["images"][0]["url"])
     ## final DF
     return pd.concat([pd.Series(album_uri), pd.Series(album_name), pd.Series(total_tracks),
-                                        pd.Series(release_date), pd.Series(artist_uris), pd.Series(artist_names)], 
+                                        pd.Series(release_date), pd.Series(artist_uris), pd.Series(artist_names), pd.Series(images)], 
                                         axis=1, keys=columns)
 
 if __name__=="__main__":
