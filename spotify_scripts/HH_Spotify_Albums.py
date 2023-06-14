@@ -71,5 +71,5 @@ def create_df():
 if __name__=="__main__":
     album_data = create_df()
     album_data.index.name = "index"
-    album_data.to_csv("S3 Data/SpotifyAlbums")
+    album_data.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyAlbums")
     print(album_data)

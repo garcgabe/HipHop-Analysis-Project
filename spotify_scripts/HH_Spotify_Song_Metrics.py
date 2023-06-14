@@ -64,4 +64,4 @@ if __name__=="__main__":
     with_metrics = with_metrics.drop( [_ for _ in with_metrics.columns if "Unnamed" in _]  , axis=1)
     with_metrics.index.name = "index"
     print(with_metrics)
-    with_metrics.to_csv("S3 Data/SpotifySongsMetrics")
+    with_metrics.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifySongsMetrics")

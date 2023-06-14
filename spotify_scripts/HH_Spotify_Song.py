@@ -84,5 +84,5 @@ if __name__ == "__main__":
     #spot_songs.to_excel("SpotifySongs.xlsx")
     spot_songs.index.name = "index"
     print(spot_songs)
-    spot_songs.to_csv("S3 Data/SpotifySongs")
+    spot_songs.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifySongs")
 

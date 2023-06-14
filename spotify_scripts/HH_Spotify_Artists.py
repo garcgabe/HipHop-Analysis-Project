@@ -56,5 +56,5 @@ if __name__=="__main__":
     df = fetch_artists()
     df.index.name = "index"
     # just until loaded into SQL
-    df.to_csv("S3 Data/SpotifyArtists")
+    df.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyArtists")
     print(df)
