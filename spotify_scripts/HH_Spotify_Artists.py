@@ -30,7 +30,7 @@ def fetch_artists():
 
     # title of each column
     columns = ["artist_name", "spotify_name", "artist_uri", "spotify_popularity", 
-            "spotify_followers","genres", "image"]
+            "spotify_followers","genres", "images"]
     # init empty lists to load then concat into DF
     artist_name, spotify_name, artist_uri, genres, spotify_popularity, spotify_followers, images  = ([] for i in range (7))
 
@@ -49,7 +49,8 @@ def fetch_artists():
         images.append(search_name_tree["images"][0]["url"])
 
     return pd.concat([pd.Series(artist_name), pd.Series(spotify_name), pd.Series(artist_uri),
-                                        pd.Series(spotify_popularity), pd.Series(spotify_followers), pd.Series(genres), pd.Series(images)], 
+                                        pd.Series(spotify_popularity), pd.Series(spotify_followers), 
+                                        pd.Series(genres), pd.Series(images)], 
                                         axis=1, keys=columns)
     
 if __name__=="__main__":
