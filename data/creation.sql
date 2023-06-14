@@ -32,7 +32,7 @@ CREATE TABLE songs(
     artist_names varchar(256),
     explicit boolean,
     preview_url varchar(256),
-    FOREIGN KEY (album_uri) REFERENCES albums (album_uri)
+    FOREIGN KEY (album_uri) REFERENCES albums (album_uri) ON DELETE CASCADE
 );
 
 -- create song metrics table
@@ -45,6 +45,6 @@ CREATE TABLE metrics(
     valence decimal(4,3),
     tempo decimal(5,1),
     instru decimal(4,4),
-    speech decimal(4,3),
-    FOREIGN KEY (song_uri) REFERENCES songs (song_uri)
+    speech decimal(4,3)
+   -- FOREIGN KEY (song_uri) REFERENCES songs (song_uri)
 );

@@ -30,7 +30,7 @@ def create_df():
 ###
 ### these need to change to read artist info from the DB
 ###
-    spot_artists = pd.read_excel("/Users/garcgabe/Desktop/HipHop-Analysis-Project/SpotifyArtists.xlsx").drop("Unnamed: 0", axis=1)
+    spot_artists = pd.read_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyArtists")
     artists_uri = spot_artists[['spotify_name','artist_uri']]
     # title of each column
     columns = ["album_uri", "album_name", "total_tracks", "release_date", 
@@ -61,7 +61,7 @@ def create_df():
             album_uri.append(search_tree_split["uri"])
             album_name.append(search_tree_split["name"].strip().split("\n")[0].replace(",", ""))
             total_tracks.append(str(search_tree_split["total_tracks"]))
-            release_date.append(search_tree_split["release_date"])
+            release_date.append(search_tree_split["release_date"] if len(search_tree_split["release_date"]) > 8 else search_tree_split["release_date"] + "-01-01")
             images.append(search_tree_split["images"][0]["url"])
     ## final DF
     return pd.concat([pd.Series(album_uri), pd.Series(album_name), pd.Series(total_tracks),
@@ -71,5 +71,6 @@ def create_df():
 if __name__=="__main__":
     album_data = create_df()
     album_data.index.name = "index"
+    album_data = album_data.drop_duplicates(subset="album_uri", keep='first')
     album_data.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyAlbums")
     print(album_data)

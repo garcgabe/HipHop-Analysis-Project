@@ -20,6 +20,7 @@ class spotWrapper():
 
 
 def call_data(all_albums, all_artists):
+    seen_artists = {key: False for key in all_artists}
     spot = spotWrapper()
     print("Fetching songs for: " + str(len(all_albums)) + " albums.")
     song_uri, song_name, album_uri, artist_uris, artist_names, explicit, preview_url = ([] for i in range(7))
@@ -36,6 +37,7 @@ def call_data(all_albums, all_artists):
         # need to parse and add as a list instead of a single value
         for num in range(0,number_of_artists):
             artist_name_in_list = album_data[0]["artists"][num]["name"]
+            seen_artists[artist_name_in_list] = True
             try:
                 artist_uri_in_list = all_artists.loc[all_artists["spotify_name"] == artist_name_in_list, "artist_uri"].iloc[0]
             except:
@@ -64,17 +66,18 @@ def call_data(all_albums, all_artists):
                                         pd.Series(artist_names), pd.Series(explicit), pd.Series(preview_url)], 
                                         axis=1, keys=columns)
     # pass DF through to get song metrics based on unique song_uri
-    return song_df
+    song_df = song_df.sort_values("explicit", ascending=False)
+    return song_df.drop_duplicates(subset="song_uri", keep='first')
 
 
 if __name__ == "__main__":
     #CHANGE to read from Dim Artist and Dim Albums
 
     # get album_uris to search for songs
-    album_df = pd.read_csv("S3 Data/SpotifyAlbums")
+    album_df = pd.read_csv("data/SpotifyAlbums")
     spot_album_uris = album_df["album_uri"]
     # get artist names and uris to add to song data
-    artist_df = pd.read_csv("S3 Data/SpotifyArtists")
+    artist_df = pd.read_csv("data/SpotifyArtists")
     spot_artist_names = artist_df[["spotify_name", "artist_uri"]]
 
     #actual fetch of songs into dataframe
@@ -83,6 +86,7 @@ if __name__ == "__main__":
     #persist dataframe in excel
     #spot_songs.to_excel("SpotifySongs.xlsx")
     spot_songs.index.name = "index"
+    
     print(spot_songs)
     spot_songs.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifySongs")
 
