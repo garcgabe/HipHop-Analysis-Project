@@ -43,24 +43,23 @@ def create_df():
         print(f"Searching for albums by {name_real}...")
         name_uri = artists_uri["artist_uri"][i]
         search_tree = spot.getAlbums(name_uri)["items"]
-        for j in range(0,len(search_tree)):
-            search_tree_split = search_tree[j]
+        for _, search_tree_split in enumerate(search_tree):
             #print(search_tree_split)
             #sys.exit()
             all_artists, all_uris = ([] for x in range(2))
             number_of_artists = len(search_tree_split["artists"])
             for artist_num in range(0,number_of_artists):
-                artist_name_in_list = search_tree_split["artists"][artist_num]["name"]
+                artist_name_in_list = search_tree_split["artists"][artist_num]["name"].replace(",", "")
                 try:
                     artist_uri_in_list = spot_artists.loc[spot_artists["spotify_name"] == artist_name_in_list, "artist_uri"].iloc[0]
                 except:
                     artist_uri_in_list = "0"
                 all_uris.append(artist_uri_in_list)
                 all_artists.append(artist_name_in_list)
-            artist_names.append(", ".join(all_artists))
-            artist_uris.append(", ".join(all_uris))
+            artist_names.append("-".join(all_artists))
+            artist_uris.append("-".join(all_uris))
             album_uri.append(search_tree_split["uri"])
-            album_name.append(search_tree_split["name"].strip().split("\n")[0])
+            album_name.append(search_tree_split["name"].strip().split("\n")[0].replace(",", ""))
             total_tracks.append(str(search_tree_split["total_tracks"]))
             release_date.append(search_tree_split["release_date"])
             images.append(search_tree_split["images"][0]["url"])
@@ -71,5 +70,6 @@ def create_df():
 
 if __name__=="__main__":
     album_data = create_df()
-    album_data.to_excel("SpotifyAlbums.xlsx")
+    album_data.index.name = "index"
+    album_data.to_csv("S3 Data/SpotifyAlbums")
     print(album_data)

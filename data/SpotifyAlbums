@@ -1,0 +1,361 @@
+index,album_uri,album_name,total_tracks,release_date,artist_uris,artist_names,images
+0,spotify:album:3MATDdrpHmQCmuOcozZjDa,TESTING,15,2018-05-25,spotify:artist:13ubrt8QOOCPljQ2FL1Kca,A$AP Rocky,https://i.scdn.co/image/ab67616d0000b2739feadc48ab0661e9b3a9170b
+1,spotify:album:3arNdjotCvtiiLFfjKngMc,AT.LONG.LAST.A$AP,18,2015-05-26,spotify:artist:13ubrt8QOOCPljQ2FL1Kca,A$AP Rocky,https://i.scdn.co/image/ab67616d0000b27381a6a2cafab2e7a4066b5eec
+2,spotify:album:6rzMufuu8sLkIizM4q9c7J,LONG.LIVE.A$AP (Deluxe Version),17,2013,spotify:artist:13ubrt8QOOCPljQ2FL1Kca,A$AP Rocky,https://i.scdn.co/image/ab67616d0000b2732ae92030b51fb8135d694af9
+3,spotify:album:4l6EPpP9hjQrLb8qNB9eC5,LIVE.LOVE.A$AP,15,2011-10-31,spotify:artist:13ubrt8QOOCPljQ2FL1Kca,A$AP Rocky,https://i.scdn.co/image/ab67616d0000b273c8ced8a4d6b6b61eb592f3dd
+4,spotify:album:3aITAVBURujVe8fhI2seeR,Pluto x Baby Pluto (Deluxe),24,2020-11-13,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Future-Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b2738efe5b8d9a3544b98aa6a85e
+5,spotify:album:48xpWR8K6CGpy3ETAym3pt,Pluto x Baby Pluto,16,2020-11-13,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Future-Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b27357928e0363878a71692e6a1f
+6,spotify:album:0fEO7g2c5onkaXsybEtuD2,Eternal Atake (Deluxe) - LUV vs. The World 2,32,2020-03-13,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b273dea510881ec1e506485303e4
+7,spotify:album:7IyoGB8J31fvQDwGtHAq9m,Eternal Atake,18,2020-03-06,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b273d5f1bbe527fa685633339add
+8,spotify:album:0zicd2mBV8HTzSubByj4vP,Luv Is Rage 2 (Deluxe),20,2017-11-17,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b2730d5a84e4e47399d2726c330c
+9,spotify:album:733e1ZfktLSwj96X5rsMeE,Luv Is Rage 2,16,2017-08-25,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b27341b41e6f7924e530a9b00f9c
+10,spotify:album:6LX75kNicFqjjiAOeZgN67,The Perfect LUV Tape,10,2016-08-10,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b2732143db1c88358d70dd898aa3
+11,spotify:album:7mgdTKTCdfnLoa1HXHvLYM,Lil Uzi Vert vs. The World,9,2016-05-27,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b2738be07181aa935225a6f25d56
+12,spotify:album:5WrbKW1nRN4vSsu70uizxX,Luv Is Rage,12,2015-12-18,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b273dc7fa10440eb5ddd8d90a8aa
+13,spotify:album:2QRedhP5RmKJiJ1i8VgDGR,Whole Lotta Red,24,2020-12-25,spotify:artist:699OTQXzgjhIYAHMy9RyPD,Playboi Carti,https://i.scdn.co/image/ab67616d0000b27398ea0e689c91f8fea726d9bb
+14,spotify:album:7dAm8ShwJLFm9SaJ6Yc58O,Die Lit,19,2018-05-11,spotify:artist:699OTQXzgjhIYAHMy9RyPD,Playboi Carti,https://i.scdn.co/image/ab67616d0000b273a1e867d40e7bb29ced5c0194
+15,spotify:album:4rJgzzfFHAVFhCSt2P4I3j,Playboi Carti,15,2017-04-14,spotify:artist:699OTQXzgjhIYAHMy9RyPD,Playboi Carti,https://i.scdn.co/image/ab67616d0000b273e31a279d267f3b3d8912e6f1
+16,spotify:album:6ViO9Wx6dWzeUq6DmGTaHl,I NEVER LIKED YOU,22,2022-05-02,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b2737e83b7d94b668d9ea94fe7ec
+17,spotify:album:4WgEUAbA3elrKKvTh1jjM3,I NEVER LIKED YOU (Instrumental),22,2022-04-26,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b2738f357d2e97fed0265106a502
+18,spotify:album:3aITAVBURujVe8fhI2seeR,Pluto x Baby Pluto (Deluxe),24,2020-11-13,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Future-Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b2738efe5b8d9a3544b98aa6a85e
+19,spotify:album:48xpWR8K6CGpy3ETAym3pt,Pluto x Baby Pluto,16,2020-11-13,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Future-Lil Uzi Vert,https://i.scdn.co/image/ab67616d0000b27357928e0363878a71692e6a1f
+20,spotify:album:4bNPOFOzxGhF5jhfIK6lit,High Off Life,21,2020-05-15,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273935d8d5369bc55e74a39303e
+21,spotify:album:65hRa80KDworqyE8242rLN,SAVE ME,7,2019-06-07,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b2735cd6070603a9f2e5dcb01d0c
+22,spotify:album:3LpIwZdzFwc10psLingT8x,Future Hndrxx Presents: The WIZRD,20,2019-01-18,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273e111437ad4fd3f50c8461ec5
+23,spotify:album:6P9PZjWXoCRF5b66BafPKY,Future & Juice WRLD Present... WRLD ON DRUGS,16,2018-10-19,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Future-Juice WRLD,https://i.scdn.co/image/ab67616d0000b273644c510e8d4c02ae69028297
+24,spotify:album:6Ew52HWkgfbth9ihRAq2Xd,BEASTMODE 2,9,2018-07-06,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273c64062196630be5cee367ee8
+25,spotify:album:0C0Vs4XobImmqpr6kIasde,SUPERFLY (Original Motion Picture Soundtrack),23,2018-06-15,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:55Aa2cqylxrFIXC767Z865,Future-Lil Wayne,https://i.scdn.co/image/ab67616d0000b273553162a7641ebb0aac36a90a
+26,spotify:album:187UNqZ7MX3neMYkkevmdm,SUPER SLIMEY,13,2017-10-20,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:50co4Is1HCEo8bhOyUWKpn,Future-Young Thug,https://i.scdn.co/image/ab67616d0000b2735998097d9467eccb3e99b8c1
+27,spotify:album:7K6OykPbezfgKgBufihn6X,HNDRXX,19,2017-07-27,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b2738eb0280d561e9b964a3e74ca
+28,spotify:album:17FBoXK1NU2rvJBbzdzw0r,FUTURE,20,2017-06-30,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273e0b64c8be3c4e804abcb2696
+29,spotify:album:3jJKDKdlwRS584zUlHV2Ly,EVOL,12,2016-04-13,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273626745b3aa04899001a924ad
+30,spotify:album:76G83osdQ4whezYjnYwwq2,Purple Reign,12,2016-01-17,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b2738a66b2b14cd2bc612a7f38fa
+31,spotify:album:1ozpmkWcCHwsQ4QTnxOOdT,What A Time To Be Alive,11,2015-09-20,spotify:artist:3TVXtAsR1Inumwj472S9r4-spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Drake-Future,https://i.scdn.co/image/ab67616d0000b273d6adfbd3f091d6f2b9af6507
+32,spotify:album:0fUy6IdLHDpGNwavIlhEsl,DS2 (Deluxe),19,2015-07-17,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273b2592bea12d840fd096ef965
+33,spotify:album:3dP0TFEEzTXJQKtrpsKFUj,DS2 - Track by Track Commentary,19,2015-07-15,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273aaa74e657d014790495e3e0f
+34,spotify:album:4Mqt4zRLIwFtZyzh7tAUQE,56 Nights,7,2015-03-21,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-0,Future-Southside,https://i.scdn.co/image/ab67616d0000b273354fc3fc863c252e3c4b8eda
+35,spotify:album:6LkUDxtz8cJG3n0RbZNkDh,Beast Mode (Instrumentals),9,2015-01-25,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,https://i.scdn.co/image/ab67616d0000b273017447e1b9022b379f128a3b
+36,spotify:album:7IKkHmEk4It4cRdOYanyvW,Punk,20,2021-10-15,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b273f8d415dab5ed7e3747bd38dd
+37,spotify:album:3XADnbi4uhYXb7RuSJ7bre,Slime Language 2 (Deluxe),31,2021-04-16,0-spotify:artist:50co4Is1HCEo8bhOyUWKpn-spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Young Stoner Life-Young Thug-Gunna,https://i.scdn.co/image/ab67616d0000b273bbb071648c950e560ae95b76
+38,spotify:album:3ihwKkIMJWmmp1huNH0iWC,Slime Language 2,23,2021-04-16,0-spotify:artist:50co4Is1HCEo8bhOyUWKpn-spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Young Stoner Life-Young Thug-Gunna,https://i.scdn.co/image/ab67616d0000b2737939ff11c32b23060cc22bb5
+39,spotify:album:7fZKtzZAsfH0kzeTivu5TG,Slime & B,13,2020-05-08,0-spotify:artist:50co4Is1HCEo8bhOyUWKpn,Chris Brown-Young Thug,https://i.scdn.co/image/ab67616d0000b27363e0ddbb488d0eeec0e738fc
+40,spotify:album:24jAbLMFzCTlIv3kQ94HwK,So Much Fun (Deluxe),24,2019-12-20,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b273540db9d6bae7e57baecf8b49
+41,spotify:album:1bnHPO4dKK7IjvgrtVBcQh,So Much Fun,19,2019-08-16,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b2736fcd1b6e205d0d19d9efa0cc
+42,spotify:album:4OHfmMUq6xwCo8zfQuc9Rf,Slime Language,15,2018-08-17,spotify:artist:50co4Is1HCEo8bhOyUWKpn-0,Young Thug-Young Stoner Life,https://i.scdn.co/image/ab67616d0000b273fbd8ead00d2fb0649a534212
+43,spotify:album:5Dwws0oO0fQLDsrwZE7rvW,Slime Season 4,12,2017-12-04,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b273eff711e24f6f4c15068b3fb0
+44,spotify:album:187UNqZ7MX3neMYkkevmdm,SUPER SLIMEY,13,2017-10-20,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:50co4Is1HCEo8bhOyUWKpn,Future-Young Thug,https://i.scdn.co/image/ab67616d0000b2735998097d9467eccb3e99b8c1
+45,spotify:album:51KZKzPd3OQT1r46a55VTt,Beautiful Thugger Girls,14,2017-06-16,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b273419cedff7b313b962a93932e
+46,spotify:album:7EpUpNUkkEGnaCvkcn1j4H,JEFFERY,10,2016-08-26,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b273d0c72291cd96834e199e1ff8
+47,spotify:album:2z4c8M8aVzl7CTobIp36KF,Slime Season 3,8,2016-03-25,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b273a875c3ec944b4f164ab5c350
+48,spotify:album:4sAB9WulPpnAcig7alDGTg,I'm Up,9,2016-02-05,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b2739cd3a5bb6e2ad118c4a16460
+49,spotify:album:01VfkQ0oPMmzzAbo1jLLZ0,Young Thugga Mane La Flare,13,2015-12-11,0-spotify:artist:50co4Is1HCEo8bhOyUWKpn,Gucci Mane-Young Thug,https://i.scdn.co/image/ab67616d0000b273c3fc55d65e6c6d6a37619b6d
+50,spotify:album:7vFZrUF0z2CfpF7rAJ97XD,1017 Thug,20,2015-12-11,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b27338ee0bf2a5b50425358367d7
+51,spotify:album:3wiipaLUpAWDi67L955mAR,The Purple Album,12,2015-06-09,0-spotify:artist:50co4Is1HCEo8bhOyUWKpn,Gucci Mane-Young Thug,https://i.scdn.co/image/ab67616d0000b273f9389ed8b0e1d06c7e15d563
+52,spotify:album:0BsMZIueWsJLWng8A7sE8e,Barter 6,13,2015-04-16,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b27388053a98d0abb8ed3a02efe1
+53,spotify:album:7a3rhn1csJY4CbdqcQsMcy,Brick Sqaud,14,2014-11-18,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b27362808c6cdede0fbb905bc157
+54,spotify:album:4N0QH3uy5K5T3fMtpLIpKq,1017 Thug 3 The Finale,13,2014-08-29,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b2737dea58a14236778e40ab3e4a
+55,spotify:album:4k4w4MLXdY084qrbMGy9Sg,I Came from Nothing 2,22,2011-12-20,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,https://i.scdn.co/image/ab67616d0000b27323297a33434c317e427ec0fb
+56,spotify:album:3rYMmOfNQlWXYrbd8yXqJ1,Acid Rap (10th Anniversary - Complete Edition),14,2023-04-30,spotify:artist:1anyVhU62p31KFi8MEzkbf,Chance the Rapper,https://i.scdn.co/image/ab67616d0000b273cf2c85c09079470c6662eccf
+57,spotify:album:2w78Cx36U8NynXOR6GFB03,Merry Christmas Lil Mama: The Gift That Keeps On Giving,17,2020-12-23,spotify:artist:1anyVhU62p31KFi8MEzkbf-0,Chance the Rapper-Jeremih,https://i.scdn.co/image/ab67616d0000b273e007267bf6d83766ec933de9
+58,spotify:album:7bgi7zCoDsZdlLKPonHZqP,The Big Day,22,2019-07-26,spotify:artist:1anyVhU62p31KFi8MEzkbf,Chance the Rapper,https://i.scdn.co/image/ab67616d0000b273a2a8b029b103df0e90724ad5
+59,spotify:album:71QyofYesSsRMwFOTafnhB,Coloring Book,14,2016-05-27,spotify:artist:1anyVhU62p31KFi8MEzkbf,Chance the Rapper,https://i.scdn.co/image/ab67616d0000b273e71dd15fc5bdefd5bff70452
+60,spotify:album:2VBcztE58pBKjIDS5oEgFh,Acid Rap,14,2013-04-30,spotify:artist:1anyVhU62p31KFi8MEzkbf,Chance the Rapper,https://i.scdn.co/image/ab67616d0000b273d95ab48a8a9de3c4a2cbfe80
+61,spotify:album:6bUsvxMAuR8NXG2ujCU4yi,10 Day,14,2012-04-03,spotify:artist:1anyVhU62p31KFi8MEzkbf,Chance the Rapper,https://i.scdn.co/image/ab67616d0000b2734bbc300c4e9e8847ca1a2873
+62,spotify:album:5MS3MvWHJ3lOZPLiMxzOU6,Her Loss,16,2022-11-04,spotify:artist:3TVXtAsR1Inumwj472S9r4-spotify:artist:1URnnhqYAYcrqrcwql10ft,Drake-21 Savage,https://i.scdn.co/image/ab67616d0000b27302854a7060fccc1a66a4b5ad
+63,spotify:album:263anqt2ayA25jSEXfs0i1,SAVAGE MODE II [CHOPPED NOT SLOPPED],29,2020-10-19,spotify:artist:1URnnhqYAYcrqrcwql10ft-0,21 Savage-Metro Boomin,https://i.scdn.co/image/ab67616d0000b2732fafc0749fcd9d3ceb5f7a29
+64,spotify:album:6wTyGUWGCilBFZ837k5aRi,SAVAGE MODE II,15,2020-10-02,spotify:artist:1URnnhqYAYcrqrcwql10ft-0,21 Savage-Metro Boomin,https://i.scdn.co/image/ab67616d0000b273aa57907bf0cb2ca0c8cc74bc
+65,spotify:album:6guJZpZ52v4MrJKIH7tASl,i am > i was (Deluxe),16,2018-12-24,spotify:artist:1URnnhqYAYcrqrcwql10ft,21 Savage,https://i.scdn.co/image/ab67616d0000b273ca29f023b5d11f85de854f1b
+66,spotify:album:007DWn799UWvfY1wwZeENR,i am > i was,15,2018-12-21,spotify:artist:1URnnhqYAYcrqrcwql10ft,21 Savage,https://i.scdn.co/image/ab67616d0000b273280689ecc5e4b2038bb5e4bd
+67,spotify:album:3IO8IPjwXuzPJnoaqkwYrj,NOT ALL HEROES WEAR CAPES (Deluxe),26,2018-11-06,0-spotify:artist:1URnnhqYAYcrqrcwql10ft,Metro Boomin-21 Savage,https://i.scdn.co/image/ab67616d0000b2732887f8c05b5a9f1cb105be29
+68,spotify:album:0MV1yCXcNNQBfwApqAVkH0,Without Warning,10,2017-10-30,spotify:artist:1URnnhqYAYcrqrcwql10ft-0-0,21 Savage-Offset-Metro Boomin,https://i.scdn.co/image/ab67616d0000b2730db43130a9aaa7bae56967ed
+69,spotify:album:4skCiJhVVSKrDOBtoFbsxU,Issa Album,14,2017-07-06,spotify:artist:1URnnhqYAYcrqrcwql10ft,21 Savage,https://i.scdn.co/image/ab67616d0000b2732719343298d0e4f1790e14cd
+70,spotify:album:4I3EcXD4e3KcEoDJfFEZ5b,Savage Mode,9,2016-07-15,spotify:artist:1URnnhqYAYcrqrcwql10ft-0,21 Savage-Metro Boomin,https://i.scdn.co/image/ab67616d0000b2732dd1ac4a61495080ef8f78ca
+71,spotify:album:1HSyuTHvLXMWyPJQGnQTLw,Slaughter King,14,2016-05-16,spotify:artist:1URnnhqYAYcrqrcwql10ft,21 Savage,https://i.scdn.co/image/ab67616d0000b2733d945468825e08e5743d244e
+72,spotify:album:3l2umvdEq50qZ5fmw4iHcI,The Slaughter Tape,14,2016-05-15,spotify:artist:1URnnhqYAYcrqrcwql10ft,21 Savage,https://i.scdn.co/image/ab67616d0000b2734cd4d4a0f03555d9fe8e55f4
+73,spotify:album:0Nur9t7M0miEBoAnQ3rPv2,I Am Music,18,2023-03-31,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273038c6347f907a6fedc8e2f2a
+74,spotify:album:6MVsBi4m5eAzfjb6C3JKwp,Sorry 4 The Wait,16,2022-01-14,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273300af6c15e091795c7997d86
+75,spotify:album:2gDny6NDG26azxuTbtNxgq,Trust Fund Babies,10,2021-10-01,spotify:artist:55Aa2cqylxrFIXC767Z865-0,Lil Wayne-Rich The Kid,https://i.scdn.co/image/ab67616d0000b27398d1486777ffe90167ebc5b4
+76,spotify:album:4ljsev5vUnwB2BUFAMvwwy,Tha Carter V (Deluxe),33,2020-09-25,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273d9cc4a9ece3df3ad0b6cdcdc
+77,spotify:album:15rah8uTv13tEhScI9Nv8z,No Ceilings,12,2020-08-28,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b2730ecc76569dda9830ac05be7e
+78,spotify:album:49zB39sak50ghwZMwHQqQ0,Funeral (Deluxe),32,2020-05-29,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b2739f6fe42777cc1287ee4c06b2
+79,spotify:album:2x657XotA7LCsPElXmXX4W,Funeral,24,2020-01-31,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b2731fceb0586044165d23cb0197
+80,spotify:album:50yFYgKdwJANZ5O9MIbMkg,Tha Carter V,23,2018-09-28,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273bb1138165ad4ec2306f4e886
+81,spotify:album:0C0Vs4XobImmqpr6kIasde,SUPERFLY (Original Motion Picture Soundtrack),23,2018-06-15,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:55Aa2cqylxrFIXC767Z865,Future-Lil Wayne,https://i.scdn.co/image/ab67616d0000b273553162a7641ebb0aac36a90a
+82,spotify:album:2wVTLpA19kpk5qmkTASir0,FWA,13,2015-07-03,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273b1ce5dfb05567297f910ae20
+83,spotify:album:2EZ3h6cM5eC65qSHCghdIZ,I Am Not A Human Being II,14,2013-03-22,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273beed8fc73fd7c5fbee109a92
+84,spotify:album:6Pqlfg42Sc3ElNuyt5NUiK,I Am Not A Human Being II (Deluxe),17,2013-01-01,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b27380c64a084164867806ea617a
+85,spotify:album:0pFydyko4Iw450abXlDPpp,Tha Carter IV (Complete Edition),21,2011-08-29,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273e80b258c7e0b318202870953
+86,spotify:album:5vfnsOgLqsgmEb3vGyc2FO,I Am Not A Human Being,13,2010-01-01,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273229411bccce65156241b6190
+87,spotify:album:40VtQmfgdaVmh95sjosyQq,Rebirth (Deluxe),14,2009-01-01,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b2739adf7391077125689b1c9841
+88,spotify:album:2v3xdUz73rd6Nness5SSIh,Rebirth,12,2009-01-01,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b273801cf8805673d07eb26da351
+89,spotify:album:5BGzOpea6At0Nd7tYtYZOP,Tha Carter III,16,2008-06-10,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b27333ebdffaa447ff19ce9f24bb
+90,spotify:album:7GNr4PXYVHMJyOWkCqZDVp,Tha Carter III [Edited (MTV Bonus Version)],18,2008-01-01,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b27366a648eb986b237d682f17ba
+91,spotify:album:4fRZNOawjx1uzGLN3VhAZ4,Tha Carter III (MTV Bonus Version),18,2008-01-01,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b27302a999c3a283b5392e57737d
+92,spotify:album:3i1VnKDxGn83Oy4ngpFBCX,Tha Carter II: Screwed And Chopped,20,2006-01-01,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,https://i.scdn.co/image/ab67616d0000b2736e43a78700dc7c41b1fdb6c7
+93,spotify:album:5MS3MvWHJ3lOZPLiMxzOU6,Her Loss,16,2022-11-04,spotify:artist:3TVXtAsR1Inumwj472S9r4-spotify:artist:1URnnhqYAYcrqrcwql10ft,Drake-21 Savage,https://i.scdn.co/image/ab67616d0000b27302854a7060fccc1a66a4b5ad
+94,spotify:album:3cf4iSSKd8ffTncbtKljXw,Honestly Nevermind,14,2022-06-17,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b2738dc0d801766a5aa6a33cbe37
+95,spotify:album:3SpBlxme9WbeQdI9kx7KAV,Certified Lover Boy,21,2021-09-03,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b273cd945b4e3de57edd28481a3f
+96,spotify:album:6OQ9gBfg5EXeNAEwGSs6jK,Dark Lane Demo Tapes,14,2020-05-01,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b273bba7cfaf7c59ff0898acba1f
+97,spotify:album:7dqpveMVcWgbzqYrOdkFTD,Care Package,17,2019-08-02,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b2739c1e02d4becb7c5bbca01e2a
+98,spotify:album:1ATL5GLyefJaxhQzSPVrLX,Scorpion,25,2018-06-29,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b273f907de96b9a4fbc04accc0d5
+99,spotify:album:1lXY618HWkwYKJWBRYR4MK,More Life,22,2017-03-18,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b2734f0fd9dad63977146e685700
+100,spotify:album:40GMAhriYJRO1rsY4YdrZb,Views,20,2016-05-06,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b2739416ed64daf84936d89e671c
+101,spotify:album:1ozpmkWcCHwsQ4QTnxOOdT,What A Time To Be Alive,11,2015-09-20,spotify:artist:3TVXtAsR1Inumwj472S9r4-spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Drake-Future,https://i.scdn.co/image/ab67616d0000b273d6adfbd3f091d6f2b9af6507
+102,spotify:album:0ptlfJfwGTy0Yvrk14JK1I,If You're Reading This It's Too Late,17,2015-02-12,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b2732090f4f6cc406e6d3c306733
+103,spotify:album:5mz0mJxb80gqJIcRf9LGHJ,Nothing Was The Same (Deluxe),15,2013-01-01,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b273a4dfa7122ec07fe3a1af22e7
+104,spotify:album:1XslIirSxfAhhxRdn4Li9t,Nothing Was The Same,13,2013-01-01,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b273a90d170c61fb7d063d47161d
+105,spotify:album:6X1x82kppWZmDzlXXK3y3q,Take Care (Deluxe),19,2011-11-15,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b273c7ea04a9b455e3f68ef82550
+106,spotify:album:6jlrjFR9mJV3jd1IPSplXU,Thank Me Later,14,2010-01-01,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b27311b21e8b868800918d21bb77
+107,spotify:album:1LShhEEKRT5MNPcO7jtYHh,So Far Gone,18,2009,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,https://i.scdn.co/image/ab67616d0000b27354ef13c30a024a7f1ba79efd
+108,spotify:album:1Sf8GsXG32t0jNrX11xqWx,JACKBOYS,7,2019-12-27,0-spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY,JACKBOYS-Travis Scott,https://i.scdn.co/image/ab67616d0000b273dfc2f59568272de50a257f2f
+109,spotify:album:41GuZcammIkupMPKH2OJ6I,ASTROWORLD,17,2018-08-03,spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY,Travis Scott,https://i.scdn.co/image/ab67616d0000b273072e9faef2ef7b6db63834a3
+110,spotify:album:6FED8aeieEnUWwQqAO9zT1,Huncho Jack Jack Huncho,13,2017-12-21,0-spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY-0,Huncho Jack-Travis Scott-Quavo,https://i.scdn.co/image/ab67616d0000b273631973893e94d01cfcdf0e5e
+111,spotify:album:42WVQWuf1teDysXiOupIZt,Birds In The Trap Sing McKnight,14,2016-09-16,spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY,Travis Scott,https://i.scdn.co/image/ab67616d0000b273f54b99bf27cda88f4a7403ce
+112,spotify:album:4PWBTB6NYSKQwfo79I3prg,Rodeo (Expanded Edition),16,2015-09-04,spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY,Travis Scott,https://i.scdn.co/image/ab67616d0000b2737433176f037e0ba14190c34f
+113,spotify:album:5v9IfhMyxAkE9CbLjfNChR,Goodbye & Good Riddance (5 Year Anniversary Edition),20,2023-05-18,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Juice WRLD,https://i.scdn.co/image/ab67616d0000b273a782c3b830a9b62630e296f7
+114,spotify:album:1typPCwqyXMfFpvDZAyKew,Fighting Demons (Deluxe),23,2022-03-18,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Juice WRLD,https://i.scdn.co/image/ab67616d0000b2737459992b444de38842b9bee7
+115,spotify:album:7aObAFaIOcczMSDnfXz5z6,Goodbye & Good Riddance (Anniversary),18,2021-05-28,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Juice WRLD,https://i.scdn.co/image/ab67616d0000b273bf640cd39d097f99c6f6e48f
+116,spotify:album:6n9DKpOxwifT5hOXtgLZSL,Legends Never Die,22,2020-07-10,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Juice WRLD,https://i.scdn.co/image/ab67616d0000b2733e0698e4ae5ffb82a005aeeb
+117,spotify:album:1btu0SV2DOI5HoFsvUd78F,Death Race For Love (Bonus Track Version),23,2019-03-08,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Juice WRLD,https://i.scdn.co/image/ab67616d0000b2738b27d35aa2c6dcf99895d664
+118,spotify:album:6tkjU4Umpo79wwkgPMV3nZ,Goodbye & Good Riddance,17,2018-12-10,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Juice WRLD,https://i.scdn.co/image/ab67616d0000b273f7db43292a6a99b21b51d5b4
+119,spotify:album:6P9PZjWXoCRF5b66BafPKY,Future & Juice WRLD Present... WRLD ON DRUGS,16,2018-10-19,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i-spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Future-Juice WRLD,https://i.scdn.co/image/ab67616d0000b273644c510e8d4c02ae69028297
+120,spotify:album:3tFjhFPqGhhLrCULnPu7Wy,D-Day: A Gangsta Grillz Mixtape,15,2022-03-31,0-spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,Dreamville-J. Cole,https://i.scdn.co/image/ab67616d0000b273580d8d4b0061e5a244c86c77
+121,spotify:album:4JAvwK4APPArjIsOdGoJXX,The Off-Season,12,2021-05-14,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,https://i.scdn.co/image/ab67616d0000b27310e6745bb2f179dd3616b85f
+122,spotify:album:5PerfGh9Smd6XjwkxpmL4V,Revenge Of The Dreamers III: Director's Cut,30,2020-01-16,0-spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,Dreamville-J. Cole,https://i.scdn.co/image/ab67616d0000b273a145ed96ce61bf4201d619c3
+123,spotify:album:2n3quCZ0anEa46j2IveacI,Revenge Of The Dreamers III,18,2019-07-05,0-spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,Dreamville-J. Cole,https://i.scdn.co/image/ab67616d0000b273c0ae820e3b64854de4642101
+124,spotify:album:4Wv5UAieM1LDEYVq5WmqDd,KOD,12,2018-04-20,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,https://i.scdn.co/image/ab67616d0000b273cf0f0affd0138a7442f13706
+125,spotify:album:3CCnGldVQ90c26aFATC1PW,4 Your Eyez Only,10,2016-12-09,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,https://i.scdn.co/image/ab67616d0000b273f4ca75192df162f78a24023e
+126,spotify:album:1yZC8xZwv4gsmCZ4p4JWdI,Forest Hills Drive: Live from Fayetteville NC,13,2016-01-28,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,https://i.scdn.co/image/ab67616d0000b2737617e402e6b7fef18f4fa7c9
+127,spotify:album:0UMMIkurRUmkruZ3KGBLtG,2014 Forest Hills Drive,13,2014-12-09,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,https://i.scdn.co/image/ab67616d0000b273c6e0948bbb0681ff29cdbae8
+128,spotify:album:5FP9keIJnlSCKnkdVOf623,Born Sinner (Deluxe Version),21,2013-06-18,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,https://i.scdn.co/image/ab67616d0000b273c1bb124f993488cf21b269fc
+129,spotify:album:0fhmJYVhW0e4i33pCLPA5i,Cole World: The Sideline Story,16,2011-09-27,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,https://i.scdn.co/image/ab67616d0000b27399da48a530f6ca2ef86da3cc
+130,spotify:album:0FYvMdfTfYJxnJnKs1wDb0,It's Only Me,23,2022-10-14,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b27366b04b41fa6f8908dce86695
+131,spotify:album:6CvBb1XqN0igtQrWrbXD80,The Voice of the Heroes,18,2021-06-04,spotify:artist:5f7VJjfbwm532GiveGC0ZK-spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Baby-Lil Durk,https://i.scdn.co/image/ab67616d0000b2739fa79040de02a72663f24323
+132,spotify:album:5GAvwptqr4r63i8lZWrL58,My Turn (Deluxe),27,2020-10-01,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b273aca2750de362a4660b693411
+133,spotify:album:1ynyQdPQiXdYJNQEDL1S3d,My Turn,20,2020-02-28,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b273f46a9ad551acbdab8f72fd89
+134,spotify:album:4iF44RCCybJtkBkMoqrLW2,Street Gossip,13,2018-11-30,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b2737cb0c4f7761f6dd66aaca065
+135,spotify:album:2yXnY2NiaZk9QiJJittS81,Drip Harder,13,2018-10-05,spotify:artist:5f7VJjfbwm532GiveGC0ZK-spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Lil Baby-Gunna,https://i.scdn.co/image/ab67616d0000b273ce159a3ba2096e13fa9d4b4c
+136,spotify:album:7yf9ZJyHRbp8sHtpDKfPpt,Harder Than Ever,17,2018-05-18,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b2736cab41f8c84d6164976400d4
+137,spotify:album:750APP0eKVlcgOxaZnBnVt,Too Hard,16,2017-12-01,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b2735067cc9332e2fdc69ea7b7a9
+138,spotify:album:1ho0cNe552yTcBHXbzfozB,2 The Hard Way,9,2017-11-03,spotify:artist:5f7VJjfbwm532GiveGC0ZK-0,Lil Baby-Marlo,https://i.scdn.co/image/ab67616d0000b2735032112edb07f2106e8b6862
+139,spotify:album:2zXJkApMEHfHuZxs6Z1pfA,Harder Than Hard,12,2017-08-25,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b27374c8919641c8c05e3df02e18
+140,spotify:album:47Q0J5RzfzIrTd6KBYmsbK,Perfect Timing,12,2017-08-24,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,https://i.scdn.co/image/ab67616d0000b273e4864532ded5d475a1581aba
+141,spotify:album:79ONNoS4M9tfIA1mYLBYVX,Mr. Morale & The Big Steppers,19,2022-05-13,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b2732e02117d76426a08ac7c174f
+142,spotify:album:3pLdWdkj83EYfDN6H2N8MR,Black Panther The Album Music From And Inspired By,14,2018-02-09,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg-0,Kendrick Lamar-SZA,https://i.scdn.co/image/ab67616d0000b273c027ad28821777b00dcaa888
+143,spotify:album:4alcGHjstaALJHHiljfy3H,DAMN. COLLECTORS EDITION.,14,2017-12-08,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b273add9eb25744782c3717c9368
+144,spotify:album:4eLPsYPBmXABThSJ821sqY,DAMN.,14,2017-04-14,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b2738b52c6b9bc4e43d873869699
+145,spotify:album:0kL3TYRsSXnu0iJvFO3rud,untitled unmastered.,8,2016-03-04,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b2738c697f553a46006a5d8886b2
+146,spotify:album:7ycBtnsMtyVbbwTfJwRjSP,To Pimp A Butterfly,16,2015-03-16,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1
+147,spotify:album:3DGQ1iZ9XKUQxAUWjfC34w,good kid m.A.A.d city (Deluxe),17,2012,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b273d58e537cea05c2156792c53d
+148,spotify:album:6PBZN8cbwkqm1ERj2BGXJ1,good kid m.A.A.d city,13,2012,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b273d28d2ebdedb220e479743797
+149,spotify:album:1bkN9nIkkCnXeG4yitVS1J,Section.80,15,2011-07-02,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b273eddb2639b74ac6c202032ebe
+150,spotify:album:7MoLQ8vckhwBbQqEYQTYQC,Overly Dedicated,12,2010-09-14,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,https://i.scdn.co/image/ab67616d0000b2739b035b031d9f0a6a75ae464e
+151,spotify:album:2ZiBfBw770CJC0f4SI1Tji,Feed Tha Streets III,15,2022-11-18,spotify:artist:757aE44tKEUQEqRuT6GnEB,Roddy Ricch,https://i.scdn.co/image/ab67616d0000b273d513f31f1445121235424acb
+152,spotify:album:1eVrpJbHRLBbioB9sb5b94,LIVE LIFE FAST,18,2021-12-17,spotify:artist:757aE44tKEUQEqRuT6GnEB,Roddy Ricch,https://i.scdn.co/image/ab67616d0000b2738007e1fcf108e4270b6df942
+153,spotify:album:52u4anZbHd6UInnmHRFzba,Please Excuse Me for Being Antisocial,16,2019-12-06,spotify:artist:757aE44tKEUQEqRuT6GnEB,Roddy Ricch,https://i.scdn.co/image/ab67616d0000b273600adbc750285ea1a8da249f
+154,spotify:album:1jlIU9p7PChTK3AeqNpnsX,Feed Tha Streets II,12,2018-11-02,spotify:artist:757aE44tKEUQEqRuT6GnEB,Roddy Ricch,https://i.scdn.co/image/ab67616d0000b273434f4eeb4231f6f4862cafd4
+155,spotify:album:3cLQ49Ll3nGRkw3HSSk92K,Expensive Pain,18,2021-10-01,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b273716d715fe3a1e25e1c6d1487
+156,spotify:album:6UYZEYjpN1DYRW0kqFy9ZE,Championships,19,2018-11-30,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b273cd63c5962050729d260077d6
+157,spotify:album:2OWLbSd0bRFLw2M0KlgrgJ,Wins & Losses (Deluxe Edition),19,2017-08-04,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b273726ec4d0c541372e8e8cbce7
+158,spotify:album:2SCQAZZ5pc90l9SPBsWCIQ,Wins & Losses,17,2017-07-21,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b2733e52eda6f8625563e05112ac
+159,spotify:album:6sNbRwX0lZREkdmUSDsVzo,DC4,14,2016-10-28,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b2730a6f4e78a01fd779ebaace83
+160,spotify:album:31ZNLGjARu4skCvhGc1bfA,First Come First Serve,15,2015-09-02,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b273374fec75cb20136baf80db1a
+161,spotify:album:2O3OKOYCub892PUGprsaQo,Dreams Worth More Than Money,14,2015-06-29,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b273fd31cd96c4ba94c40532cc34
+162,spotify:album:3CjBOwf3HzW7fWxUGCU8NQ,Unreleased Killadelphia Muzik,19,2014-10-27,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b2735f53bed8c38ae1876de6d9ae
+163,spotify:album:5k21b6J72f19J3NmPXgPUu,Dreamchasers 3,17,2013-09-29,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b273f7118f3f9c17e9f0a7cf263f
+164,spotify:album:0zhZDmHEtDtok393SbZ3d7,Dreams and Nightmares (Deluxe Edition),16,2012-10-26,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b273f0c746d1b52c883c19b25a51
+165,spotify:album:0JeT6s9dkjm4ZjIe6g4QHr,Dreams and Nightmares,14,2012-10-26,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b2734caa4b8ca892c84ce127d27a
+166,spotify:album:0kpslw9IHk7EsK40BGUbX9,Dreamchasers 2,18,2012-05-07,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b2733e1a2db813bd01027106e470
+167,spotify:album:40SFz21xgwvkJn2Ea1z5iH,Dreamchasers,19,2011-08-11,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,https://i.scdn.co/image/ab67616d0000b27335b8de4158624ef237e3c531
+168,spotify:album:2Wiyo7LzdeBCsVZiRA6vVZ,Donda (Deluxe),32,2021-11-14,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b273c5663e50de353981ed2b1a37
+169,spotify:album:5CnpZV3q5BcESefcB3WJmz,Donda,27,2021-08-29,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b273cad190f1a73c024e5a40dddd
+170,spotify:album:0FgZKfoU2Br5sHOfvZKTI9,JESUS IS KING,11,2019-10-25,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b2731bb797bbfe2480650b6c2964
+171,spotify:album:6pwuKxMUkNg673KETsXPUV,KIDS SEE GHOSTS,7,2018-06-08,0-spotify:artist:5K4W6rqBFWDnAN6FQUkS6x-spotify:artist:0fA0VVWsXO9YnASrzqfmYu,KIDS SEE GHOSTS-Kanye West-Kid Cudi,https://i.scdn.co/image/ab67616d0000b273013c00ee367dd85396f79c82
+172,spotify:album:2Ek1q2haOnxVqhvVKqMvJe,ye,7,2018-06-01,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b2730cd942c1a864afa4e92d04f2
+173,spotify:album:7gsWAHLeT0w7es6FofOXk1,The Life Of Pablo,20,2016-06-10,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b2732a7db835b912dc5014bd37f4
+174,spotify:album:7D2NdGvBHIavgLhmcwhluK,Yeezus,10,2013-06-18,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b2731dacfbc31cc873d132958af9
+175,spotify:album:2P2Xwvh2xWXIZ1OWY9S9o5,Watch The Throne (Deluxe),16,2011-08-08,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB-spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,JAY-Z-Kanye West,https://i.scdn.co/image/ab67616d0000b273699bfca9512ee8d1fbf126a7
+176,spotify:album:0OcMap99vLEeGkBCfCwRwS,Watch The Throne,12,2011-08-08,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB-spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,JAY-Z-Kanye West,https://i.scdn.co/image/ab67616d0000b27352e61456aa4995ba48d94e30
+177,spotify:album:20r762YmB5HeofjMCiPMLv,My Beautiful Dark Twisted Fantasy,13,2010-11-22,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b273d9194aa18fa4c9362b47464f
+178,spotify:album:3WFTGIO6E3Xh4paEOBY9OU,808s & Heartbreak,12,2008-11-24,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b273346d77e155d854735410ed18
+179,spotify:album:4SZko61aMnmgvNhfhgTuD3,Graduation,14,2007-09-11,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b27326f7f19c7f0381e56156c94a
+180,spotify:album:5ll74bqtkcXlKE7wwkMq4g,Late Registration,21,2005-08-30,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b273428d2255141c2119409a31b2
+181,spotify:album:4Uv86qWpGTxf7fU7lG5X6F,The College Dropout,21,2004-02-10,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,https://i.scdn.co/image/ab67616d0000b27325b055377757b3cdd6f26b78
+182,spotify:album:4bGVj7yZ8KvSN4zA3mbua8,HOV DID,1,2022-08-31,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b27336b9c01762b7ef92e03d716e
+183,spotify:album:7GoZNNb7Yl74fpk8Z6I2cv,4:44,10,2017-07-07,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b2737513c4956ea5552caf02eab6
+184,spotify:album:0OTjYdGtP7AbwOwbYsGhyi,Magna Carta... Holy Grail,16,2013-07-04,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b27316667761b90f600c1d7b08e6
+185,spotify:album:2P2Xwvh2xWXIZ1OWY9S9o5,Watch The Throne (Deluxe),16,2011-08-08,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB-spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,JAY-Z-Kanye West,https://i.scdn.co/image/ab67616d0000b273699bfca9512ee8d1fbf126a7
+186,spotify:album:0OcMap99vLEeGkBCfCwRwS,Watch The Throne,12,2011-08-08,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB-spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,JAY-Z-Kanye West,https://i.scdn.co/image/ab67616d0000b27352e61456aa4995ba48d94e30
+187,spotify:album:1IDwi6urY664Mv1JFuTNlc,The Blueprint Collector's Edition (Explicit Version),40,2009-09-08,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b27317cc8e4f33e48b00588a769f
+188,spotify:album:2CUT0104gySOIvqwtXeFsX,The Blueprint 3,15,2009-09-08,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273fec1b815bb3c50a64a90fd10
+189,spotify:album:6If8UXZG5DH2fv3DnloHZo,American Gangster Acappella,15,2007-11-06,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273dc0da0c50d66d7c91c7cb256
+190,spotify:album:6QOGDVh3mVnAJYPnt66Qj5,American Gangster,15,2007-11-06,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273e5490334961b3498e491449f
+191,spotify:album:2tnDxImtQAgCKdjk5yMIhd,Live From The Hangar Tour,7,2007-01-02,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273bf257e5dacd584c06c2a2294
+192,spotify:album:34leStU1anAKH5RsU607zz,Kingdom Come,14,2006-11-21,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273ffdd7a885159b73d0d15e0f9
+193,spotify:album:4FWvo9oS4gRgHtAwDwUjiO,The Black Album,14,2003-11-14,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273c528802c308a1e0e4d9945dd
+194,spotify:album:0HsBuTvi6wWDj66sSbvA4H,The Black Album,14,2003-11-14,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273c9a73b04d18cb2e8be73d325
+195,spotify:album:5rf9obIGCl072S7xGygzSz,Blueprint 2.1,12,2003-04-08,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273c5b9a4d0439fc70a462c9b0f
+196,spotify:album:5xHStEOG8PsbzNQb7LkxZU,The Blueprint 2: The Gift & The Curse,25,2002-11-12,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273b7c45af95aaf599cee3acf08
+197,spotify:album:7ctCScnWG0nMedlfUiauOk,Jay-Z Unplugged (Live On MTV Unplugged / 2001),13,2001-12-18,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b27300ec30184bf13b6aad34a3a1
+198,spotify:album:54I5tDCMjnNVWSENHg8EDH,The Blueprint,15,2001-09-11,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b2739992c5d2c010ccb3f6fa6bb6
+199,spotify:album:3VfeeJElCEDeXlDiNZbn3E,The Dynasty,16,2000-10-31,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273d6351422ffb0384cbd6af29c
+200,spotify:album:3rWJsuu7ukoZZhp7YYkjNZ,Vol. 3... Life And Times Of S. Carter,16,1999-12-28,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b273188099f301c32148ab07a557
+201,spotify:album:3j1xCJdBMCl6wYQXurz2tb,Vol.2... Hard Knock Life,14,1998-11-29,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,https://i.scdn.co/image/ab67616d0000b2739700390e9c33c62cfcd915ce
+202,spotify:album:33ichA2TzIOdW248hRlqpH,The House Is Burning [homies begged],20,2021-11-19,spotify:artist:6aaMZ3fcfLv4tEbmY7bjRM,Isaiah Rashad,https://i.scdn.co/image/ab67616d0000b273f9cb45f50aaf11d04514cf2e
+203,spotify:album:6TQ8nqw43uUOWu7Yqp58ko,The House Is Burning,16,2021-07-30,spotify:artist:6aaMZ3fcfLv4tEbmY7bjRM,Isaiah Rashad,https://i.scdn.co/image/ab67616d0000b273ac895ae149e004dcbb6367be
+204,spotify:album:6jjX8mGrsWtrpYpFhGMrg1,The Sun's Tirade,17,2016-09-02,spotify:artist:6aaMZ3fcfLv4tEbmY7bjRM,Isaiah Rashad,https://i.scdn.co/image/ab67616d0000b273fbdec8696ff05ae19265dfa0
+205,spotify:album:6JF49ixyHmOgS0Rsda2k42,Cilvia Demo,14,2014-01-28,spotify:artist:6aaMZ3fcfLv4tEbmY7bjRM,Isaiah Rashad,https://i.scdn.co/image/ab67616d0000b273986cd6b330f7405b17a604f4
+206,spotify:album:3aTuW4BtsyyyyQa9LKqj8n,Curtain Call 2,35,2022-08-05,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b27375a2c90eca545e6b0557897c
+207,spotify:album:6EzbFdrwvWpnpUjzrR57aU,The Eminem Show (Expanded Edition),38,2022-05-26,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273a18291a1854b9b6371ff9663
+208,spotify:album:3MKvhQoFSrR2PrxXXBHe9B,Music To Be Murdered By - Side B (Deluxe Edition),36,2020-12-18,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273b84b0516d901f95461bb5165
+209,spotify:album:4otkd9As6YaxxEkIjXPiZ6,Music To Be Murdered By,20,2020-01-17,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b2732f44aec83b20e40f3baef73c
+210,spotify:album:3HNnxK7NgLXbDoxRZxNWiR,Kamikaze,13,2018-08-31,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273e4073def0c03a91e3fceaf73
+211,spotify:album:0U6ldwLBEMkwgfQRY4V6D2,Revival,19,2017-12-15,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273dee6b58d35215322626b5701
+212,spotify:album:6DN7GcZF1HywzrkGN6Eeqk,The Marshall Mathers LP2 (Deluxe),21,2013-11-05,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273cb66bcc14c6f857c127d5969
+213,spotify:album:1gUI4keDXbeSil6rwY9qUm,Recovery (Deluxe Edition),19,2010-06-21,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b2731afee6fb3a4ca2f049dd69b5
+214,spotify:album:47BiFcV59TQi2s9SkBo2pb,Recovery,17,2010-06-18,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273c08d5fa5c0f1a834acef5100
+215,spotify:album:7MZzYkbHL9Tk3O6WeD4Z0Z,Relapse: Refill,29,2009-05-15,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273506c4cc93e5a6234164125e1
+216,spotify:album:6HXlnhMr40FP2qBTnKXRbA,Relapse [Deluxe],22,2009-05-15,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273f135bf1dee323e1aef89ffbf
+217,spotify:album:7h2OEj0ifXb3UdgvTmCqfY,Relapse,20,2009-05-15,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b27363d5aec8186b37f4404b1d1d
+218,spotify:album:1kTlYbs28MXw7hwO0NLYif,Encore (Deluxe Version),23,2004-11-12,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273726d48d93d02e1271774f023
+219,spotify:album:2cWBwpqMsDJC1ZUwz813lo,The Eminem Show,20,2002-05-26,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b2736ca5c90113b30c3c43ffb8f4
+220,spotify:album:6t7956yu5zYf5A829XRiHC,The Marshall Mathers LP,18,2000-05-23,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273dbb3dd82da45b7d7f31b1b42
+221,spotify:album:10nO3EJJDMm6j6d2uK3Jah,The Slim Shady LP (Expanded Edition),30,1999-02-23,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b273d12909c6ebc83cb4c6bef6f4
+222,spotify:album:0vE6mttRTBXRe9rKghyr1l,The Slim Shady LP,20,1999-02-23,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,https://i.scdn.co/image/ab67616d0000b2739bef45ee387f274ea3198c55
+223,spotify:album:1n5t4LXCTAmiJmyMtbBxVU,Faith (Deluxe),30,2021-07-31,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b273c7d31eab93d5e6f7fd2a0a23
+224,spotify:album:2MlT9dGKoGH2hsfcz7UUXL,Faith,20,2021-07-16,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b27379476cf856443329e6c52c04
+225,spotify:album:2MDU46hcBn3u94s46BOSdv,Shoot For The Stars Aim For The Moon (Deluxe),34,2020-07-20,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b27346e1307c35579c3483ea7b03
+226,spotify:album:7e7t0MCrNDcJZsPwUKjmOc,Shoot For The Stars Aim For The Moon,19,2020-07-03,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b27377ada0863603903f57b34369
+227,spotify:album:5NTOvCGu7HT4DgJGLXtKUU,Meet The Woo 2 (Deluxe),16,2020-02-12,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b273cd90e898c070ef21812ab363
+228,spotify:album:4MZnolldq7ciKKlbVDzLm5,Meet The Woo 2,13,2020-02-07,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b27362a57823eced1cb4fd93b2c1
+229,spotify:album:22py1IeIi51c0GBYEHQTsI,Meet The Woo (Deluxe Version),11,2019-09-13,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b2730ae6a8d3e8957f0b3f35bb44
+230,spotify:album:6d1vGZsr6Uy3h9IigBpPAf,Meet The Woo,9,2019-07-26,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,https://i.scdn.co/image/ab67616d0000b2738fe5d04b06aff90f9fe796f5
+231,spotify:album:6ciIG1XKTlVIn0Yl8rvsce,Almost Healed,21,2023-05-26,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b2736234c2c6d4bb935839ac4719
+232,spotify:album:4lXLULUDQvqV1yHtLW5fyL,Lil Durk Presents: Loyal Bros 2,23,2022-12-16,0-spotify:artist:3hcs9uc56yIGFCSy9leWe7,Only The Family-Lil Durk,https://i.scdn.co/image/ab67616d0000b273ae7a96d9d5107992d40d94c5
+233,spotify:album:2rGN0kLth4hNmyMffDTlpX,7220 (Deluxe),31,2022-06-24,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b273a6952f32937f16cc81b4abca
+234,spotify:album:42q2L3R0LUPv3tM1Mabvyl,7220 (Reloaded),18,2022-03-18,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b27369ed6f07008b1bb3bcf846dd
+235,spotify:album:0vRN2oePynCSTspdY9NDsM,7220,17,2022-03-11,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b2739984d05ec46e029f7b942aca
+236,spotify:album:6CvBb1XqN0igtQrWrbXD80,The Voice of the Heroes,18,2021-06-04,spotify:artist:5f7VJjfbwm532GiveGC0ZK-spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Baby-Lil Durk,https://i.scdn.co/image/ab67616d0000b2739fa79040de02a72663f24323
+237,spotify:album:6lb9q7QZwjMj9EE7M664sK,The Voice (Deluxe),28,2021-01-29,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b27386a14ed0bbd8472d0b718ae6
+238,spotify:album:33lOYXjswrDuzTqTNJYSWy,The Voice,16,2020-12-24,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b273317f63dd5214d9a5d2cb7c71
+239,spotify:album:6SaN9NlFIy4VwdkzXc1yRM,Just Cause Y'all Waited 2 (Deluxe),22,2020-06-26,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b273fec5f282565cc61622be8e04
+240,spotify:album:3D4bwVn4Wp8Za0Amkyd5I5,Just Cause Y'all Waited 2,15,2020-05-08,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b273f8558e8b0ceb521977e4c5bf
+241,spotify:album:4T7cvmdhs8ehPlhghwStjM,Family Over Everything,16,2019-12-11,spotify:artist:3hcs9uc56yIGFCSy9leWe7-0,Lil Durk-Only The Family,https://i.scdn.co/image/ab67616d0000b2738587611866a00ae5916eea3b
+242,spotify:album:3kj9O7YYodmvzwq8ObaWU9,Love Songs 4 the Streets 2,16,2019-08-02,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b2738c20f9fe5d480d13f980edc2
+243,spotify:album:7HB55Zq1RoZvtwQGm5nxhv,Signed To The Streets 3,20,2018-11-09,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b273cc252a21d0f26d9378f03ed6
+244,spotify:album:1R8YtoBYJgC2ue7eq9Xa8d,Just Cause Y'all Waited,12,2018-03-30,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b2731064d6e037d5fd20bf5bad70
+245,spotify:album:19YlQK3Zr5gZgEZXrmgayO,Bloodas,12,2017-12-08,0-spotify:artist:3hcs9uc56yIGFCSy9leWe7,Tee Grizzley-Lil Durk,https://i.scdn.co/image/ab67616d0000b2730b75f78c51d2cd01d211b2da
+246,spotify:album:7ur402aEploQusH5JUSZyy,Signed to the Streets 2.5,9,2017-10-19,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b273492582f806a7e52160b5a68b
+247,spotify:album:0VHiA46eaOVlaI6RBwL3HK,Love Songs for the Streets,9,2017-03-01,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b2738d540a78272715a099242f38
+248,spotify:album:7M04O54J8wm16ziDsGclWI,They Forgot,13,2017-02-14,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b273d2dd9bc96b06d9b2bee07b70
+249,spotify:album:0V68iflWNZri1Zc8txsLyg,Lil Durk 2X (Deluxe),13,2016-07-22,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b27311da12ff86cdc57b55484cbb
+250,spotify:album:7dgbUj8qhJGj7tYsM67JM3,300 Days 300 Nights,19,2015-12-15,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,https://i.scdn.co/image/ab67616d0000b2736424468118dd8ca8dedb2938
+251,spotify:album:02uWB8Kekadkl3yGBoOOcx,DS4EVER,20,2022-01-13,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b27314d91ebdd6d7e2931322cc1a
+252,spotify:album:3XADnbi4uhYXb7RuSJ7bre,Slime Language 2 (Deluxe),31,2021-04-16,0-spotify:artist:50co4Is1HCEo8bhOyUWKpn-spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Young Stoner Life-Young Thug-Gunna,https://i.scdn.co/image/ab67616d0000b273bbb071648c950e560ae95b76
+253,spotify:album:3ihwKkIMJWmmp1huNH0iWC,Slime Language 2,23,2021-04-16,0-spotify:artist:50co4Is1HCEo8bhOyUWKpn-spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Young Stoner Life-Young Thug-Gunna,https://i.scdn.co/image/ab67616d0000b2737939ff11c32b23060cc22bb5
+254,spotify:album:6FfYIKA59pCFs2d1FB79Pq,WUNNA (Deluxe),26,2020-07-24,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b273fae944bd93dd1e47591a0df9
+255,spotify:album:0gA0nZrZ55PLUp7ARfrICu,WUNNA,18,2020-05-22,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b273d7547a7624116ac5f8a51fd2
+256,spotify:album:1oUzjom2A9xtyRM1SdOAGj,Drip or Drown 2,16,2019-02-22,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b273bddf008ccaea655e61892c27
+257,spotify:album:2yXnY2NiaZk9QiJJittS81,Drip Harder,13,2018-10-05,spotify:artist:5f7VJjfbwm532GiveGC0ZK-spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Lil Baby-Gunna,https://i.scdn.co/image/ab67616d0000b273ce159a3ba2096e13fa9d4b4c
+258,spotify:album:5xtAAHr59ozJ2PQ67utEmi,Drip Season 3 (Deluxe),17,2018-02-02,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b273d00a36fea0639c48eb0ee312
+259,spotify:album:3flHKlyXgH4vu277N43sMJ,Drip or Drown,7,2017-11-30,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b273dcb5f3bbd5e9fbe873ac68f4
+260,spotify:album:3vObc2h4jNdpjUoA1XlxCQ,Drip Season 2,16,2017-05-11,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b273d7ee986deb6c2903b225ada4
+261,spotify:album:0dHaEMMoQ7HP3nBi3yYU0o,Drip Season,10,2016-10-15,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,https://i.scdn.co/image/ab67616d0000b273d85ca96db7186d800e75e895
+262,spotify:album:0F166z0TRwmSRuHBOId890,MANSION MUSIK,25,2023-01-20,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273cb2bb0e4c88654c85a070567
+263,spotify:album:4sS5IjHR0YOJQdSTQ8whWz,Trip At Knight (Complete Edition),18,2021-08-21,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273d01b8867ca76ba7a4c15a9a4
+264,spotify:album:4Sj1MJMO2jaIZyr00ipCkl,Pegasus: Neon Shark vs Pegasus Presented By Travis Barker (Deluxe),40,2021-02-19,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273eff5054a41cee474ac1149ab
+265,spotify:album:26m0mm2zQH59wSiF8oL4qM,Pegasus (Spooky Sounds Edition),32,2020-10-31,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273157274a974ff87db8de63104
+266,spotify:album:2vMi9So8GxXiqaT2zJXbQG,Pegasus,26,2020-10-30,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273530e4657d123427b8f54f091
+267,spotify:album:5Hsaxc6a2GWPAqXttPFbY0,A Love Letter To You 4 (Deluxe),29,2020-02-21,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273e6496e26fc24d8269171b1c4
+268,spotify:album:0tKX7BLXiiRgXUKYdJzjEz,A Love Letter To You 4,21,2019-11-22,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273cd81b9f0393348b6537c9d92
+269,spotify:album:11vLnrFGWQRbonR6wFuCf8,!,13,2019-08-09,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273f6f4f6d474b1de48e0ff1889
+270,spotify:album:69Nk8sC4f7l2F6pHrq2Ax5,A Love Letter To You 3 (Sped Up),16,2018-11-09,0-spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,10X-Trippie Redd,https://i.scdn.co/image/ab67616d0000b273116263cb4412633e5bcee82d
+271,spotify:album:6qRbGZqJ3aQY8N8bcHc1ug,A Love Letter To You 3,16,2018-11-09,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b27392bb8047753d97ff274b2f5f
+272,spotify:album:214f4uAY0p2KgY7Fl4fBgk,LIFE'S A TRIP,14,2018-08-10,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273d959c12f4de683c39a1bafe3
+273,spotify:album:6tLES24vsABpoBU2UsQybl,A Love Letter To You 2 (Sped Up),14,2017-10-06,0-spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,10X-Trippie Redd,https://i.scdn.co/image/ab67616d0000b2738d9676361984d8354f817357
+274,spotify:album:55XA1uIQSqmlTBkVVx6ptz,A Love Letter To You 2,14,2017-10-06,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b273e991f37dbb44249ac01314f0
+275,spotify:album:2Pdkkur0XxF78O9VFMV2ZF,A Love Letter To You (Sped Up),12,2017-05-26,0-spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,10X-Trippie Redd,https://i.scdn.co/image/ab67616d0000b27380f12e271090833ae09dd07b
+276,spotify:album:7ae73nWyKrrH9wwGm97RIA,A Love Letter To You,12,2017-05-14,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,https://i.scdn.co/image/ab67616d0000b2738dca9cbf206c611b08a43c17
+277,spotify:album:4aW4iDepQUl5ZCHd1Gli68,Entergalactic,15,2022-09-30,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b27371cecf4c653a4bad539da13d
+278,spotify:album:2blXZboio9DF8VC39LmUag,A Kid Named Cudi,16,2022-07-15,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b273cd4666c02c9749c71dabb8ea
+279,spotify:album:19ZYOtXGdqGpeeDS9SJccD,The Boy Who Flew To The Moon (Vol. 1),18,2022-07-08,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b273ef3b5a279ee075749b67e0a7
+280,spotify:album:64nbgEEIcY4g1ElVLONJ0w,Man On The Moon III: The Chosen,18,2020-12-11,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b2739bf7698a1737bc7c2e4a14f3
+281,spotify:album:6pwuKxMUkNg673KETsXPUV,KIDS SEE GHOSTS,7,2018-06-08,0-spotify:artist:5K4W6rqBFWDnAN6FQUkS6x-spotify:artist:0fA0VVWsXO9YnASrzqfmYu,KIDS SEE GHOSTS-Kanye West-Kid Cudi,https://i.scdn.co/image/ab67616d0000b273013c00ee367dd85396f79c82
+282,spotify:album:5bCk3kWAy2JbbTfHqzZCII,Passion Pain & Demon Slayin',19,2016-12-16,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b2735c8d9ad991d2a23eb039d8dd
+283,spotify:album:6e8pwYKSF9iZjpPep1DVzx,Speedin' Bullet 2 Heaven,26,2015-12-04,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b273a4ea8c76f78b72ce3bda7625
+284,spotify:album:7qrXPKTQeYWTp42aJqa9s6,KiD CuDi presents SATELLITE FLIGHT: The journey to Mother Moon,10,2014-02-25,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b2737c0f6a5c2fa4cd12049aff7e
+285,spotify:album:262o5a05pMUDSV2uzo5EwQ,Indicud,18,2013-04-12,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b273b9ab5cc935d2327a7d2bc629
+286,spotify:album:08eM9GRdr5BCCHNqS3Wwud,Man On The Moon II: The Legend Of Mr. Rager,17,2010-11-09,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b27359e842b6a3566a141f27f815
+287,spotify:album:2S8AWAM0nxyFy66YnUfIs3,Man On The Moon: The End Of Day (Deluxe),18,2009-01-01,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,https://i.scdn.co/image/ab67616d0000b273a487deeecb334b6619489d74
+288,spotify:album:1N3KJHdJWxK27Ze2AP2Vtk,It's Almost Dry: Ye vs. Pharrell,12,2022-04-25,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b2733846b8cf34ddf179677543b3
+289,spotify:album:74xlON1sCCChynzbgLlc7Q,It's Almost Dry: Pharrell vs. Ye,12,2022-04-25,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b273f826d49f1077a0fbf5c45b89
+290,spotify:album:6o38CdD7CUlZDCFhjZYLDH,It's Almost Dry,12,2022-04-22,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b273e27dfef438562f2ecb98a642
+291,spotify:album:07bIdDDe3I3hhWpxU6tuBp,DAYTONA,7,2018-05-25,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b273263555eebbe2b375593aa31e
+292,spotify:album:4OoNqHBpbgDoqtN3u1IdiC,King Push – Darkest Before Dawn: The Prelude,10,2015-12-18,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b27316f96f33365e0ae909f75698
+293,spotify:album:7e51fH5KpL87BCIVO068fh,Spotify Sessions,11,2014-06-10,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b273e13dbfdd05b83b1ed435b458
+294,spotify:album:42oQv8fbI5CbeuAasf2ILC,My Name Is My Name,12,2013-10-31,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b273861ecd2783b33bde98760364
+295,spotify:album:6ZS2NOEZ7XwlNlKWK2dzPM,Fear of God II: Let Us Pray,12,2011-11-08,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,https://i.scdn.co/image/ab67616d0000b2732749e1b9049f703e43ece068
+296,spotify:album:51heTwkSfb4Z5dRIgwU2bd,SICK!,10,2022-01-14,spotify:artist:3A5tHz1SfngyOZM2gItYKu,Earl Sweatshirt,https://i.scdn.co/image/ab67616d0000b27337834cc82e604d7c124bb951
+297,spotify:album:1RWgm4YvRL0YN1iX1Mto7b,FEET OF CLAY (Deluxe),9,2020-07-24,spotify:artist:3A5tHz1SfngyOZM2gItYKu,Earl Sweatshirt,https://i.scdn.co/image/ab67616d0000b2731feefce1c62dd359260b9fbd
+298,spotify:album:0N0EFoE8csbKxl5lxT1ylm,FEET OF CLAY,7,2019-11-01,spotify:artist:3A5tHz1SfngyOZM2gItYKu,Earl Sweatshirt,https://i.scdn.co/image/ab67616d0000b2731fab037626d29339dd28b74e
+299,spotify:album:66at85wgO2pu5CccvqUF6i,Some Rap Songs,15,2018-11-30,spotify:artist:3A5tHz1SfngyOZM2gItYKu,Earl Sweatshirt,https://i.scdn.co/image/ab67616d0000b2732b688ab63b1a5f281cfdf451
+300,spotify:album:3wUv2IjD5hPrqlPakpczQa,I Don't Like Shit I Don't Go Outside: An Album by Earl Sweatshirt,10,2015-03-23,spotify:artist:3A5tHz1SfngyOZM2gItYKu,Earl Sweatshirt,https://i.scdn.co/image/ab67616d0000b27316ac34a19212811cf922ab71
+301,spotify:album:5vRfIDOPJHy3W2wHWbzLlE,Doris,15,2013-08-16,spotify:artist:3A5tHz1SfngyOZM2gItYKu,Earl Sweatshirt,https://i.scdn.co/image/ab67616d0000b27346f9bf1154c7205b0e8b1667
+302,spotify:album:1GG6U2SSJPHO6XsFiBzxYv,CALL ME IF YOU GET LOST: The Estate Sale,24,2023-03-31,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b273aa95a399fd30fbb4f6f59fca
+303,spotify:album:45ba6QAtNrdv6Ke4MFOKk9,CALL ME IF YOU GET LOST,16,2021-06-25,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b273696b4e67423edd64784bfbb4
+304,spotify:album:5zi7WsKlIiUXv09tbGLKsE,IGOR,12,2019-05-17,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b2737005885df706891a3c182a57
+305,spotify:album:2nkto6YNI4rUYTLqEwWJ3o,Flower Boy,14,2017-07-21,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3
+306,spotify:album:5V3Chnpno9oTI7JSPXKUf3,Cherry Bomb + Instrumentals,26,2015-04-13,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b27337906edcfbfde42b203097f2
+307,spotify:album:621OhgnZJ7Pz8iUazct1In,Cherry Bomb,13,2015-04-13,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b273e4bf0d3d9e0224a30ca5f665
+308,spotify:album:4jEKedq9rWPV9OXuMkrZCa,Wolf + Instrumentals,38,2013-04-01,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b273ecdf37c0fb7d35f589e2fb4d
+309,spotify:album:40QTqOBBxCEIQlLNdSjFQB,Wolf,18,2013-04-01,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b27322007a4aa8a55fe7b1de5632
+310,spotify:album:5dbCm8qaCdWnNdVyi3urUO,Goblin,18,2011-05-09,0,Tyler The Creator,https://i.scdn.co/image/ab67616d0000b27328ae9a159d24cb0ab2552712
+311,spotify:album:5iJvtKGTQRIo2KL42xS7JX,Detroit 2 (Deluxe),24,2022-09-19,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b2736bc7f20a88efc5cc056e1195
+312,spotify:album:4XXX0W3F9QNxtkofgUbxaj,Detroit,18,2022-09-05,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b2736bc8f07189843c966b3b95bc
+313,spotify:album:2wsEKWXcUpVNR2AKprorV3,Finally Famous (10th Anniversary Deluxe Edition Remixed and Remastered),16,2021-06-25,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b2734160f3e11ed57e0dba4f4c80
+314,spotify:album:6slkiHeFK3wW2D1mao0TX3,Detroit 2,21,2020-09-04,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b273b1b3fdd23be4c158d4d2c32f
+315,spotify:album:0llyIxX3nDC3hobbGibVZl,Double Or Nothing (& Metro Boomin),10,2017-12-08,spotify:artist:0c173mlxpT3dSFRgMO8XPh-0,Big Sean-Metro Boomin,https://i.scdn.co/image/ab67616d0000b273a921ed2b886e7d154e88d37b
+316,spotify:album:0XAIjjN5qxViVS0Y5fYkar,I Decided.,14,2017-02-03,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b273e572359074e5da958a922987
+317,spotify:album:4Nlbt2EuXedr6UqaeXEI4c,Dark Sky Paradise (Deluxe),15,2015-02-24,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b273f6a63a9dbf0f1c388db690fc
+318,spotify:album:1j2x7FJXTgUT0X5hZ8TDXE,Dark Sky Paradise,12,2015-02-24,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b27350192d5f728fea13fb3af203
+319,spotify:album:5RlT8X7XGGLKUhoimrDl54,Hall Of Fame (Deluxe),18,2013-01-01,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b273d126daad8e8479dbad94610e
+320,spotify:album:4GZRT7uSmZOmmp3iEsFuj7,Hall Of Fame,15,2013-01-01,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b2736aadd50c800bd47d75654aac
+321,spotify:album:19DGkH750PrQMMnKqBAxfY,Finally Famous (Deluxe),16,2011-01-01,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b273b1c48e4e64087ef3805dd407
+322,spotify:album:2fRLnox9PQ9nos2YYdcYwE,Finally Famous,13,2011-01-01,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,https://i.scdn.co/image/ab67616d0000b2735634a639afe491a0bffcd54b
+323,spotify:album:25Uddgldy3slnChqKqHsIM,AftërLyfe,22,2023-02-24,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b2733f560650c583444498c214f0
+324,spotify:album:6Xo2PDEoQKzCndIbks2kvu,Lyfë,12,2022-09-09,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b2737aee5b36a3a60ca926bc429b
+325,spotify:album:0345WPzPBSeISh2IpIQWxT,2 Alivë (Geëk Pack),29,2022-04-01,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b273dac51d9a5701fbfb222f2f06
+326,spotify:album:0d1BFY8z15vye3KjtLvF3u,2 Alivë,20,2022-02-18,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b27372b69f1f356613717909d6db
+327,spotify:album:1x55Z0fYARLdeJVjG2UESs,Up 2 Më,22,2021-09-10,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b273b20fdc3ee4c262693cfdf005
+328,spotify:album:05QOSu1AEcQxM5jvZFuann,4L,20,2021-06-10,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b27387b1f578fa40d6ac504b57d7
+329,spotify:album:1n3e9mGQUpv1UXOxMre4My,Alivë,22,2021-04-02,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b2738bec48cd14271058a813467d
+330,spotify:album:2QcYIzmkEf1fdsOgfANuwN,Wake Up Call,7,2019-01-09,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,https://i.scdn.co/image/ab67616d0000b273365f5ef464e63fa4d52341d0
+331,spotify:album:2Q2TRdT994vTzGE3Grmmht,Love Sick (Deluxe),20,2023-02-28,spotify:artist:4Gso3d4CscCijv0lmajZWs,Don Toliver,https://i.scdn.co/image/ab67616d0000b273f5e27c2aa0b110c2b6611577
+332,spotify:album:26z5llzd194mcCZHADWd6k,Love Sick,16,2023-02-24,spotify:artist:4Gso3d4CscCijv0lmajZWs,Don Toliver,https://i.scdn.co/image/ab67616d0000b273feeff698e6090e6b02f21ec0
+333,spotify:album:2WmJ5wp5wKBlIJE6FDAIBJ,Life of a DON,16,2021-10-08,spotify:artist:4Gso3d4CscCijv0lmajZWs,Don Toliver,https://i.scdn.co/image/ab67616d0000b273ab738b25b86bf02f0346c53d
+334,spotify:album:69RuKg34VBwhfiGuMpXUWQ,Heaven Or Hell (CHOPNOTSLOP REMIX),12,2020-04-17,spotify:artist:4Gso3d4CscCijv0lmajZWs,Don Toliver,https://i.scdn.co/image/ab67616d0000b2737978515522c548461e16cc61
+335,spotify:album:7z4GhRfLqfSkqrj5F3Yt2B,Heaven Or Hell,12,2020-03-13,spotify:artist:4Gso3d4CscCijv0lmajZWs,Don Toliver,https://i.scdn.co/image/ab67616d0000b27345190a074bef3e8ce868b60c
+336,spotify:album:2VubyYz7rZ5Z68IJ3CjwNf,Donny Womack,13,2018-08-02,spotify:artist:4Gso3d4CscCijv0lmajZWs,Don Toliver,https://i.scdn.co/image/ab67616d0000b2731c00775c64af66b04a8ece58
+337,spotify:album:2actLFtpiiBZm1z0TUzMx2,Culture III (Deluxe),24,2021-06-11,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273da9f9ce257d0f654279d6022
+338,spotify:album:3uyOwJu4r3yroAkFywNFM3,Culture III,19,2021-06-11,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273f89d00155b6a066650e5460d
+339,spotify:album:7fd7SEK25VS3gJAUgSwL6y,Culture II,24,2018-01-26,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b2739c188c494d8bfaf895411890
+340,spotify:album:4JTOxuvM2jcSqAvEZtZsOO,Culture,13,2017-01-27,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b2736275aeac316378b0dd4f31fd
+341,spotify:album:7Hd1Gqx8xFRAnQOLHAZxn3,YRN 2 (Young Rich Niggas 2),14,2016-10-14,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273b462ad328dc32384e92df508
+342,spotify:album:7qLM7egb40QyDHa3CknQqs,Rich Shooters,11,2015-11-01,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273e837972e128cde0623176127
+343,spotify:album:4R8gIy454OjbyRspuPu5A7,Currency,16,2015-09-02,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b27346767e03e155e95b24c6a88b
+344,spotify:album:34DPoSeDW5fw2QW9Hl5Y92,Yung Rich Nation,15,2015-07-31,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273e748816bc030ae86a975f3bb
+345,spotify:album:36jv2wndXsaiUghNs9beLv,The Green Album,10,2015-06-09,0-spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Gucci Mane-Migos,https://i.scdn.co/image/ab67616d0000b273a46c66ca73fb2e21b982fcdd
+346,spotify:album:0lfwxoyCgsqxo6GGBRQc6j,Rich Ni**a Timeline,18,2014-11-05,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273b093f061da31a2c81e76ef40
+347,spotify:album:1NIzKm1DqvComMoEF1FZPQ,No Label II,20,2014-02-25,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b2735c4d2b8429e7bbcda34e14de
+348,spotify:album:2HuT5JdeK6QUrZqK6pTmnI,No Label,20,2013-07-11,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273224835678ca6c7a973b4a777
+349,spotify:album:4YmTZjHk8SmTFTiVMXBN1A,Young Rich N*ggas,20,2013-07-09,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b273adf74d8984ea3fbe8399ba9d
+350,spotify:album:3ZPy9VAhAgGHen0TIlWI7V,Juug Season,19,2011-08-25,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,https://i.scdn.co/image/ab67616d0000b2732fd10c1458abf420b185b845
+351,spotify:album:2rmPnKM3T64J7Xz5TEyR0c,Cocodrillo Turbo,10,2022-04-29,spotify:artist:7BMccF0hQFBpP6417k1OtQ,Action Bronson,https://i.scdn.co/image/ab67616d0000b2732a3e3c2cfad3f1f4e3ee0004
+352,spotify:album:1ZbgQbpmCbLX2RTYSAIG6k,Only For Dolphins,12,2020-09-25,spotify:artist:7BMccF0hQFBpP6417k1OtQ,Action Bronson,https://i.scdn.co/image/ab67616d0000b273e8e6cc55058bbd882aa6ef5a
+353,spotify:album:3BPX4x5EQOd9vzpPC2rMrm,Lamb Over Rice,7,2019-11-22,spotify:artist:7BMccF0hQFBpP6417k1OtQ-0,Action Bronson-The Alchemist,https://i.scdn.co/image/ab67616d0000b2731680695dc187004fe5627b04
+354,spotify:album:1RpE0cvRLrWxtaGeUjWqgV,White Bronco,11,2018-11-01,spotify:artist:7BMccF0hQFBpP6417k1OtQ,Action Bronson,https://i.scdn.co/image/ab67616d0000b2739be3f49b9c63dcf05cf5e4db
+355,spotify:album:0N3HnJ7Jw1VrfO5TnbNWEA,Blue Chips 7000,13,2017-08-25,spotify:artist:7BMccF0hQFBpP6417k1OtQ,Action Bronson,https://i.scdn.co/image/ab67616d0000b273e1b44f2f2eb1501a95359259
+356,spotify:album:7ijgeLAW3W3vZ9jf6tozFq,Mr. Wonderful,13,2015-03-23,spotify:artist:7BMccF0hQFBpP6417k1OtQ,Action Bronson,https://i.scdn.co/image/ab67616d0000b2730949c5a5ad8bec4bebacc47d
+357,spotify:album:3BClCxsYrpmoL7U1gVFvWa,SAAAB Stories Produced by Harry Fraud,7,2013-06-11,spotify:artist:7BMccF0hQFBpP6417k1OtQ,Action Bronson,https://i.scdn.co/image/ab67616d0000b273cf7b883ff5d6992874edc90a
+358,spotify:album:7zAtwFIvAtyqJ8VaI9TYn2,Well Done,15,2011-11-22,spotify:artist:7BMccF0hQFBpP6417k1OtQ-0,Action Bronson-Statik Selektah,https://i.scdn.co/image/ab67616d0000b2735b55e54245236360a21deb38
+359,spotify:album:1hNdA7lmK8KNVq99faGmbM,Well Done,15,2011-11-22,spotify:artist:7BMccF0hQFBpP6417k1OtQ-0,Action Bronson-Statik Selektah,https://i.scdn.co/image/ab67616d0000b273ba2d03946c00132ab79caa44

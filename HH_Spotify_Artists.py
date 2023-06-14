@@ -34,17 +34,16 @@ def fetch_artists():
     # init empty lists to load then concat into DF
     artist_name, spotify_name, artist_uri, genres, spotify_popularity, spotify_followers, images  = ([] for i in range (7))
 
-    for i in range(0,len(artists)):
+    for i, search_name in enumerate(artists):
         # for each Name from Genius, search under artists and return data 
-        search_name = artists[i]
         if(i%5==0):
-            print(f"{i}: {search_name}")
+            print(i, search_name)
         search_name_tree = spot.searchArtist(search_name)['artists']['items'][0]
 
-        artist_name.append(search_name)
-        spotify_name.append(search_name_tree["name"])
+        artist_name.append(search_name.replace(",", ""))
+        spotify_name.append(search_name_tree["name"].replace(",", ""))
         artist_uri.append(search_name_tree["uri"])
-        genres.append(search_name_tree["genres"])
+        genres.append("-".join([_ for _ in search_name_tree["genres"]]) )
         spotify_popularity.append(search_name_tree["popularity"])
         spotify_followers.append(search_name_tree["followers"]["total"])
         images.append(search_name_tree["images"][0]["url"])
@@ -55,6 +54,7 @@ def fetch_artists():
     
 if __name__=="__main__":
     df = fetch_artists()
+    df.index.name = "index"
     # just until loaded into SQL
-    df.to_excel("SpotifyArtists.xlsx")
+    df.to_csv("S3 Data/SpotifyArtists")
     print(df)

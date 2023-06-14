@@ -21,10 +21,10 @@ def get_song_metrics(df):
     spot = spotWrapper()
     dance, energy, loudness, valence, tempo, instru, speech = ([] for i in range(7))
     all_uris = df["song_uri"]
-    print(df)
+    #print(df)
     columns = ["dance", "energy", "loudness", "valence", "tempo", "instru", "speech"]
-    print(columns)
-    length = 2#len(all_uris)
+    #print(columns)
+    length = len(all_uris)
     for i in range(0,length):
         print(i)
         if(i%50 == 0):
@@ -55,12 +55,13 @@ def get_song_metrics(df):
                                         pd.Series(tempo), pd.Series(instru), pd.Series(speech)],
                                 axis=1, keys=columns)
     df = df.reset_index(drop=True)
-    #new_df = new_df.reset_index(drop=True)
     return pd.concat([df, new_df], axis=1)
                                         
 
 if __name__=="__main__":
-    main = pd.read_excel("SpotifySongs.xlsx")
+    main = pd.read_csv("S3 Data/SpotifySongs")
     with_metrics = get_song_metrics(main)
+    with_metrics = with_metrics.drop( [_ for _ in with_metrics.columns if "Unnamed" in _]  , axis=1)
+    with_metrics.index.name = "index"
     print(with_metrics)
-    with_metrics.to_excel("SpotifySongsMetrics.xlsx")
+    with_metrics.to_csv("S3 Data/SpotifySongsMetrics")
