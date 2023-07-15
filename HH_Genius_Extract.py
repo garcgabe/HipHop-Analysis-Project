@@ -13,11 +13,11 @@ fetch_number = input("How many songs by each artists?")
 artists = []
 
 class geniusWrapper():
-    genius_client_id = '6ik7FFRHyv94azwRfLlDIpTAS-710CM1BoWDfO2x82LkpIz9g9Oo5-YQbp_B_xzA'
-    genius_client_secret = '23fPMx4U0q6TJRT0ss3aIpXRhT9w0taLUf-3_w2iRxAYU1b3uKSPvucwdqbkf8iObaqM5-_f0RXOTV92bLeLvQ'
+    genius_client_id = '###'
+    genius_client_secret = '####'
 
     def __init__(self):
-        self.genius = lg.Genius('SFSvR6r7o3-3g123P0DUAFkiqsvBZaptEbjQw2Nw6rAPLUkUA9d89_8VdNa9tK50')
+        self.genius = lg.Genius('####')
  
     def getSongsByArtist(self, artist, number):
         return (self.genius.search_artist(artist, max_songs=number,get_full_info=False)).songs
