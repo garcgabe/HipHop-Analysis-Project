@@ -7,8 +7,8 @@ import time, sys
 class spotWrapper():
     def __init__(self):
         # Hide these within venv variables
-        client_id = 'accd0aa479164ddcbf1cbf822512b80b'
-        client_secret = '58bfc467435045e7b61c86fb03385729'
+        client_id = '####'
+        client_secret = '####'
         client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
         self.spot = spotipy.Spotify(client_credentials_manager=client_credentials_manager,
                                     retries=10, status_retries=10)
