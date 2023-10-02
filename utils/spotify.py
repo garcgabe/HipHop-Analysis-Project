@@ -1,7 +1,7 @@
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy
 
-from env import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
+from utils.env import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
 
 class SpotifyWrapper():
     def __init__(self):

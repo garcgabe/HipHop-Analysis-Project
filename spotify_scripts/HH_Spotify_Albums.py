@@ -1,26 +1,22 @@
 from utils.spotify import SpotifyWrapper
+from utils.postgres import Postgres
 import pandas as pd
-import psycopg2 as pg
+
+import sys
 
 spot = SpotifyWrapper()
+db = Postgres()
     
-def connect():
-    connection_var = pg.connect(
-        host="localhost",
-        database="hiphop",
-        user="garcgabe",
-        password="password"
-    )
-    return connection_var
-
-
 def create_df():
 
 ###
 ### these need to change to read artist info from the DB
 ###
-    spot_artists = pd.read_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyArtists")
-    artists_uri = spot_artists[['spotify_name','artist_uri']]
+    artists_uri = db.execute_query(f"""
+            SELECT artist_uri, spotify_name FROM artists;
+            """)
+    print(artists_uri)
+    sys.exit(0)
     # title of each column
     columns = ["album_uri", "album_name", "total_tracks", "release_date", 
             "artist_uris", "artist_names", "images"]
@@ -59,7 +55,7 @@ def create_df():
 
 if __name__=="__main__":
     album_data = create_df()
-    album_data.index.name = "album_id"
+
     # may have to introduce own duplicate logic here to keep explicit albums
     # or only add explicit ones
     album_data = album_data.drop_duplicates(subset="album_uri", keep='first')

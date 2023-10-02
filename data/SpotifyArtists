@@ -1,34 +1,34 @@
-index,artist_name,spotify_name,artist_uri,spotify_popularity,spotify_followers,genres,image
-0,A$AP Rocky,A$AP Rocky,spotify:artist:13ubrt8QOOCPljQ2FL1Kca,83,12336141,east coast hip hop-hip hop-rap-trap,https://i.scdn.co/image/ab6761610000e5ebee452efcf24aa4124fb28d94
-1,Lil Uzi Vert,Lil Uzi Vert,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,86,15186167,melodic rap-philly rap-rage rap-rap,https://i.scdn.co/image/ab6761610000e5eb30122c0d3ead72f96bb5ee93
-2,Playboi Carti,Playboi Carti,spotify:artist:699OTQXzgjhIYAHMy9RyPD,83,8236702,atl hip hop-plugg-pluggnb-rage rap-rap,https://i.scdn.co/image/ab6761610000e5eb504ff11d788162fbf8078654
-3,Future,Future,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,90,14063433,atl hip hop-hip hop-rap-southern hip hop-trap,https://i.scdn.co/image/ab6761610000e5eb24e41f491b129093a6fee383
-4,Young Thug,Young Thug,spotify:artist:50co4Is1HCEo8bhOyUWKpn,84,8412531,atl hip hop-atl trap-gangster rap-melodic rap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb547d2b41c9f2c97318aad0ed
-5,Chance the Rapper,Chance the Rapper,spotify:artist:1anyVhU62p31KFi8MEzkbf,73,5889568,chicago rap-conscious hip hop-hip hop-pop rap-rap,https://i.scdn.co/image/ab6761610000e5eba6ab3c4df02cec59758ae3fa
-6,21 Savage,21 Savage,spotify:artist:1URnnhqYAYcrqrcwql10ft,90,13896690,atl hip hop-hip hop-rap-trap,https://i.scdn.co/image/ab6761610000e5eb35ca7d2181258b51c0f2cf9e
-7,Lil Wayne,Lil Wayne,spotify:artist:55Aa2cqylxrFIXC767Z865,86,13648198,hip hop-new orleans rap-pop rap-rap-trap,https://i.scdn.co/image/ab6761610000e5ebc63aded6f4bf4d06d1377106
-8,Drake,Drake,spotify:artist:3TVXtAsR1Inumwj472S9r4,95,76064784,canadian hip hop-canadian pop-hip hop-rap-toronto rap,https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9
-9,Travis Scott,Travis Scott,spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY,89,22588131,hip hop-rap-slap house,https://i.scdn.co/image/ab6761610000e5ebe707b87e3f65997f6c09bfff
-10,Juice WRLD,Juice WRLD,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,88,29410957,chicago rap-melodic rap-rap,https://i.scdn.co/image/ab6761610000e5eb1908e1a8b79abf71d5598944
-11,J. Cole,J. Cole,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,87,20373267,conscious hip hop-hip hop-north carolina hip hop-rap,https://i.scdn.co/image/ab6761610000e5ebadd503b411a712e277895c8a
-12,Lil Baby,Lil Baby,spotify:artist:5f7VJjfbwm532GiveGC0ZK,88,14357308,atl hip hop-atl trap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb6cad3eff5adc29e20f189a6c
-13,Kendrick Lamar,Kendrick Lamar,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,89,24280008,conscious hip hop-hip hop-rap-west coast rap,https://i.scdn.co/image/ab6761610000e5eb437b9e2a82505b3d93ff1022
-14,Roddy Ricch,Roddy Ricch,spotify:artist:757aE44tKEUQEqRuT6GnEB,79,9428590,melodic rap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb9c30c6b69a55d48decd71600
-15,Meek Mill,Meek Mill,spotify:artist:20sxb77xiYeusSH8cVdatc,75,7284622,hip hop-philly rap-pop rap-rap-southern hip hop-trap,https://i.scdn.co/image/ab6761610000e5eb238b2a30c741d42a4c91b7b7
-16,Kanye West,Kanye West,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,90,20268773,chicago rap-hip hop-rap,https://i.scdn.co/image/ab6761610000e5eb867008a971fae0f4d913f63a
-17,JAY-Z,JAY-Z,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,84,8412612,east coast hip hop-gangster rap-hip hop-pop rap-rap,https://i.scdn.co/image/ab6761610000e5ebc75afcd5a9027f60eaebb5e4
-18,Isaiah Rashad,Isaiah Rashad,spotify:artist:6aaMZ3fcfLv4tEbmY7bjRM,67,1287004,hip hop-indie hip hop-rap-tennessee hip hop-underground hip hop,https://i.scdn.co/image/ab6761610000e5eb1ff1685224034e6c12538722
-19,Eminem,Eminem,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,90,71953213,detroit hip hop-hip hop-rap,https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b
-20,Pop Smoke,Pop Smoke,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,82,12569642,brooklyn drill-rap,https://i.scdn.co/image/ab6761610000e5eb597f9edd2cd1a892d4412b09
-21,Lil Durk,Lil Durk,spotify:artist:3hcs9uc56yIGFCSy9leWe7,87,5703814,chicago drill-chicago rap-drill-hip hop-rap-trap,https://i.scdn.co/image/ab6761610000e5eba0461c1f2218374aa672ce4e
-22,Gunna,Gunna,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,83,5326468,atl hip hop-melodic rap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb6501f8a7d50c56e86e46f920
-23,Trippie Redd,Trippie Redd,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,80,8740215,melodic rap-rap,https://i.scdn.co/image/ab6761610000e5eb32f8f4df5e7b05a7e4d170ca
-24,Kid Cudi,Kid Cudi,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,80,6517484,hip hop-ohio hip hop-pop rap-rap,https://i.scdn.co/image/ab6761610000e5eb876faa285687786c3d314ae0
-25,Pusha T,Pusha T,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,71,2781365,gangster rap-hip hop-rap-southern hip hop-trap-virginia hip hop,https://i.scdn.co/image/ab6761610000e5ebc5b88a3924d8318f25f20594
-26,Earl Sweatshirt,Earl Sweatshirt,spotify:artist:3A5tHz1SfngyOZM2gItYKu,68,2023745,drumless hip hop-experimental hip hop-hip hop-rap-underground hip hop,https://i.scdn.co/image/ab6761610000e5eb5e93db92ca7864585fbe5f28
-27,Tyler The Creator,Tyler The Creator,spotify:artist:4V8LLVI7PbaPR0K2TGSxFF,87,11732601,hip hop-rap,https://i.scdn.co/image/ab6761610000e5eb8278b782cbb5a3963db88ada
-28,Big Sean,Big Sean,spotify:artist:0c173mlxpT3dSFRgMO8XPh,77,10853331,detroit hip hop-hip hop-pop rap-r&b-rap-southern hip hop-trap,https://i.scdn.co/image/ab6761610000e5eb89dccc0a0b3d818c8d5fb711
-29,Yeat,Yeat,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,83,2557351,pluggnb-rage rap,https://i.scdn.co/image/ab6761610000e5eba36d13951ab8280a63bac16c
-30,Don Toliver,Don Toliver,spotify:artist:4Gso3d4CscCijv0lmajZWs,84,2948309,rap,https://i.scdn.co/image/ab6761610000e5ebeb63bf6379a9ea8453a30020
-31,Migos,Migos,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,76,13222904,atl hip hop-hip hop-rap-trap,https://i.scdn.co/image/ab6761610000e5ebf4593f7b778219838d858c34
-32,Action Bronson,Action Bronson,spotify:artist:7BMccF0hQFBpP6417k1OtQ,62,766986,alternative hip hop-east coast hip hop-hip hop-nyc rap-queens hip hop,https://i.scdn.co/image/ab6761610000e5ebaef8392a62c123944b6383b2
+artist_id,artist_uri,artist_name,spotify_name,spotify_popularity,spotify_followers,genres,images
+0,spotify:artist:13ubrt8QOOCPljQ2FL1Kca,A$AP Rocky,A$AP Rocky,81,12876680,east coast hip hop-hip hop-rap-trap,https://i.scdn.co/image/ab6761610000e5eb5c58c41a506a0d6b32cc6cad
+1,spotify:artist:4O15NlyKLIASxsJ0PrXPfz,Lil Uzi Vert,Lil Uzi Vert,85,15960839,hip hop-melodic rap-philly rap-rage rap-rap,https://i.scdn.co/image/ab6761610000e5eb1234d2f516796badbdf16a89
+2,spotify:artist:699OTQXzgjhIYAHMy9RyPD,Playboi Carti,Playboi Carti,85,8882579,atl hip hop-plugg-pluggnb-rage rap-rap,https://i.scdn.co/image/ab6761610000e5eb504ff11d788162fbf8078654
+3,spotify:artist:1RyvyyTE3xzB2ZywiAwp0i,Future,Future,89,14974136,atl hip hop-hip hop-rap-southern hip hop-trap,https://i.scdn.co/image/ab6761610000e5eb24e41f491b129093a6fee383
+4,spotify:artist:50co4Is1HCEo8bhOyUWKpn,Young Thug,Young Thug,84,8969672,atl hip hop-atl trap-gangster rap-melodic rap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb547d2b41c9f2c97318aad0ed
+5,spotify:artist:1anyVhU62p31KFi8MEzkbf,Chance the Rapper,Chance the Rapper,72,5944292,chicago rap-conscious hip hop-hip hop-pop rap-rap,https://i.scdn.co/image/ab6761610000e5eba6ab3c4df02cec59758ae3fa
+6,spotify:artist:1URnnhqYAYcrqrcwql10ft,21 Savage,21 Savage,89,14988759,atl hip hop-hip hop-rap-trap,https://i.scdn.co/image/ab6761610000e5eb35ca7d2181258b51c0f2cf9e
+7,spotify:artist:55Aa2cqylxrFIXC767Z865,Lil Wayne,Lil Wayne,85,14152021,hip hop-new orleans rap-pop rap-rap-trap,https://i.scdn.co/image/ab6761610000e5ebc63aded6f4bf4d06d1377106
+8,spotify:artist:3TVXtAsR1Inumwj472S9r4,Drake,Drake,95,80466139,canadian hip hop-canadian pop-hip hop-pop rap-rap,https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9
+9,spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY,Travis Scott,Travis Scott,93,24403323,hip hop-rap-slap house,https://i.scdn.co/image/ab6761610000e5eb19c2790744c792d05570bb71
+10,spotify:artist:4MCBfE4596Uoi2O4DtmEMz,Juice WRLD,Juice WRLD,86,30858877,chicago rap-melodic rap-rap,https://i.scdn.co/image/ab6761610000e5eb1908e1a8b79abf71d5598944
+11,spotify:artist:6l3HvQ5sa6mXTsMTB19rO5,J. Cole,J. Cole,85,21550888,conscious hip hop-hip hop-north carolina hip hop-rap,https://i.scdn.co/image/ab6761610000e5ebadd503b411a712e277895c8a
+12,spotify:artist:5f7VJjfbwm532GiveGC0ZK,Lil Baby,Lil Baby,86,15443695,atl hip hop-atl trap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb6cad3eff5adc29e20f189a6c
+13,spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg,Kendrick Lamar,Kendrick Lamar,87,25548371,conscious hip hop-hip hop-rap-west coast rap,https://i.scdn.co/image/ab6761610000e5eb437b9e2a82505b3d93ff1022
+14,spotify:artist:757aE44tKEUQEqRuT6GnEB,Roddy Ricch,Roddy Ricch,76,9861208,melodic rap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb9c30c6b69a55d48decd71600
+15,spotify:artist:20sxb77xiYeusSH8cVdatc,Meek Mill,Meek Mill,73,7621920,hip hop-philly rap-pop rap-rap-southern hip hop-trap,https://i.scdn.co/image/ab6761610000e5eb238b2a30c741d42a4c91b7b7
+16,spotify:artist:5K4W6rqBFWDnAN6FQUkS6x,Kanye West,Kanye West,90,21497900,chicago rap-hip hop-rap,https://i.scdn.co/image/ab6761610000e5eb867008a971fae0f4d913f63a
+17,spotify:artist:3nFkdlSjzX9mRTtwJOzDYB,JAY-Z,JAY-Z,82,8673043,east coast hip hop-gangster rap-hip hop-pop rap-rap,https://i.scdn.co/image/ab6761610000e5ebc75afcd5a9027f60eaebb5e4
+18,spotify:artist:6aaMZ3fcfLv4tEbmY7bjRM,Isaiah Rashad,Isaiah Rashad,67,1331305,hip hop-rap-tennessee hip hop-underground hip hop,https://i.scdn.co/image/ab6761610000e5eb1ff1685224034e6c12538722
+19,spotify:artist:7dGJo4pcD2V6oG8kP0tJRR,Eminem,Eminem,89,77265779,detroit hip hop-hip hop-rap,https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b
+20,spotify:artist:0eDvMgVFoNV3TpwtrVCoTj,Pop Smoke,Pop Smoke,80,13000486,brooklyn drill-rap,https://i.scdn.co/image/ab6761610000e5eb597f9edd2cd1a892d4412b09
+21,spotify:artist:3hcs9uc56yIGFCSy9leWe7,Lil Durk,Lil Durk,82,6257984,chicago drill-chicago rap-drill-hip hop-rap-trap,https://i.scdn.co/image/ab6761610000e5eba0461c1f2218374aa672ce4e
+22,spotify:artist:2hlmm7s2ICUX0LVIhVFlZQ,Gunna,Gunna,85,5975863,atl hip hop-melodic rap-rap-trap,https://i.scdn.co/image/ab6761610000e5eb6501f8a7d50c56e86e46f920
+23,spotify:artist:6Xgp2XMz1fhVYe7i6yNAax,Trippie Redd,Trippie Redd,80,9053218,melodic rap-rap-trap,https://i.scdn.co/image/ab6761610000e5ebf2db81b3312a1f167fc54096
+24,spotify:artist:0fA0VVWsXO9YnASrzqfmYu,Kid Cudi,Kid Cudi,79,6705384,hip hop-ohio hip hop-pop rap-rap,https://i.scdn.co/image/ab6761610000e5eb876faa285687786c3d314ae0
+25,spotify:artist:0ONHkAv9pCAFxb0zJwDNTy,Pusha T,Pusha T,70,2873569,gangster rap-hip hop-pop rap-rap-southern hip hop-trap-virginia hip hop,https://i.scdn.co/image/ab6761610000e5ebc5b88a3924d8318f25f20594
+26,spotify:artist:3A5tHz1SfngyOZM2gItYKu,Earl Sweatshirt,Earl Sweatshirt,68,2104288,alternative hip hop-drumless hip hop-experimental hip hop-hip hop-rap-underground hip hop,https://i.scdn.co/image/ab6761610000e5ebd5183ad16c1eae15a1c378c7
+27,spotify:artist:4V8LLVI7PbaPR0K2TGSxFF,Tyler The Creator,Tyler The Creator,84,12747141,hip hop-rap,https://i.scdn.co/image/ab6761610000e5eb8278b782cbb5a3963db88ada
+28,spotify:artist:0c173mlxpT3dSFRgMO8XPh,Big Sean,Big Sean,75,11174497,detroit hip hop-hip hop-pop rap-r&b-rap-trap,https://i.scdn.co/image/ab6761610000e5eb89dccc0a0b3d818c8d5fb711
+29,spotify:artist:3qiHUAX7zY4Qnjx8TNUzVx,Yeat,Yeat,81,3151506,pluggnb-rage rap,https://i.scdn.co/image/ab6761610000e5eba36d13951ab8280a63bac16c
+30,spotify:artist:4Gso3d4CscCijv0lmajZWs,Don Toliver,Don Toliver,81,3279711,pop rap-rap-trap,https://i.scdn.co/image/ab6761610000e5ebeb63bf6379a9ea8453a30020
+31,spotify:artist:6oMuImdp5ZcFhWP0ESe6mG,Migos,Migos,75,13529015,atl hip hop-hip hop-pop rap-rap-trap,https://i.scdn.co/image/ab6761610000e5ebf4593f7b778219838d858c34
+32,spotify:artist:7BMccF0hQFBpP6417k1OtQ,Action Bronson,Action Bronson,62,788889,alternative hip hop-east coast hip hop-hip hop-nyc rap-queens hip hop,https://i.scdn.co/image/ab6761610000e5ebaef8392a62c123944b6383b2
