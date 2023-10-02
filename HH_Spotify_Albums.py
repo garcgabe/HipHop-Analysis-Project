@@ -46,6 +46,9 @@ def fetch_data():
             release_date.append(search_tree_split["release_date"] if len(search_tree_split["release_date"]) > 8 else search_tree_split["release_date"] + "-01-01")
             images.append(search_tree_split["images"][0]["url"])
 
+## add upsert logic here
+## on conflict do nothing - album already accounted for by prior artist (not explciit/ nonexplicit problem, just multi artist problem)
+
     ## final DF
     return pd.concat([pd.Series(album_uri), pd.Series(album_name), pd.Series(total_tracks),
                                         pd.Series(release_date), pd.Series(artist_uris), pd.Series(artist_names), pd.Series(images)], 
