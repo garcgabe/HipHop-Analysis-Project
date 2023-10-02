@@ -1,34 +1,27 @@
 from utils.spotify import SpotifyWrapper
 import pandas as pd
+
+# Artists brought in from constant list
 from utils.constants import artists
 
 spot = SpotifyWrapper()
  
-def readArtists():
-    artists = []
-    with open('/Users/garcgabe/Desktop/HipHop-Analysis-Project/artists.txt') as file:
-        name = 'x'
-        while(name != ''):
-            name = file.readline()
-            if name.strip() and 'stop' not in name:
-                artists.append(name.split("\n")[0])  
-            else:
-                break
-    return artists
-
 def fetch_artists():
     print("Beginning artist fetch...")
 
     # title of each column
-    columns = ["artist_name", "spotify_name", "artist_uri", "spotify_popularity", 
-            "spotify_followers","genres", "images"]
+    columns = ["artist_uri", "artist_name", "spotify_name", 
+               "spotify_popularity", "spotify_followers",
+               "genres", "images"]
+    
     # init empty lists to load then concat into DF
     artist_name, spotify_name, artist_uri, genres, spotify_popularity, spotify_followers, images  = ([] for i in range (7))
 
-    for i, search_name in enumerate(artists):
+    for counter, search_name in enumerate(artists):
         # for each Name from Genius, search under artists and return data 
-        if(i%5==0):
-            print(i, search_name)
+        if(counter%5==0):
+            print(counter, search_name)
+        
         search_name_tree = spot.searchArtist(search_name)['artists']['items'][0]
 
         artist_name.append(search_name.replace(",", ""))
@@ -39,14 +32,18 @@ def fetch_artists():
         spotify_followers.append(search_name_tree["followers"]["total"])
         images.append(search_name_tree["images"][0]["url"])
 
-    return pd.concat([pd.Series(artist_name), pd.Series(spotify_name), pd.Series(artist_uri),
+    return pd.concat([pd.Series(artist_uri), pd.Series(artist_name), pd.Series(spotify_name),
                                         pd.Series(spotify_popularity), pd.Series(spotify_followers), 
                                         pd.Series(genres), pd.Series(images)], 
                                         axis=1, keys=columns)
     
 if __name__=="__main__":
     df = fetch_artists()
+    print(df)
     df.index.name = "artist_id"
     # just until loaded into SQL
+
+
+
     df.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyArtists")
     print(df)
