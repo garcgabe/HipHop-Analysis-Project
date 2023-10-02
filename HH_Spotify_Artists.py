@@ -10,7 +10,7 @@ from utils.postgres import Postgres
 db = Postgres()
 spot = SpotifyWrapper()
  
-def fetch_artists():
+def fetch_data():
     print("Beginning artist fetch...")
 
     # title of each column
@@ -67,5 +67,5 @@ def fetch_artists():
                                         axis=1, keys=columns)
     
 if __name__=="__main__":
-    artist_data = fetch_artists()
+    artist_data = fetch_data()
 

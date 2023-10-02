@@ -3,20 +3,6 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
 from fuzzywuzzy import fuzz
 
-class spotWrapper():
-    def __init__(self):
-        client_id = 'accd0aa479164ddcbf1cbf822512b80b'
-        client_secret = '58bfc467435045e7b61c86fb03385729'
-        client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-        self.spot = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    def search(self, string):
-        return self.spot.search(q=string)
-
-    def getTrack(self, song, artist):
-        return self.spot.search(q=str(song + ' ' + artist))
-    def getAudioFeatures(self, song_id):
-        return self.spot.audio_features(song_id)
-
 def get_fuzz_ratio(var1, var2):
     return fuzz.ratio(var1, var2)
 
