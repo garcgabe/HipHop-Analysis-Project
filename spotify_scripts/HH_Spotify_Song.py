@@ -1,27 +1,12 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
+from utils.spotify import SpotifyWrapper
 import pandas as pd
 import time, sys
 
-
-class spotWrapper():
-    def __init__(self):
-        # Hide these within venv variables
-        client_id = '####'
-        client_secret = '####'
-        client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-        self.spot = spotipy.Spotify(client_credentials_manager=client_credentials_manager,
-                                    retries=10, status_retries=10)
-
-    def getAlbumsTracks(self, id):
-        return self.spot.album_tracks(id)
-    def getAudioFeatures(self, song_uri):
-        return self.spot.audio_features(song_uri)
-
+spot = SpotifyWrapper()
 
 def call_data(all_albums, all_artists):
     seen_artists = {key: False for key in all_artists}
-    spot = spotWrapper()
+
     print("Fetching songs for: " + str(len(all_albums)) + " albums.")
     song_uri, song_name, album_uri, artist_uris, artist_names, explicit, preview_url = ([] for i in range(7))
     columns = ["song_uri", "song_name", "album_uri", "artist_uris", "artist_names", "explicit", "preview_url"]
@@ -76,6 +61,7 @@ if __name__ == "__main__":
     # get album_uris to search for songs
     album_df = pd.read_csv("data/SpotifyAlbums")
     spot_album_uris = album_df["album_uri"]
+    
     # get artist names and uris to add to song data
     artist_df = pd.read_csv("data/SpotifyArtists")
     spot_artist_names = artist_df[["spotify_name", "artist_uri"]]

@@ -1,15 +1,8 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
+from utils.spotify import SpotifyWrapper
 import pandas as pd
+from utils.constants import artists
 
-class spotWrapper():
-    def __init__(self):
-        client_id = '####'
-        client_secret = '####'
-        client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-        self.spot = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    def searchArtist(self, string):
-        return self.spot.search(q=string, type="artist")
+spot = SpotifyWrapper()
  
 def readArtists():
     artists = []
@@ -25,8 +18,6 @@ def readArtists():
 
 def fetch_artists():
     print("Beginning artist fetch...")
-    spot = spotWrapper()
-    artists = readArtists()
 
     # title of each column
     columns = ["artist_name", "spotify_name", "artist_uri", "spotify_popularity", 

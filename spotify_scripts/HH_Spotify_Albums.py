@@ -1,22 +1,8 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-
-## 
-
-
+from utils.spotify import SpotifyWrapper
 import pandas as pd
 import psycopg2 as pg
-import sys
 
-class spotWrapper():
-    def __init__(self):
-        client_id = '####'
-        client_secret = '####'
-        client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-        self.spot = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    def getAlbums(self, uri):
-        return self.spot.artist_albums(uri, album_type="album")
-    
+spot = SpotifyWrapper()
     
 def connect():
     connection_var = pg.connect(
@@ -28,9 +14,8 @@ def connect():
     return connection_var
 
 
-
 def create_df():
-    spot = spotWrapper()
+
 ###
 ### these need to change to read artist info from the DB
 ###
