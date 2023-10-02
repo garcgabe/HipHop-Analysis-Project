@@ -55,7 +55,7 @@ def fetch_artists():
     
 if __name__=="__main__":
     df = fetch_artists()
-    df.index.name = "index"
+    df.index.name = "artist_id"
     # just until loaded into SQL
     df.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyArtists")
     print(df)

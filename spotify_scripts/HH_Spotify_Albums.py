@@ -1,5 +1,9 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+
+## 
+
+
 import pandas as pd
 import psycopg2 as pg
 import sys
@@ -70,7 +74,10 @@ def create_df():
 
 if __name__=="__main__":
     album_data = create_df()
-    album_data.index.name = "index"
+    album_data.index.name = "album_id"
+    # may have to introduce own duplicate logic here to keep explicit albums
+    # or only add explicit ones
     album_data = album_data.drop_duplicates(subset="album_uri", keep='first')
+    # 
     album_data.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifyAlbums")
     print(album_data)

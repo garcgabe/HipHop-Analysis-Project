@@ -85,7 +85,7 @@ if __name__ == "__main__":
 
     #persist dataframe in excel
     #spot_songs.to_excel("SpotifySongs.xlsx")
-    spot_songs.index.name = "index"
+    spot_songs.index.name = "song_id"
     
     print(spot_songs)
     spot_songs.to_csv("/Users/garcgabe/Desktop/HipHop-Analysis-Project/data/SpotifySongs")
