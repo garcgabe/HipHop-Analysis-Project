@@ -1,5 +1,5 @@
 import psycopg2 as pg
-from env import host, database, user, password
+from utils.env import host, database, user, password
 
 class Postgres():
     # holds two attributes:
