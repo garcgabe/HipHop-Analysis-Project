@@ -10,8 +10,8 @@ class SpotifyWrapper():
         self.spot = spotipy.Spotify(client_credentials_manager=client_credentials_manager,
                                     retries=10, status_retries=10)
 
-    def getAlbumsTracks(self, album_id):
-        return self.spot.album_tracks(album_id)
+    def getAlbumsTracks(self, album_uri):
+        return self.spot.album_tracks(album_uri)
     
     def getAudioFeatures(self, song_uri):
         return self.spot.audio_features(song_uri)
