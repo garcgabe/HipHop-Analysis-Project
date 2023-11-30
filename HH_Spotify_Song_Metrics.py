@@ -17,9 +17,11 @@ class spotWrapper():
     def getAudioFeatures(self, song_uri):
         return self.spot.audio_features(song_uri)
 
-def get_song_metrics(df):
+def get_song_metrics(uris):
     spot = spotWrapper()
+
     dance, energy, loudness, valence, tempo, instru, speech = ([] for i in range(7))
+    
     all_uris = df["song_uri"]
     #print(df)
     columns = ["dance", "energy", "loudness", "valence", "tempo", "instru", "speech"]
@@ -34,7 +36,7 @@ def get_song_metrics(df):
         print(uri)
         spot_audio = spot.getAudioFeatures(uri)
         if(spot_audio == None):
-            print("problem detected: " + uri)
+            print("problem detected; manually enter: " + uri)
             dance.append(0)
             energy.append(0)
             loudness.append(0)
