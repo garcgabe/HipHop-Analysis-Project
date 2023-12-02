@@ -20,7 +20,7 @@ def fetch_data():
     print("Beginning album fetch...")
     # init empty lists to load then concat into DF
     album_uri, album_name, total_tracks, release_date, artist_uris, artist_names, images  = ([] for i in range (7))
-    for i in range(0,1):#len(artists_uri)):
+    for i in range(0,len(artists_uri)):
         name_real = artists_uri["spotify_name"][i]
         print(f"Searching for albums by {name_real}...")
         name_uri = artists_uri["artist_uri"][i]
@@ -45,7 +45,7 @@ def fetch_data():
             
 
             json_string = json.dumps(search_tree_split, indent=4)
-            print(json_string)
+            #print(json_string)
 
             temp_album_uri = search_tree_split["uri"]
             album_uri.append(temp_album_uri)
