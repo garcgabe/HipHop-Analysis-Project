@@ -1,5 +1,5 @@
 import psycopg2 as pg
-from utils.env import host, database, user, password
+from utils.env import host, database, user, password, port
 
 class Postgres():
     # holds two attributes:
@@ -10,7 +10,8 @@ class Postgres():
             host=host,
             database=database,
             user=user,
-            password=password
+            password=password,
+            port=port
         )
         self.cursor = self.conn.cursor()
     

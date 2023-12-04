@@ -30,6 +30,7 @@ def call_data(all_albums):
         for num in range(0,number_of_artists):
             artist_name_in_list = album_data[0]["artists"][num]["name"]
             temp_artists.append(artist_name_in_list.replace(",", ""))
+
         # join these lists into one variables to append to list for DF addition
         # each song within this loop iteration will share these 2 variables since same album
         album_artists = "-".join(temp_artists)
