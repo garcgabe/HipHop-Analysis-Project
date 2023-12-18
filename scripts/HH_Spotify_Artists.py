@@ -49,6 +49,7 @@ def fetch_data():
         temp_images = search_name_tree["images"][0]["url"]
         images.append(temp_images)
 
+        #print(f"{temp_artist_uri}, {temp_artist_name}, {temp_spotify_name}, {temp_popularity}, {temp_followers}, {temp_genres}, {temp_images}")
 
         # performs an UPSERT for the artist information
         db.execute_query(f"""
