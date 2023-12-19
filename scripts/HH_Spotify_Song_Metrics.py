@@ -1,21 +1,8 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
+
 import pandas as pd
 import time, sys
 
-class spotWrapper():
-    def __init__(self):
-        # Hide these within venv variables
-        client_id = '####'
-        client_secret = '####'
-        client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-        self.spot = spotipy.Spotify(client_credentials_manager=client_credentials_manager,
-                                    retries=10, status_retries=10)
 
-    def getAlbumsTracks(self, id):
-        return self.spot.album_tracks(id)
-    def getAudioFeatures(self, song_uri):
-        return self.spot.audio_features(song_uri)
 
 def get_song_metrics(uris):
     spot = spotWrapper()

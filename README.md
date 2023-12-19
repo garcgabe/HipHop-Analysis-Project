@@ -14,4 +14,15 @@ we can add SQL logic to clean it up. just dump it all there for now and use SQL 
 - there are many song duplicates
 ---- they may be same song name, diff artist, same song name, same artist, diff album, and these have different song_uris, so may have to create some logic that aggregates the songs if they're on different albums.
 
--- idk we'll see
+with multiple_songs as (
+	select song_name--, count(album_uri) as occurrences 
+	from songs
+	group by song_name
+	having count(album_uri) > 1
+	)
+select song_name, album_uri from songs 
+where song_name in (select song_name from multiple_songs) 
+order by song_name
+
+-- need to be able to filter songs+albums by their artists
+-- need to 
