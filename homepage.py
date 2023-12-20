@@ -1,22 +1,23 @@
 import streamlit as st
 from utils.postgres import Postgres
 
-db = Postgres(**st.secrets.aws_credentials)
+#db = Postgres(**st.secrets.aws_credentials)
+conn = st.connection("hiphopdb", type="sql")
 
 # only gets artist names
-artists = db.fetch_data("""
+artists = conn.query("""
             SELECT artist_uri, artist_name FROM artists
 """)
 
 # gets artist names - delimited by 
-albums = db.fetch_data("""
+albums = conn.query("""
             SELECT album_uri, artist_uris
 """)
 
 ## query to filter by artists
 selected_artist_uri = None #add
 
-filtered_album_uris = db.fetch_data(f"""
+filtered_album_uris = conn.query(f"""
             SELECT album_uri FROM albums
             WHERE artist_uris LIKE '%{selected_artist_uri}$'
 """)
