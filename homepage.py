@@ -11,17 +11,17 @@ artists = conn.query("""
 """)
 
 # gets artist names - delimited by 
-albums = conn.query("""
-            SELECT album_uri, artist_uris
-""")
+# albums = conn.query("""
+#             SELECT album_uri, artist_uris
+# """)
 
 ## query to filter by artists
-selected_artist_uri = None #add
+# selected_artist_uri = None #add
 
-filtered_album_uris = conn.query(f"""
-            SELECT album_uri FROM albums
-            WHERE artist_uris LIKE '%{selected_artist_uri}$'
-""")
+# filtered_album_uris = conn.query(f"""
+#             SELECT album_uri FROM albums
+#             WHERE artist_uris LIKE '%{selected_artist_uri}$'
+# """)
 
 
 
