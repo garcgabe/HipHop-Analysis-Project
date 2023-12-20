@@ -2,7 +2,7 @@ import streamlit as st
 from utils.postgres import Postgres
 
 #db = Postgres(**st.secrets.aws_credentials)
-conn = st.connection("hiphopdb", type="sql")
+conn = st.connection("hiphop_db", type="sql")
 
 # only gets artist names
 artists = conn.query("""
