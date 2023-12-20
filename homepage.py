@@ -1,7 +1,7 @@
 import streamlit as st
 from utils.postgres import Postgres
 
-db = Postgres(st.secrets['aws_credentials'])
+db = Postgres(**st.secrets.aws_credentials)
 
 # only gets artist names
 artists = db.fetch_data("""
