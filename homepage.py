@@ -12,9 +12,9 @@ for row in rows.data:
     st.write(f"{row['name']} has a :{row['pet']}:")
 
 # only gets artist names
-artists = conn.query("""
-            SELECT artist_uri, artist_name FROM artists
-""")
+# artists = conn.query("""
+#             SELECT artist_uri, artist_name FROM artists
+# """)
 
 # gets artist names - delimited by 
 # albums = conn.query("""
@@ -31,7 +31,7 @@ artists = conn.query("""
 
 
 
-st.write(artists)
+#st.write(artists)
 
 st.sidebar.markdown("rap analytics")
 
