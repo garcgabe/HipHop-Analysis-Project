@@ -1,15 +1,19 @@
 import streamlit as st
 from st_supabase_connection import SupabaseConnection
 
-# Initialize connection.
-conn = st.connection("supabase",type=SupabaseConnection, )
+# init connection
+conn = st.connection("supabase",type=SupabaseConnection)
 
-# Perform query.
-rows = conn.query("*", table="mytable", ttl="1m").execute()
 
-# Print results.
-for row in rows.data:
-    st.write(f"{row['name']} has a :{row['pet']}:")
+# query artists
+artists = conn.query("select * from artists", \
+    show_spinner = "querying...", \
+    ttl="1m")
+
+st.write(artists)
+# print
+for artist in artists:
+    st.write(f"{artist}")
 
 # only gets artist names
 # artists = conn.query("""
