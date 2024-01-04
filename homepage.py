@@ -6,8 +6,8 @@ conn = st.connection("supabase",type=SupabaseConnection)
 
 
 # query artists
-artists = conn.query("select * from artists", \
-    #show_spinner = "querying...", \
+artists = conn.query("*", \
+    table="artists", \
     ttl="1m")
 
 st.write(artists)
