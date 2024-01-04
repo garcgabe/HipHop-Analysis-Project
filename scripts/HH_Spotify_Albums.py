@@ -18,16 +18,19 @@ def fetch_data():
             "artist_uris", "artist_names", "images"]
     
     print("Beginning album fetch...")
+
     # init empty lists to load then concat into DF
     album_uri, album_name, total_tracks, release_date, artist_uris, artist_names, images  = ([] for i in range (7))
     for i in range(0,len(artists_uri)):
         name_real = artists_uri["spotify_name"][i]
         print(f"Searching for albums by {name_real}...")
         name_uri = artists_uri["artist_uri"][i]
+
         search_tree = spot.getAlbums(name_uri)["items"]
+
         for _, search_tree_split in enumerate(search_tree):
             #print(search_tree_split)
-            #sys.exit()
+
             all_artists, all_uris = ([] for x in range(2))
             number_of_artists = len(search_tree_split["artists"])
             
@@ -45,7 +48,6 @@ def fetch_data():
             
 
             json_string = json.dumps(search_tree_split, indent=4)
-            #print(json_string)
 
             temp_album_uri = search_tree_split["uri"]
             album_uri.append(temp_album_uri)
@@ -82,8 +84,7 @@ def fetch_data():
                     DO NOTHING
                 """, (temp_album_uri, temp_album_name, temp_total_tracks, temp_release_date, temp_artist_uris, temp_artist_names, temp_images))
 
-
-    ## final DF
+    ## return final DF for local debugging if needed
     return pd.concat([pd.Series(album_uri), pd.Series(album_name), pd.Series(total_tracks),
                                         pd.Series(release_date), pd.Series(artist_uris), pd.Series(artist_names), pd.Series(images)], 
                                         axis=1, keys=columns)

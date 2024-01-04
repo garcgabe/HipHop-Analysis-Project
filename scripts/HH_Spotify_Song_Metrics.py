@@ -1,7 +1,11 @@
-
 import pandas as pd
-import time, sys
+import time, sys, json
 
+from utils.spotify import SpotifyWrapper
+from utils.postgres import Postgres
+
+db = Postgres()
+spot = SpotifyWrapper()
 
 
 def get_song_metrics(uris):
