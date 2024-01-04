@@ -2,7 +2,7 @@ import streamlit as st
 from st_supabase_connection import SupabaseConnection
 
 # Initialize connection.
-conn = st.connection("supabase",type=SupabaseConnection)
+conn = st.connection("supabase",type=SupabaseConnection, )
 
 # Perform query.
 rows = conn.query("*", table="mytable", ttl="10m").execute()
@@ -40,4 +40,4 @@ st.title("welcome to the rap analytics page")
 
 
 
-st.image("")
+#st.image("")
