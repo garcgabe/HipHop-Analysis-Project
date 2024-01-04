@@ -1,20 +1,15 @@
 import streamlit as st
+import requests
+from utils.env import SUPABASE_URL, SUPABASE_KEY
 from st_supabase_connection import SupabaseConnection
 
-# init connection
-conn = st.connection("supabase",type=SupabaseConnection)
+resp = requests.get(SUPABASE_URL)
+st.write(resp.status_code)
 
-
-# query artists
-artists = conn.query("*", \
-    table="artists",    \
-    ttl="1m")           \
-    .execute()
-
-st.write(artists)
-# print
-for artist in artists:
-    st.write(f"{artist}")
+# st.write(artists)
+# # print
+# for artist in artists:
+#     st.write(f"{artist}")
 
 # only gets artist names
 # artists = conn.query("""
