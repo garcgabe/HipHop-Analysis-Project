@@ -9,7 +9,6 @@ spot = SpotifyWrapper()
 
 
 def get_song_metrics(uris):
-    spot = spotWrapper()
  
     dance, energy, loudness, valence, tempo, instru, speech = ([] for i in range(7))
     
