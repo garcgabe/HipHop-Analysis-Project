@@ -1,11 +1,11 @@
 import psycopg2 as pg
-#from utils.env import host, database, user, password, port
+from utils.env import host, database, user, password, port
 
 class Postgres():
     # holds two attributes:
     #   connection to the database
     #   cursor, which is used to execute queries and close itself
-    def __init__(self, host, database, user, password, port):
+    def __init__(self):
         self.conn = pg.connect(
             host=host,
             database=database,
