@@ -1,9 +1,15 @@
 import streamlit as st
-from utils.postgres import Postgres
+from st_supabase_connection import SupabaseConnection
 
-#db = Postgres(**st.secrets.aws_credentials)
-conn = st.connection("postgresql", type="sql", 
-                     **st.secrets.db_credentials)
+# Initialize connection.
+conn = st.connection("supabase",type=SupabaseConnection)
+
+# Perform query.
+rows = conn.query("*", table="mytable", ttl="10m").execute()
+
+# Print results.
+for row in rows.data:
+    st.write(f"{row['name']} has a :{row['pet']}:")
 
 # only gets artist names
 artists = conn.query("""
