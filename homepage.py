@@ -30,12 +30,20 @@ filter_response = supabase.table("artists")\
     .select("artist_name, popularity, followers, genres, images")\
     .eq('artist_name', f'{selected_name}')\
     .execute()
-filter_query_result = pd.DataFrame(filter_response.data)
 
-st.dataframe(filter_query_result,\
-    column_config={
-        "images": st.column_config.ImageColumn("Image", width=50)
-    },)
+result = pd.DataFrame(filter_response.data)
+result_image = result['artist_name', 'images']
+result = result.drop['images']
+
+# displaying artist image above the data
+st.image(result_image.loc[result_image['artist_name'] == selected_name]\
+    ['images'], width=200)
+
+st.dataframe(result,\
+    # column_config={
+    #     "images": st.column_config.ImageColumn("image", width=50)
+    # },
+    )
 
 # only gets artist names
 # artists = conn.query("""
