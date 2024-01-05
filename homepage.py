@@ -9,9 +9,13 @@ from st_supabase_connection import SupabaseConnection
 url = st.secrets["supabase_url"].SUPABASE_URL
 key = st.secrets["supabase_key"].SUPABASE_KEY
 
-supabase= create_client(url, key)
+supabase = create_client(url, key)
 
-# st.write(artists)
+# querying all artists and info
+artists = supabase.table("artists").select("*").execute()
+
+print(type(artists))
+st.write(artists)
 # # print
 # for artist in artists:
 #     st.write(f"{artist}")
