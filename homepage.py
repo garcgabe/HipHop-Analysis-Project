@@ -14,7 +14,7 @@ supabase = create_client(url, key)
 # querying all artists and info
 data, count = supabase.table("artists").select("*").execute()
 
-st.write(pd.DataFrame(data))
+st.write(pd.DataFrame(data.json()))
 st.write(count)
 # # print
 # for artist in artists:
