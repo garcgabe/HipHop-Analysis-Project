@@ -7,7 +7,7 @@ url = st.secrets["supabase_url"]
 key = st.secrets["supabase_key"]
 
 st.write(url)
-st.write(key[0:10])
+st.write(key)
 
 resp = requests.get(url, api_key=key)
 st.write(resp.status_code, )
