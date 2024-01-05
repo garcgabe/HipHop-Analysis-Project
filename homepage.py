@@ -39,7 +39,7 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 result = result.drop(['artist_uri','images'], axis=1)
 
 # column layout
-col1, col2 = st.columns(2)  # Adjust the column widths as needed
+col1, col2 = st.columns([1,2])  # Adjust the column widths as needed
 col1.image(selected_artist_image, width=200)
 col2.dataframe(result,\
     # column_config={
