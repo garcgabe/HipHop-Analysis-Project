@@ -40,7 +40,7 @@ result = result.drop(['artist_uri','images'], axis=1)
 
 
 # column layout
-col1, col2, col3 = st.columns([1,2,2])  # Adjust the column widths as needed
+col1, col2, col3 = st.columns([1,1,1])  # Adjust the column widths as needed
 col1.image(selected_artist_image, width=200)
 # col2.dataframe(result.drop('spotify_name', axis=1),\
 #     # column_config={
