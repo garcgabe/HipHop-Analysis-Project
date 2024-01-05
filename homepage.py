@@ -16,7 +16,7 @@ supabase = create_client(url, key)
 response = supabase.table("artists")\
     .select("artist_name")\
     .execute()
-query_result = to_list(response.data)
+query_result = list(response.data)
 
 st.write(query_result)
 
