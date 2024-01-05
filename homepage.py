@@ -38,19 +38,21 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
+st.image(selected_artist_image, width=400)
 
 # column layout
 col1, col2, col3 = st.columns([1,1,1])  # Adjust the column widths as needed
-col1.image(selected_artist_image, width=200)
 # col2.dataframe(result.drop('spotify_name', axis=1),\
 #     # column_config={
 #     #     "images": st.column_config.ImageColumn("image", width=50)
 #     # },
 #     )
 selection = result.loc[result['artist_name'] == selected_name]
-col2.metric('popularity!', (selection['popularity'][0]))
+col1.metric('popularity!', (selection['popularity'][0]))
 col2.metric('followers!', selection['followers'][0])
-col3.metric('genres!', ", ".join(genre for genre in selection['genres'][0].split('-')))
+col3.metric('genres!', \
+    ", ".join(genre for genre in selection['genres'][0].split('-')),\
+        )
 
 
 ###########################################
