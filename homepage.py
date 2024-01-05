@@ -47,6 +47,11 @@ album_response = supabase.table("albums")\
 album_result = pd.DataFrame(album_response.data)
 album_uris = list(album_result['album_uri'])
 
+# move image to front
+to_move = album_result['images']
+album_result = album_result.drop('images', axis=1)
+album_result.insert(0, 'images', to_move)
+
 st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
     column_config={
         "images": st.column_config.ImageColumn("image", width=100)
