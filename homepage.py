@@ -51,7 +51,7 @@ st.markdown(
 )
 
 st.markdown(
-    f'<div class="center"><img src="{selected_artist_image}" width="400"></div>',
+    f'<div class="center"><img src="{selected_artist_image}" width="200"></div>',
     unsafe_allow_html=True
 )
 
