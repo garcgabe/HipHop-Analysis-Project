@@ -41,7 +41,7 @@ result = result.drop(['artist_uri','images'], axis=1)
 
 album_response = supabase.table("albums")\
     .select("*")\
-    .like('artist_uri', f'%{selected_artist_uri}%')\
+    .like('artist_uris', f'%{selected_artist_uri}%')\
     .execute()
 # convert all data to DF; then 
 album_result = pd.DataFrame(album_response.data)
