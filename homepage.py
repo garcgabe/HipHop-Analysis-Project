@@ -54,7 +54,7 @@ album_result.insert(0, 'images', to_move)
 
 st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
     column_config={
-        "images": st.column_config.ImageColumn("image", width=200)
+        "images": st.column_config.ImageColumn("image", width=30)
     },
 )
 
