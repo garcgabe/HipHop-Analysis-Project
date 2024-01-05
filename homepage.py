@@ -1,16 +1,15 @@
 import streamlit as st
 import requests
+import os
+from supabase import create_client
 
 from st_supabase_connection import SupabaseConnection
+
 
 url = st.secrets["supabase_url"].SUPABASE_URL
 key = st.secrets["supabase_key"].SUPABASE_KEY
 
-st.write(url)
-st.write(key)
-
-resp = requests.get(url, headers={'Authorization': 'Basic ' + key})
-st.write(resp.status_code)
+supabase= create_client(url, key)
 
 # st.write(artists)
 # # print
