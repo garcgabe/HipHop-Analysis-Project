@@ -63,10 +63,10 @@ st.metric('genres!', \
         )
 style_metric_cards(background_color="#FFF",
     border_size_px = 2,
-    border_color: str = "#CCC",
-    border_radius_px: int = 5,
-    border_left_color: str = "#9AD8E1",
-    box_shadow: bool = True,)
+    border_color= "#CCC",
+    border_radius_px = 5,
+    border_left_color = "#9AD8E1",
+    box_shadow= True,)
 
 
 
