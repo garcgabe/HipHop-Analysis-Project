@@ -36,6 +36,7 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
+# centered artist image
 st.markdown(
     """
     <style>
@@ -47,7 +48,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 st.markdown(
     f'<div class="center"><img src="{selected_artist_image}" width="200"></div>',
     unsafe_allow_html=True
@@ -61,6 +61,7 @@ col2.metric('followers!', selection['followers'][0])
 st.metric('genres!', \
     ", ".join(genre for genre in selection['genres'][0].split('-')),\
         )
+
 
 
 
