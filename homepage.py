@@ -58,11 +58,12 @@ album_response = supabase.table("albums")\
     .execute()
 # convert all data to DF; then 
 album_result = pd.DataFrame(album_response.data)
+# reordering columns
+album_result = album_result['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']
 album_uris = list(album_result['album_uri'])
 
 
-st.dataframe(album_result['images, artist_names, album_name, release_date, total_tracks']\
-    .drop(['album_uri', 'artist_uris'], axis=1),
+st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
     column_config={
         "images": st.column_config.ImageColumn("image", width=50)
     },
