@@ -27,27 +27,27 @@ selected_name = st.selectbox("select an artist", \
 
 # querying all artists and info
 filter_response = supabase.table("artists")\
-    .select("artist_name, popularity, followers, genres, images")\
+    .select("*")\
     .eq('artist_name', f'{selected_name}')\
     .execute()
 
 result = pd.DataFrame(filter_response.data)
 result_image = result[['artist_name', 'images']]
-result = result.drop('images', axis=1)
+result = result.drop(['artist_uri','images'], axis=1)
 
-# displaying artist image above the data
-st.image(result_image.loc[result_image['artist_name'] == selected_name]['images'][0], width=200)
+selected_artist_image = result_image.loc[result_image['artist_name'] == selected_name]['images'][0]
+selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 
+
+# column layout
+col1, col2 = st.columns(2)  # Adjust the column widths as needed
+col1.image(selected_artist_image, width=200)
 st.dataframe(result,\
     # column_config={
     #     "images": st.column_config.ImageColumn("image", width=50)
     # },
     )
 
-# only gets artist names
-# artists = conn.query("""
-#             SELECT artist_uri, artist_name FROM artists
-# """)
 
 # gets artist names - delimited by 
 # albums = conn.query("""
