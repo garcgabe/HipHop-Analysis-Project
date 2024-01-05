@@ -33,12 +33,11 @@ filter_response = supabase.table("artists")\
 
 result = pd.DataFrame(filter_response.data)
 result_image = result[['artist_name', 'images']]
-result = result.drop(['artist_uri','images'], axis=1)
 
 selected_artist_image = result_image.loc[result_image['artist_name'] == selected_name]['images'][0]
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 
-
+result = result.drop(['artist_uri','images'], axis=1)
 # column layout
 col1, col2 = st.columns(2)  # Adjust the column widths as needed
 col1.image(selected_artist_image, width=200)
