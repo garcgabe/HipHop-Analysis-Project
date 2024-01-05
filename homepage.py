@@ -51,7 +51,7 @@ selection = result.loc[result['artist_name'] == selected_name]
 col1.metric('popularity!', selection['popularity'][0])
 col2.metric('followers!', selection['followers'][0])
 st.metric('genres!', \
-    "\n".join(genre for genre in selection['genres'][0].split('-')),\
+    ", ".join(genre for genre in selection['genres'][0].split('-')),\
         )
 
 
