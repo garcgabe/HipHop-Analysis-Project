@@ -48,8 +48,10 @@ col1.image(selected_artist_image, width=200)
 #     # },
 #     )
 selection = result.loc[result['artist_name'] == selected_name]
-col2.metrics(selection['popularity'][0], selection['followers'][0])
-col3.metrics(selection['genres'][0])
+col2.metric(selection['popularity'][0], selection['followers'][0])
+col3.metric(selection['genres'][0])
+
+
 ###########################################
 ###               ALBUM DATA            ###
 ###########################################
