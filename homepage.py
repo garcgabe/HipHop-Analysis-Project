@@ -12,9 +12,10 @@ key = st.secrets["supabase_key"].SUPABASE_KEY
 supabase = create_client(url, key)
 
 # querying all artists and info
-data, count = supabase.table("artists").select("* limit 5").execute()
+response = supabase.table("artists").select("* limit 5").execute()
 
-st.write(data)
+st.write(response + "\n\n\n")
+st.write(response.data)
 
 st.write(pd.DataFrame(data.json()))
 st.write(count)
