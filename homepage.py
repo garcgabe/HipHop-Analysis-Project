@@ -41,7 +41,7 @@ result = result.drop(['artist_uri','images'], axis=1)
 # column layout
 col1, col2 = st.columns(2)  # Adjust the column widths as needed
 col1.image(selected_artist_image, width=200)
-st.dataframe(result,\
+col2.dataframe(result,\
     # column_config={
     #     "images": st.column_config.ImageColumn("image", width=50)
     # },
