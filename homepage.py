@@ -38,6 +38,19 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
+
+album_response = supabase.table("albums")\
+    .select("*")\
+    .like('artist_uri', f'%{selected_artist_uri}%')\
+    .execute()
+# convert all data to DF; then 
+album_result = pd.DataFrame(album_response.data)
+
+albums = pd.dataframe(album_result)
+st.dataframe(albums)
+
+
+
 # column layout
 col1, col2 = st.columns([1,2])  # Adjust the column widths as needed
 col1.image(selected_artist_image, width=200)
