@@ -57,17 +57,32 @@ st.markdown(
 
 # column layout
 col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
+selection = result.loc[result['artist_name'] == selected_name]
+# col1.metric('popularity!', selection['popularity'][0])
+# col2.metric('followers!', selection['followers'][0])
+# st.metric('genres!', \
+#     ", ".join(genre for genre in selection['genres'][0].split('-')),\
+#         )
+col1.markdown(
+    '<div class="center"><h2>popularity!</h2><p>{}</p></div>'.format(selection['popularity'][0]),
+    unsafe_allow_html=True
+)
+
+col2.markdown(
+    '<div class="center"><h2>followers!</h2><p>{}</p></div>'.format(selection['followers'][0]),
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    '<div class="center"><h2>genres!</h2><p>{}</p></div>'.format(", ".join(genre for genre in selection['genres'][0].split('-'))),
+    unsafe_allow_html=True
+)
+
 # col2.dataframe(result.drop('spotify_name', axis=1),\
 #     # column_config={
 #     #     "images": st.column_config.ImageColumn("image", width=50)
 #     # },
 #     )
-selection = result.loc[result['artist_name'] == selected_name]
-col1.metric('popularity!', selection['popularity'][0])
-col2.metric('followers!', selection['followers'][0])
-st.metric('genres!', \
-    ", ".join(genre for genre in selection['genres'][0].split('-')),\
-        )
 
 
 ###########################################
