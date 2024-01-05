@@ -32,7 +32,7 @@ filter_response = supabase.table("artists")\
     .execute()
 filter_query_result = pd.DataFrame(filter_response.data)
 
-st.table(filter_query_result)
+st.dataframe(filter_query_result)
 
 # only gets artist names
 # artists = conn.query("""
