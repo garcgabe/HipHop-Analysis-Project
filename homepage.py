@@ -34,7 +34,7 @@ filter_query_result = pd.DataFrame(filter_response.data)
 
 st.dataframe(filter_query_result,\
     column_config={
-        "images": st.column_config.ImageColumn("Image")
+        "images": st.column_config.ImageColumn("Image", width=50)
     },)
 
 # only gets artist names
