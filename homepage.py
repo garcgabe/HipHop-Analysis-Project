@@ -78,6 +78,23 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown(
+    """
+    <div style="display: flex; justify-content: space-between;">
+        <div style="width: 33%; text-align: left;">
+            <h3>Top Left</h3>
+        </div>
+        <div style="width: 33%; text-align: right;">
+            <h3>Top Right</h3>
+        </div>
+    </div>
+    <div style="width: 100%; text-align: center;">
+        <h3>Centered</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # col2.dataframe(result.drop('spotify_name', axis=1),\
 #     # column_config={
 #     #     "images": st.column_config.ImageColumn("image", width=50)
