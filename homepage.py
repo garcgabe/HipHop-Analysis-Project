@@ -45,7 +45,13 @@ album_response = supabase.table("albums")\
     .execute()
 # convert all data to DF; then 
 album_result = pd.DataFrame(album_response.data)
-st.dataframe(album_result)
+album_uris = list(album_result['album_uri'])
+
+st.dataframe(album_result.drop(['album_uri', 'artist_uris']),
+    column_config={
+        "images": st.column_config.ImageColumn("image", width=100)
+    },
+)
 
 
 
