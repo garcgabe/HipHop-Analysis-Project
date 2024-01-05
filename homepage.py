@@ -49,7 +49,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.markdown(
-    f'<div class="center"><img src="{selected_artist_image}" width="200"></div>',
+    f'<div class="center"><img src="{selected_artist_image}" width="300"></div>',
     unsafe_allow_html=True
 )
 
