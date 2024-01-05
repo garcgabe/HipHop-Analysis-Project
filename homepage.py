@@ -63,18 +63,18 @@ selection = result.loc[result['artist_name'] == selected_name]
 # st.metric('genres!', \
 #     ", ".join(genre for genre in selection['genres'][0].split('-')),\
 #         )
-st.markdown(
-    '<div class="center"><h2>popularity!</h2><h5>{}</h5></div>'.format(selection['popularity'][0]),
+col1.markdown(
+    '<div class="center"><h2>popularity!</h2><p>{}</p></div>'.format(selection['popularity'][0]),
+    unsafe_allow_html=True
+)
+
+col2.markdown(
+    '<div class="center"><h2>followers!</h2><p>{}</p></div>'.format(selection['followers'][0]),
     unsafe_allow_html=True
 )
 
 st.markdown(
-    '<div class="center"><h2>followers!</h2><h5>{}</h5></div>'.format(selection['followers'][0]),
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    '<div class="center"><h2>genres!</h2><h5>{}</h5></div>'.format(", ".join(genre for genre in selection['genres'][0].split('-'))),
+    '<div class="center"><h2>genres!</h2><p>{}</p></div>'.format(", ".join(genre for genre in selection['genres'][0].split('-'))),
     unsafe_allow_html=True
 )
 
