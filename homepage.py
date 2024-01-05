@@ -18,7 +18,7 @@ response = supabase.table("artists").select("* limit 5").execute()
 st.write("\n\n\n")
 st.write(response.data[0])
 
-data = json.dumps(response.data)
+#data = json.dumps(response.data)
 
 
 st.write(pd.DataFrame(response.data))
