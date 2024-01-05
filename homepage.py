@@ -40,14 +40,16 @@ result = result.drop(['artist_uri','images'], axis=1)
 
 
 # column layout
-col1, col2 = st.columns([1,2])  # Adjust the column widths as needed
+col1, col2, col3 = st.columns([1,2,2])  # Adjust the column widths as needed
 col1.image(selected_artist_image, width=200)
-col2.dataframe(result,\
-    # column_config={
-    #     "images": st.column_config.ImageColumn("image", width=50)
-    # },
-    )
-
+# col2.dataframe(result.drop('spotify_name', axis=1),\
+#     # column_config={
+#     #     "images": st.column_config.ImageColumn("image", width=50)
+#     # },
+#     )
+selection = result.loc[result['artist_name'] == selected_name]
+col2.metrics(selection['popularity'][0], selection['followers'][0])
+col3.metrics(selection['genres'][0])
 ###########################################
 ###               ALBUM DATA            ###
 ###########################################
@@ -60,8 +62,6 @@ album_response = supabase.table("albums")\
 album_result = pd.DataFrame(album_response.data)
 # reordering columns
 album_result = album_result[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
-album_uris = list(album_result['album_uri'])
-
 
 st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
     column_config={
@@ -69,6 +69,7 @@ st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
     },
 )
 
+album_uris = list(album_result['album_uri'])
 ###########################################
 ###               SONG DATA             ###
 ###########################################
