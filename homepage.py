@@ -53,6 +53,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.divider()
 # column layout
 col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
 selection = result.loc[result['artist_name'] == selected_name]
@@ -66,7 +67,7 @@ style_metric_cards(background_color="#000000",
     border_color= "#9AD8E1",
     border_radius_px = 2,
     border_left_color = "#9AD8E1",
-    box_shadow= False,)
+    box_shadow= False)
 
 
 
