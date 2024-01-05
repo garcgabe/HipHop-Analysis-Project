@@ -3,8 +3,13 @@ import requests
 
 from st_supabase_connection import SupabaseConnection
 
+url = st.secrets["supabase_url"]
+key = st.secrets["supabase_key"]
 
-resp = requests.get(st.secrets["supabase.auth"])
+st.write(url)
+st.write(key[0:10])
+
+resp = requests.get(url, api_key=key)
 st.write(resp.status_code, )
 
 # st.write(artists)
