@@ -11,14 +11,30 @@ key = st.secrets["supabase_key"].SUPABASE_KEY
 
 supabase = create_client(url, key)
 
-# querying all artists and info
-response = supabase.table("artists").select("* limit 5").execute()
-
-query_result = pd.DataFrame(response.data)
-query_count = response.count
+###################################################
+# get artist options from DB
+response = supabase.table("artists")\
+    .select("artist_name")\
+    .execute()
+query_result = to_list(response.data)
 
 st.write(query_result)
-st.write(query_count)
+
+
+# SELECT ARTIST FROM FRONTEND
+
+#selected_name = st.selectbox("select an artist", \
+    #options=)
+
+# querying all artists and info
+filter_response = supabase.table("artists")\
+    .select("artist_name, popularity, followers, genres, images")\
+    .eq('artist_name', 'selected_name')\
+    .execute()
+filter_query_result = pd.DataFrame(filter_response.data)
+filter_query_count = filter_response.count
+
+st.table(query_result)
 
 # only gets artist names
 # artists = conn.query("""
