@@ -32,7 +32,7 @@ filter_response = supabase.table("artists")\
     .execute()
 
 result = pd.DataFrame(filter_response.data)
-result_image = result['artist_name', 'images']
+result_image = result[['artist_name', 'images']]
 result = result.drop['images']
 
 # displaying artist image above the data
