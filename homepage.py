@@ -57,7 +57,7 @@ st.divider()
 # column layout
 col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
 selection = result.loc[result['artist_name'] == selected_name]
-col1.metric('popularity!', selection['popularity'][0])
+col1.metric('popularity!', selection['popularity'][0].format(number))
 col2.metric('followers!', selection['followers'][0])
 st.metric('genres!', \
     ", ".join(genre for genre in selection['genres'][0].split('-')),\
