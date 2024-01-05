@@ -12,10 +12,10 @@ key = st.secrets["supabase_key"].SUPABASE_KEY
 supabase = create_client(url, key)
 
 # querying all artists and info
-artists = supabase.table("artists").select("*").execute()
+data, count = supabase.table("artists").select("*").execute()
 
-print(type(artists))
-st.write(artists)
+st.write(pd.DataFrame(data))
+st.write(count)
 # # print
 # for artist in artists:
 #     st.write(f"{artist}")
