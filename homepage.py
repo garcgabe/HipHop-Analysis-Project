@@ -33,7 +33,7 @@ filter_response = supabase.table("artists")\
 
 result = pd.DataFrame(filter_response.data)
 result_image = result[['artist_name', 'images']]
-result = result.drop['images']
+result = result.drop('images', axis=1)
 
 # displaying artist image above the data
 st.image(result_image.loc[result_image['artist_name'] == selected_name]\
