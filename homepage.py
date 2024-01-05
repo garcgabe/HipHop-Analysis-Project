@@ -3,8 +3,10 @@ import requests
 from utils.env import SUPABASE_URL, SUPABASE_KEY
 from st_supabase_connection import SupabaseConnection
 
-resp = requests.get(SUPABASE_URL)
-st.write(resp.status_code)
+
+
+resp = requests.get(SUPABASE_URL+SUPABASE_KEY)
+st.write(resp.status_code, )
 
 # st.write(artists)
 # # print
