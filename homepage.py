@@ -61,12 +61,12 @@ col2.metric('followers!', selection['followers'][0])
 st.metric('genres!', \
     ", ".join(genre for genre in selection['genres'][0].split('-')),\
         )
-style_metric_cards(background_color="#FFF",
+style_metric_cards(background_color="#000000",
     border_size_px = 2,
-    border_color= "#CCC",
-    border_radius_px = 5,
+    border_color= "#9AD8E1",
+    border_radius_px = 2,
     border_left_color = "#9AD8E1",
-    box_shadow= True,)
+    box_shadow= False,)
 
 
 
