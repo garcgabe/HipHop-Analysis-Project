@@ -1,6 +1,6 @@
 import streamlit as st
-import requests
 import os
+import pandas as pd
 from supabase import create_client
 
 from st_supabase_connection import SupabaseConnection
