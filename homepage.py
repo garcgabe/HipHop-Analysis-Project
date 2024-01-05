@@ -4,7 +4,7 @@ import requests
 from st_supabase_connection import SupabaseConnection
 
 
-resp = requests.get(st.secrets["SUPABASE_AUTH"])
+resp = requests.get(st.secrets["supabase_auth"])
 st.write(resp.status_code, )
 
 # st.write(artists)
