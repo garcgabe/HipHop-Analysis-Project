@@ -16,7 +16,7 @@ supabase = create_client(url, key)
 response = supabase.table("artists")\
     .select("artist_name")\
     .execute()
-artists = list(response.data)
+artists = [x.get('artist_name') for x in response.data]
 
 # SELECT ARTIST FROM FRONTEND
 
@@ -31,9 +31,8 @@ filter_response = supabase.table("artists")\
     .eq('artist_name', f'{selected_name}')\
     .execute()
 filter_query_result = pd.DataFrame(filter_response.data)
-filter_query_count = filter_response.count
 
-st.table(query_result)
+st.table(filter_query_result)
 
 # only gets artist names
 # artists = conn.query("""
