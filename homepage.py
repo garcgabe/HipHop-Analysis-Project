@@ -14,12 +14,12 @@ supabase = create_client(url, key)
 # querying all artists and info
 response = supabase.table("artists").select("* limit 5").execute()
 
-st.write(response)
+#st.write(response)
 st.write("\n\n\n")
-st.write(response.data)
 
 
-st.write(pd.DataFrame(data.json()))
+
+st.write(pd.DataFrame(response.data.json()))
 st.write(count)
 # # print
 # for artist in artists:
