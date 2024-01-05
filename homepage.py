@@ -16,20 +16,19 @@ supabase = create_client(url, key)
 response = supabase.table("artists")\
     .select("artist_name")\
     .execute()
-query_result = list(response.data)
-
-st.write(query_result)
-
+artists = list(response.data)
 
 # SELECT ARTIST FROM FRONTEND
 
-#selected_name = st.selectbox("select an artist", \
-    #options=)
+selected_name = st.selectbox("select an artist", \
+    options=artists)
+
+
 
 # querying all artists and info
 filter_response = supabase.table("artists")\
     .select("artist_name, popularity, followers, genres, images")\
-    .eq('artist_name', 'selected_name')\
+    .eq('artist_name', f'{selected_name}')\
     .execute()
 filter_query_result = pd.DataFrame(filter_response.data)
 filter_query_count = filter_response.count
