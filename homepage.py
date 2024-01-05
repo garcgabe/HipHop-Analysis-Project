@@ -14,19 +14,11 @@ supabase = create_client(url, key)
 # querying all artists and info
 response = supabase.table("artists").select("* limit 5").execute()
 
-#st.write(response)
-st.write("\n\n\n")
-st.write(response.data[0])
+query_result = pd.DataFrame(response.data)
+query_count = response.count
 
-#data = json.dumps(response.data)
-
-
-st.write(pd.DataFrame(response.data))
-#st.write(pd.DataFrame(data.json()))
-st.write(count)
-# # print
-# for artist in artists:
-#     st.write(f"{artist}")
+st.write(query_result)
+st.write(query_count)
 
 # only gets artist names
 # artists = conn.query("""
