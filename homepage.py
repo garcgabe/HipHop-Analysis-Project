@@ -16,6 +16,7 @@ response = supabase.table("artists").select("* limit 5").execute()
 
 #st.write(response)
 st.write("\n\n\n")
+st.write(response.data)
 
 
 
