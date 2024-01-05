@@ -59,7 +59,7 @@ album_response = supabase.table("albums")\
 # convert all data to DF; then 
 album_result = pd.DataFrame(album_response.data)
 # reordering columns
-album_result = album_result['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']
+album_result = album_result[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
 album_uris = list(album_result['album_uri'])
 
 
