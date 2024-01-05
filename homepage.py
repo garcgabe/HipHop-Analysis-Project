@@ -38,7 +38,22 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
-st.image(selected_artist_image, width=400)
+st.markdown(
+    """
+    <style>
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    f'<div class="center"><img src="{selected_artist_image}" width="400"></div>',
+    unsafe_allow_html=True
+)
 
 # column layout
 col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
