@@ -36,7 +36,7 @@ result_image = result[['artist_name', 'images']]
 result = result.drop('images', axis=1)
 
 # displaying artist image above the data
-st.image(result_image.loc[result_image['artist_name'] == selected_name]['images'], width=200)
+st.image(result_image.loc[result_image['artist_name'] == selected_name]['images'][0], width=200)
 
 st.dataframe(result,\
     # column_config={
