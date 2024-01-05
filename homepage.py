@@ -39,6 +39,19 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 result = result.drop(['artist_uri','images'], axis=1)
 
 
+# column layout
+col1, col2 = st.columns([1,2])  # Adjust the column widths as needed
+col1.image(selected_artist_image, width=200)
+col2.dataframe(result,\
+    # column_config={
+    #     "images": st.column_config.ImageColumn("image", width=50)
+    # },
+    )
+
+###########################################
+###               ALBUM DATA            ###
+###########################################
+
 album_response = supabase.table("albums")\
     .select("*")\
     .like('artist_uris', f'%{selected_artist_uri}%')\
@@ -58,16 +71,11 @@ st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
     },
 )
 
+###########################################
+###               SONG DATA             ###
+###########################################
 
 
-# column layout
-col1, col2 = st.columns([1,2])  # Adjust the column widths as needed
-col1.image(selected_artist_image, width=200)
-col2.dataframe(result,\
-    # column_config={
-    #     "images": st.column_config.ImageColumn("image", width=50)
-    # },
-    )
 
 # TODO: bring in album metrics
 #        - number of albums
@@ -77,14 +85,6 @@ col2.dataframe(result,\
 #
 #
 
-## query to filter by artists
-
-# filtered_album_uris = conn.query(f"""
-#             SELECT album_uri FROM albums
-#             WHERE artist_uris LIKE '%{selected_artist_uri}$'
-# """)
 
 
-
-st.title("welcome to the rap analytics page")
 
