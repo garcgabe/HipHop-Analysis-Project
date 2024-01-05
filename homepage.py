@@ -1,11 +1,10 @@
 import streamlit as st
 import requests
-from utils.env import SUPABASE_URL, SUPABASE_KEY
+
 from st_supabase_connection import SupabaseConnection
 
-
-
-resp = requests.get(SUPABASE_URL+SUPABASE_KEY)
+full_url = st.secrets["SUPABASE_URL"] + st.secrets["SUPABASE_KEY"] + ""
+resp = requests.get(full_url)
 st.write(resp.status_code, )
 
 # st.write(artists)
