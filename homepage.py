@@ -9,7 +9,7 @@ key = st.secrets["supabase_key"]
 st.write(url)
 st.write(key)
 
-resp = requests.get(url, api_key=key)
+resp = requests.get(url, headers={'Authorization': 'Bearer ' + key})
 st.write(resp.status_code, )
 
 # st.write(artists)
