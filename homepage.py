@@ -45,9 +45,7 @@ album_response = supabase.table("albums")\
     .execute()
 # convert all data to DF; then 
 album_result = pd.DataFrame(album_response.data)
-
-albums = pd.dataframe(album_result)
-st.dataframe(albums)
+st.dataframe(album_result)
 
 
 
