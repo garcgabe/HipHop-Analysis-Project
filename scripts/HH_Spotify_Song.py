@@ -8,7 +8,7 @@ import sys, json
 db = Postgres()
 spot = SpotifyWrapper()
 
-def call_data(all_albums):
+def get_songs_from_albums(all_albums):
 
     print("Fetching songs for: " + str(len(all_albums)) + " albums.")
     song_uri, song_name, album_uri, artist_names, explicit, preview_url = ([] for _ in range(6))
@@ -81,6 +81,6 @@ if __name__ == "__main__":
     )
 
     #actual fetch of songs into DB
-    spot_songs = call_data(spot_album_uris)
+    spot_songs = get_songs_from_albums(spot_album_uris)
     
 
