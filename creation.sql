@@ -34,6 +34,6 @@ CREATE TABLE songs(
     valence decimal(4,3),
     tempo decimal(5,1),
     instru decimal(4,4),
-    speech decimal(4,3)
+    speech decimal(4,3),
     FOREIGN KEY (album_uri) REFERENCES albums (album_uri) ON DELETE CASCADE
 );
