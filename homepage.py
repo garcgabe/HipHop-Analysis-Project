@@ -50,7 +50,7 @@ st.markdown(
 )
 st.markdown(
     f'<div class="center"><img src="{selected_artist_image}" width="300"></div>',
-    unsafe_allow_html=True
+     unsafe_allow_html=True
 )
 
 st.divider()
@@ -69,19 +69,13 @@ style_metric_cards(background_color="#000000",
     border_left_color = "#9AD8E1",
     box_shadow= False)
 
-
-
-
-# col2.dataframe(result.drop('spotify_name', axis=1),\
-#     # column_config={
-#     #     "images": st.column_config.ImageColumn("image", width=50)
-#     # },
-#     )
-
-
+#
+#
 ###########################################
 ###               ALBUM DATA            ###
 ###########################################
+#
+#
 
 album_response = supabase.table("albums")\
     .select("*")\
@@ -98,12 +92,15 @@ st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
     },
 )
 
+
 album_uris = list(album_result['album_uri'])
+#
+#
 ###########################################
 ###               SONG DATA             ###
 ###########################################
-
-
+#
+#
 
 # TODO: bring in album metrics
 #        - number of albums

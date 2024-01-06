@@ -40,6 +40,8 @@ def call_data(all_albums):
             temp_song_uri =  album_data[song_num]["uri"]
             song_uri.append(temp_song_uri)
 
+            # call oth
+
             name = album_data[song_num]["name"]
             temp_song_name = name.replace(",", "")
             song_name.append(temp_song_name)
