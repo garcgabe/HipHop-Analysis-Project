@@ -45,12 +45,20 @@ card_front.markdown("""
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .card-top5 {}
-  .dots-line {
+  .line {
   width: 100%;
   height: 1px;
   background: #000;
   position: relative;
   }
+  .line::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 0;
+  background: repeating-linear-gradient(to right, #000, #000 3px, transparent 3px, transparent 6px);
+}
 
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
