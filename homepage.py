@@ -51,7 +51,8 @@ card_front.markdown("""
   .card-content { display: flex; justify-content: space-between; }
   .metrics { text-align: right; }
   .metric { margin-bottom: 5px; }
-  .photo { width: 100px; height: 100px; background: #ccc; justify-content: center; align-items: center;border-radius: 50%; }
+  .center{display: flex; justify-content: center;}
+  .photo { width: 100px; height: 100px; background: #ccc;border-radius: 50%; }
 </style>
 </head>
 <body>
