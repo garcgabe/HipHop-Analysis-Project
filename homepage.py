@@ -43,7 +43,7 @@ card_front.markdown("""
   body { font-family: Arial, sans-serif; }
   .card { width: 300px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; margin-bottom: 20px; }
-  .card-content { display: flex; justify-content: center; }
+  .card-content { display: flex; justify-content: center; position: relative; }
   .card-top5 { text-align: left; }
 
   .metrics { text-align: bottom; }
