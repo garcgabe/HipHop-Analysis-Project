@@ -15,6 +15,9 @@ class SpotifyWrapper():
     
     def getAudioFeatures(self, song_uri):
         return self.spot.audio_features(song_uri)
+
+    def getTrack(self, song_uri):
+        return self.spot.track(song_uri)
     
     def searchArtist(self, artist):
         return self.spot.search(q=artist, type="artist")

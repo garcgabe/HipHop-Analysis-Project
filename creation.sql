@@ -41,13 +41,16 @@ CREATE TABLE songs(
 
 -- create song metrics table
 CREATE TABLE metrics(
-    song_uri varchar(256),
-    dance decimal(4,3),
+    song_uri varchar(256) primary key,
+    song_name varchar(256),
+    duration int,
+    popularity int,
+    danceability decimal(4,3),
     energy decimal(4,3),
     loudness decimal(5,3),
     valence decimal(4,3),
     tempo decimal(5,1),
-    instru decimal(4,4),
-    speech decimal(4,3)
-   -- FOREIGN KEY (song_uri) REFERENCES songs (song_uri)
+    instrumentalness decimal(4,4),
+    speechiness decimal(4,3),
+    FOREIGN KEY (song_uri) REFERENCES songs (song_uri)
 );

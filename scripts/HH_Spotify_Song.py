@@ -14,7 +14,7 @@ def get_songs_from_albums(albums):
         Parameters:
             albums (pandas.DataFrame): A single column pandas DF containing unique album identifiers.
 
-        Returns:ß
+        Returns:
             None
     """
     print("Fetching songs for: " + str(len(albums)) + " albums.")
