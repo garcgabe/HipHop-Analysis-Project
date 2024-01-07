@@ -60,7 +60,7 @@ card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
     <h2>PLACEHOLDER NAME</h2>
-    <div class="photo"><img src="{selected_artist_image}"></div>
+    <div class="photo"><img src="{selected_artist_image}" width="30"></div>
     <p>Genre1 - Genre2 - Genre3 - Genre4</p>
   </div>
 </body>
