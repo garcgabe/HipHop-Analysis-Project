@@ -90,7 +90,6 @@ card_back.markdown(f"""
       <div class="metric"><strong>Emotion</strong> 20 - 60 - 80</div>
     </div>
   </div>
-</div>
 """, unsafe_allow_html=True)
 
 
