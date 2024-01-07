@@ -54,7 +54,7 @@ card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
     <h2>PLACEHOLDER NAME</h2>
-    <img src="{selected_artist_image}" width="175" height="175" border-radius: 5>
+    <img src="{selected_artist_image}" width="175" height="175" border-radius: 50%>
     <p>Genre1 - Genre2</p><p>Genre3 - Genre4</p>
     <p>Pareto Score</p>
     <p>30%</p>
