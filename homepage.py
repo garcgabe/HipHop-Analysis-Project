@@ -44,6 +44,7 @@ card_front.markdown("""
   .card { width: 300px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; margin-bottom: 20px; }
   .card-content { display: flex; justify-content: center; }
+  .card-top5 { text-align: left; }
 
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
@@ -62,21 +63,22 @@ card_front.markdown(f"""
 """, unsafe_allow_html=True)
 
 
+topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
 
 
-card_back.markdown("""
+card_back.markdown(f"""
   <div class="card-content">
-    <div>
-      <p>Song 1 - 91%</p>
-      <p>Song 2 - 86%</p>
-      <p>Song 3 - 88%</p>
-      <p>Song 4 - 87%</p>
-      <p>Song 5 - 79%</p>
+    <div class="card-top5>
+      <p>{topsongs[0]}- {91%}</p>
+      <p>{topsongs[1]} - 86%</p>
+      <p>{topsongs[2]} - 88%</p>
+      <p>{topsongs[3]} - 87%</p>
+      <p>{topsongs[4]} - 79%</p>
     </div>
     <div class="metrics">
-      <div class="metric"><strong>Popularity:</strong> 50 - 75 - 90</div>
-      <div class="metric"><strong>Danceability:</strong> 20 - 70 - 90</div>
-      <div class="metric"><strong>Emotion:</strong> 20 - 60 - 80</div>
+      <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
+      <div class="metric"><strong>Danceability</strong> 20 - 70 - 90</div>
+      <div class="metric"><strong>Emotion</strong> 20 - 60 - 80</div>
     </div>
   </div>
 </div>
