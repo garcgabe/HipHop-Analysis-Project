@@ -45,6 +45,11 @@ card_front.markdown("""
   .card-header { text-align: center; justify-content: center; margin-bottom: 20px; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .card-top5 {}
+  .dots-line {
+    border: none;
+    border-top: 1px dotted #000;
+    margin: 10px 0;
+  }
 
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
@@ -75,6 +80,8 @@ card_back.markdown(f"""
       <p>{topsongs[3]} - 87%</p>
       <p>{topsongs[4]} - 79%</p>
     </div>
+<hr class="dots-line">
+
     <div class="metrics">
       <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
       <div class="metric"><strong>Danceability</strong> 20 - 70 - 90</div>
