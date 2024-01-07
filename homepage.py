@@ -71,7 +71,7 @@ card_front.markdown(f"""
   <div class="card-header">
     <h2>{selected_name}</h2>
     <img src="{selected_artist_image}" width="175" height="175" border-radius: 50% padding: 50px>
-    <p>{"---".join(selected_artist_genres[i] for i in selected_artist_genres)}</p>
+    <p>{"---".join(genre for genre in selected_artist_genres)}</p>
     <p>Pareto Score</p>
     <p>30%</p>
   </div>
