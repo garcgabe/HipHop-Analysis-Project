@@ -32,7 +32,7 @@ result = pd.DataFrame(filter_response.data)
 # identify image and uri we will use going ahead
 selected_artist_image = result.loc[result['artist_name'] == selected_name]['images'][0]
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
-selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")[0:3]
+selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
@@ -71,8 +71,7 @@ card_front.markdown(f"""
   <div class="card-header">
     <h2>{selected_name}</h2>
     <img src="{selected_artist_image}" width="175" height="175" border-radius: 50% padding: 50px>
-    <p>{selected_artist_genres[0]} --- {selected_artist_genres[1]} </p>
-    <p>{selected_artist_genres[2]} --- {selected_artist_genres[3]} </p>
+    <p>{selected_artist_genres[i] for i in selected_artist_genres}</p>
     <p>Pareto Score</p>
     <p>30%</p>
   </div>
