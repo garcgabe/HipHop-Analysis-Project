@@ -22,6 +22,7 @@ def get_song_metrics(uris):
 
     columns = ["song_uri", "song_name", "duration_sec", "popularity", "danceability", "energy", "loudness", "valence", \
         "tempo", "instrumentalness","speechiness"]
+
     for count in range(0,total_songs):
         if(count%250 == 0):
             print("Song # "+str(count)+" of "+ str(total_songs ))
@@ -34,12 +35,12 @@ def get_song_metrics(uris):
             track_data = spot.getTrack(song_uri)
         except:
             print("Too many requests. Sleeping...")
-            time.sleep(60)
+            time.sleep(30)
         
         if (audio_features[0] is None or track_data is None):
             print(f"{song_name} not found. skipping...")
             continue
-        else:
+        elif (audio_features[0] is not None and track_data is not None):
             duration_sec = track_data['duration_ms'] * 0.001
             popularity = track_data['popularity']
 

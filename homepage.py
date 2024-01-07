@@ -36,22 +36,82 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
-# centered artist image
-st.markdown(
-    """
-    <style>
-    .center {
-        display: flex;
-        justify-content: center;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    f'<div class="center"><img src="{selected_artist_image}" width="300"></div>',
-     unsafe_allow_html=True
-)
+
+st.markdown("""
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artist Card</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .card { width: 300px; border: 1px solid #000; padding: 10px; }
+  .card-header { text-align: center; margin-bottom: 20px; }
+  .card-content { display: flex; justify-content: space-between; }
+  .metrics { text-align: right; }
+  .metric { margin-bottom: 5px; }
+  .photo { width: 100px; height: 100px; background: #ccc; border-radius: 50%; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <h2>PLACEHOLDER NAME</h2>
+    <div class="photo"></div>
+    <p>Genre1 - Genre2 - Genre3 - Genre4</p>
+  </div>
+  <div class="card-content">
+    <div>
+      <p>Song 1 - 91%</p>
+      <p>Song 2 - 86%</p>
+      <p>Song 3 - 88%</p>
+      <p>Song 4 - 87%</p>
+      <p>Song 5 - 79%</p>
+    </div>
+    <div class="metrics">
+      <div class="metric"><strong>Popularity:</strong> 50 - 75 - 90</div>
+      <div class="metric"><strong>Danceability:</strong> 20 - 70 - 90</div>
+      <div class="metric"><strong>Emotion:</strong> 20 - 60 - 80</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # centered artist image
+# st.markdown(
+#     """
+#     <style>
+#     .center {
+#         display: flex;
+#         justify-content: center;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+# st.markdown(
+#     f'<div class="center"><img src="{selected_artist_image}" width="300"></div>',
+#      unsafe_allow_html=True
+# )
 
 st.divider()
 # column layout
