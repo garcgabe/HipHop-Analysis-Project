@@ -23,7 +23,7 @@ def get_song_metrics(uris):
     columns = ["song_uri", "song_name", "duration_sec", "popularity", "danceability", "energy", "loudness", "valence", \
         "tempo", "instrumentalness","speechiness"]
     for count in range(0,total_songs):
-        if(count%50 == 0):
+        if(count%250 == 0):
             print("Song # "+str(count)+" of "+ str(total_songs ))
     
         song_uri = uris.iloc[count]["song_uri"]
@@ -36,7 +36,7 @@ def get_song_metrics(uris):
             print("Too many requests. Sleeping...")
             time.sleep(60)
         
-        if (not audio_features or not track_data):
+        if (audio_features[0] is None or track_data is None):
             print(f"{song_name} not found. skipping...")
             continue
         else:
@@ -59,11 +59,19 @@ def get_song_metrics(uris):
                 """, (song_uri, song_name, duration_sec, popularity, danceability, energy, loudness, valence, tempo, instrumentalness, speechiness))                                        
 
 if __name__=="__main__":
-    # Read from album table in DB
-    song_uris = pd.DataFrame(db.fetch_data(f"""
-            SELECT song_uri, song_name FROM songs;
+    # Read from song table in DB
+    # filter out songs that we have already requested metrics for
+    # decrease API calls
+    new_song_uris = pd.DataFrame(db.fetch_data(f"""
+            with new_songs as (
+                select s.song_uri, s.song_name, popularity from songs s
+                left join metrics m
+                on s.song_uri = m.song_uri
+                )
+            select song_uri, song_name from new_songs where popularity is null
+
             """), columns = ["song_uri", "song_name"]
     )
     
-    get_song_metrics(song_uris)
+    get_song_metrics(new_song_uris)
 

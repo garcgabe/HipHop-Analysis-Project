@@ -17,10 +17,7 @@ class SpotifyWrapper():
         return self.spot.audio_features(song_uri)
 
     def getTrack(self, song_uri):
-        try:
-            return self.spot.track(song_uri)
-        except:
-            time.sleep(5)
+        return self.spot.track(song_uri)
     
     def searchArtist(self, artist):
         return self.spot.search(q=artist, type="artist")
