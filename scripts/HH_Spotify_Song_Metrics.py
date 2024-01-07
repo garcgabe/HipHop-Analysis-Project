@@ -29,8 +29,12 @@ def get_song_metrics(uris):
         song_uri = uris.iloc[count]["song_uri"]
         song_name = uris.iloc[count]["song_name"]
 
-        audio_features = spot.getAudioFeatures(song_uri)
-        track_data = spot.getTrack(song_uri)
+        try:
+            audio_features = spot.getAudioFeatures(song_uri)
+            track_data = spot.getTrack(song_uri)
+        except:
+            print("Too many requests. Sleeping...")
+            time.sleep(60)
         
         if (not audio_features or not track_data):
             print(f"{song_name} not found. skipping...")
