@@ -46,8 +46,7 @@ card_front.markdown("""
   .card-content { display: flex; justify-content: center; position: relative; }
   .card-top5 {}
   .dots-line {
-    border: none;
-    border-top: 1px dotted #000;
+    border: 1px dotted #000;
     margin: 10px 0;
   }
 
