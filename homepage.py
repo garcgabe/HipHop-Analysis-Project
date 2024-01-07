@@ -46,12 +46,12 @@ card_front.markdown("""
 <title>Artist Card</title>
 <style>
   body { font-family: Arial, sans-serif; }
-  .card { width: 300px; border: 1px solid #000; padding: 10px; }
+  .card { width: 300px; border: 2px solid #0AA; border-radius: 10; padding: 10px; }
   .card-header { text-align: center; margin-bottom: 20px; }
   .card-content { display: flex; justify-content: space-between; }
   .metrics { text-align: right; }
   .metric { margin-bottom: 5px; }
-  .photo { width: 100px; height: 100px; background: #ccc; border-radius: 50%; }
+  .photo { width: 100px; height: 100px; background: #ccc; justify-content: center; align-items: center;border-radius: 50%; }
 </style>
 </head>
 <body>
