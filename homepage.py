@@ -44,7 +44,7 @@ card_front.markdown("""
   .card { width: 300px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; margin-bottom: 20px; }
   .card-content { display: flex; justify-content: center; position: relative; }
-  .card-top5 { text-align: left; }
+  .card-top5 {}
 
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
