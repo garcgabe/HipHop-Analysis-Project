@@ -48,18 +48,19 @@ card_front.markdown("""
   body { font-family: Arial, sans-serif; }
   .card { width: 300px; border: 2px solid #0AA; border-radius: 10; padding: 10px; }
   .card-header { text-align: center; margin-bottom: 20px; }
-  .card-content { display: flex; justify-content: space-between; }
-  .metrics { text-align: right; }
+  .card-content { display: flex; justify-content: center; }
+  .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
-  .center{display: flex; justify-content: center;}
   .photo { width: 100px; height: 100px; background: #ccc;border-radius: 50%; }
 </style>
 </head>
-<body>
+<body>""", unsafe_allow_html=True)
+
+card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
     <h2>PLACEHOLDER NAME</h2>
-    <div class="photo"></div>
+    <div class="photo"><img src="{selected_artist_image}" width="300"></div>
     <p>Genre1 - Genre2 - Genre3 - Genre4</p>
   </div>
 </body>
@@ -83,22 +84,6 @@ card_back.markdown("""
   </div>
 </div>
 """, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # # centered artist image
