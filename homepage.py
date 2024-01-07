@@ -36,8 +36,9 @@ selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
+card_front, card_back = st.columns([1,1])
 
-st.markdown("""
+card_front.markdown("""
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -60,6 +61,11 @@ st.markdown("""
     <div class="photo"></div>
     <p>Genre1 - Genre2 - Genre3 - Genre4</p>
   </div>
+</body>
+</html>
+""", unsafe_allow_html=True)
+
+card_back.markdown("""
   <div class="card-content">
     <div>
       <p>Song 1 - 91%</p>
@@ -75,8 +81,6 @@ st.markdown("""
     </div>
   </div>
 </div>
-</body>
-</html>
 """, unsafe_allow_html=True)
 
 
