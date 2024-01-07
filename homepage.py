@@ -44,9 +44,9 @@ card_front.markdown("""
   .card { width: 300px; border: 2px solid #AAA; border-radius: 10; padding: 10px; }
   .card-header { text-align: center; justify-content: center; margin-bottom: 20px; }
   .card-content { display: flex; justify-content: center; }
+  
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
-  .photo { width: 100px; height: 100px; background: #ccc;border-radius: 100%; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -54,7 +54,7 @@ card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
     <h2>PLACEHOLDER NAME</h2>
-    <div class="photo"><img src="{selected_artist_image}" width="30"></div>
+    <img src="{selected_artist_image}" width="30">
     <p>Genre1 - Genre2</p><p>Genre3 - Genre4</p>
     <p>Pareto Score</p>
     <p>30%</p>
