@@ -39,33 +39,31 @@ result = result.drop(['artist_uri','images'], axis=1)
 card_front, card_back = st.columns([1,1])
 
 card_front.markdown("""
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artist Card</title>
 <style>
   body { font-family: Arial, sans-serif; }
-  .card { width: 300px; border: 2px solid #0AA; border-radius: 10; padding: 10px; }
-  .card-header { text-align: center; margin-bottom: 20px; }
+  .card { width: 300px; border: 2px solid #AAA; border-radius: 10; padding: 10px; }
+  .card-header { text-align: center; justify-content: center; margin-bottom: 20px; }
   .card-content { display: flex; justify-content: center; }
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
   .photo { width: 100px; height: 100px; background: #ccc;border-radius: 50%; }
 </style>
-</head>
-<body>""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
     <h2>PLACEHOLDER NAME</h2>
     <div class="photo"><img src="{selected_artist_image}" width="30"></div>
-    <p>Genre1 - Genre2 - Genre3 - Genre4</p>
+    <p>Genre1 - Genre2</p><p>Genre3 - Genre4</p>
+    <p>Pareto Coefficient</p>
+    <p>30%</p>
+
   </div>
-</body>
-</html>
 """, unsafe_allow_html=True)
+
+
+
 
 card_back.markdown("""
   <div class="card-content">
