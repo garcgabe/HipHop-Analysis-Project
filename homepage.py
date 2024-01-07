@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import pandas as pd
-from supabase import create_client
+from upabase import create_client
 from streamlit_extras.metric_cards import style_metric_cards
 
 url = st.secrets["supabase_url"].SUPABASE_URL
