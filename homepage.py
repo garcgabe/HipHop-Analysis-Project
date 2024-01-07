@@ -80,7 +80,7 @@ card_back.markdown(f"""
       <p>{topsongs[3]} - 87%</p>
       <p>{topsongs[4]} - 79%</p>
     </div>
-<hr class="dots-line">
+<hr class="dots-line"></hr>
 
     <div class="metrics">
       <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
