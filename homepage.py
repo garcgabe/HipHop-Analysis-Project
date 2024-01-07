@@ -41,7 +41,7 @@ card_front, card_back = st.columns([1,1])
 card_front.markdown("""
 <style>
   body { font-family: Arial, sans-serif; }
-  .card { width: 300px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
+  .card { width: 300px; height: 500px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; margin-bottom: 20px; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .card-top5 {}
