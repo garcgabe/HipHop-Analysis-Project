@@ -8,13 +8,13 @@ import sys, json
 db = Postgres()
 spot = SpotifyWrapper()
 
-def get_songs_from_albums(all_albums):
+def get_songs_from_albums(albums):
 
-    print("Fetching songs for: " + str(len(all_albums)) + " albums.")
+    print("Fetching songs for: " + str(len(albums)) + " albums.")
     song_uri, song_name, album_uri, artist_names, explicit, preview_url = ([] for _ in range(6))
     columns = ["song_uri", "song_name", "album_uri", "artist_names", "explicit", "preview_url"]
-    for counter in range(0,len(all_albums)):
-        uri = all_albums.iloc[counter]["album_uri"]
+    for counter in range(0,len(albums)):
+        uri = albums.iloc[counter]["album_uri"]
         #print(counter, uri)
         if(counter%25 == 0):
             print("Album #: "+str(counter))
@@ -75,12 +75,12 @@ def get_songs_from_albums(all_albums):
 
 if __name__ == "__main__":
     # Read from album table in DB
-    spot_album_uris = pd.DataFrame(db.fetch_data(f"""
+    album_uris = pd.DataFrame(db.fetch_data(f"""
             SELECT album_uri FROM albums;
             """), columns = ["album_uri"]
     )
 
     #actual fetch of songs into DB
-    spot_songs = get_songs_from_albums(spot_album_uris)
+    spot_songs = get_songs_from_albums(album_uris)
     
 

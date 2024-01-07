@@ -31,6 +31,14 @@ CREATE TABLE songs(
     FOREIGN KEY (album_uri) REFERENCES albums (album_uri) ON DELETE CASCADE
 );
 
+--
+--
+-- WORK IN PROGRESS BELOW -- MAKE CALLS FIRST THEN DECIDE
+--
+--
+
+
+
 -- create song metrics table
 CREATE TABLE metrics(
     song_uri varchar(256),
