@@ -62,7 +62,7 @@ st.markdown("""
     flex:1
     }
   .card-header { text-align: center; justify-content: center; }
-  .card-content { text-align: center; justify-content: center; display: flex; }
+  .card-content { text-align: center; justify-content: center; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
   .front_info { font-family: Helvetica, sans-serif; padding: 5px; word-wrap: break-word; max-width: 275px; }
 
@@ -96,10 +96,10 @@ st.markdown(f"""
   </div>
   <div class="card-content">
     <img src="{selected_artist_image}" class = "artist_pic">
-    <div padding=5px>
-    {genre_html}
-    <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
-    <h4>Pareto Score:   30%</h4>
+    <div class="front_info">
+      {genre_html}
+      <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
+      <h4>Pareto Score:   30%</h4>
     </div>
   </div>
 </div>
