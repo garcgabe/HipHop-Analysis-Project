@@ -60,13 +60,9 @@ st.markdown("""
     border-image-slice: 1;
     background-radius: 15px;
     flex:1
-    positon: relative
-    height: 500px
     }
   .card-header { text-align: center; justify-content: center; }
-  .card-content { text-align: center; justify-content: center; margin-bottom: 10px; 
-    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
-  }
+  .card-content { text-align: center; justify-content: center; margin-bottom: 10px; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
   .front_info { font-family: Helvetica, sans-serif; word-wrap: break-word; max-width: 275px; margin: 0 auto;}
   h4{margin-top: 0; margin-bottom: 0; bottom: 0}
