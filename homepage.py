@@ -34,7 +34,7 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = "<p>"
+genre_html = "<h3>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
@@ -42,7 +42,7 @@ else:
     for i in range(0, number_genres, 2):
         genre_html += " --- ".join(selected_artist_genres[i:i+2])
         genre_html += "<br>"
-genre_html += "</p>"
+genre_html += "</h3>"
 
 topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
 
@@ -65,7 +65,7 @@ st.markdown("""
   .card-content { text-align: center; justify-content: center; margin-bottom: 10px; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
   .front_info { font-family: Helvetica, sans-serif; word-wrap: break-word; max-width: 275px; margin: 0 auto;}
-  h4{margin-top: 0; margin-bottom: 0; }
+  h4{margin-top: 0; margin-bottom: 0; bottom: 0}
   p{margin-top: 0; margin-bottom: 0; }
   .top-songs {
     display: flex;
@@ -99,7 +99,7 @@ st.markdown(f"""
     <img src="{selected_artist_image}" class = "artist_pic">
     <div class="front_info">
       {genre_html}
-      <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
+      <h4>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h4>
       <h4>Pareto Score:   30%</h4>
     </div>
   </div>
