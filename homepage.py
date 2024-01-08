@@ -55,7 +55,7 @@ card_front.markdown("""
   body { font-family: Helvetica, sans-serif; }
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
    background-image: linear-gradient(to bottom right, #133832, #552506);
-    border-image: linear-gradient(to right, #F1E1A4, #000000);
+    border-image: linear-gradient(to right, #F1E1A4, #FFFFFF);
     border-image-slice: 1;
     border-radius: 15px ; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
