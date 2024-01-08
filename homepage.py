@@ -47,7 +47,7 @@ card_front.markdown("""
   .card { width: 300px; height: 500px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
-  .artist_pic { width:300px; height:300px; border-radius:50%; justify-content: center;}
+  .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
   .genres { text-align: bottom; }
   .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC; }
 
