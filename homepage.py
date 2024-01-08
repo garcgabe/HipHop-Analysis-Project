@@ -38,13 +38,14 @@ genre_html = "<h5>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
-else:
+elif(number_genres <=6):
     for i in range(0, number_genres, 2):
-      if i > 6:
-        break
-      else:
         genre_html += " --- ".join(selected_artist_genres[i:i+2])
         genre_html += "<br>"
+else:
+    for i in range(0, 6, 2):
+      genre_html += " --- ".join(selected_artist_genres[i:i+2])
+      genre_html += "<br>"
 genre_html += "</h5>"
 
 topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
