@@ -34,7 +34,7 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = "<h3>"
+genre_html = "<h5>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
@@ -42,7 +42,7 @@ else:
     for i in range(0, number_genres, 2):
         genre_html += " --- ".join(selected_artist_genres[i:i+2])
         genre_html += "<br>"
-genre_html += "</h3>"
+genre_html += "</h5>"
 
 topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
 
@@ -60,9 +60,13 @@ st.markdown("""
     border-image-slice: 1;
     background-radius: 15px;
     flex:1
+    positon: relative
+    height: 500px
     }
   .card-header { text-align: center; justify-content: center; }
-  .card-content { text-align: center; justify-content: center; margin-bottom: 10px; }
+  .card-content { text-align: center; justify-content: center; margin-bottom: 10px; 
+    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
   .front_info { font-family: Helvetica, sans-serif; word-wrap: break-word; max-width: 275px; margin: 0 auto;}
   h4{margin-top: 0; margin-bottom: 0; bottom: 0}
