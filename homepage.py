@@ -34,7 +34,7 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = "<p padding: 5px>"
+genre_html = "<p padding-top: 5px>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
