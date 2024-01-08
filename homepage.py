@@ -64,7 +64,7 @@ st.markdown("""
   .card-header { text-align: center; justify-content: center; }
   .card-content { text-align: center; justify-content: center; margin-bottom: 10px; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
-  .front_info { font-family: Helvetica, sans-serif; word-wrap: break-word; max-width: 275px; margin: 0 auto;}
+  .front_info { font-family: Helvetica, sans-serif; word-wrap: break-word; max-width: 350px; margin: 0 auto;}
   h4{margin-top: 0; margin-bottom: 0; bottom: 0}
   p{margin-top: 0; margin-bottom: 0; }
   .top-songs {
