@@ -48,7 +48,7 @@ card_front.markdown("""
   .artist_pic { width:300px; height:300px; border-radius:50%; padding: 25px }
   .genres { text-align: bottom; }
 
-  .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC }
+  .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC; padding: 25px; }
   .card-top5 {}
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
