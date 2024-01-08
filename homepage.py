@@ -75,7 +75,7 @@ card_front.markdown("""
 card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
-    <p><h6>╪</h6><h3>{selected_name}</h3><h6>╪</h6>╪</p>
+    <p><h6>╪</h6><h3>{selected_name}</h3><h6>╪</h6></p>
   </div>
   <div class="card-content">
     <img src="{selected_artist_image}" class = "artist_pic">
