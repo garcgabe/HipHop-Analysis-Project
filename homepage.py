@@ -76,7 +76,7 @@ card_front.markdown(f"""
   <div class="card-header">
     <h3>{selected_name}</h3>
     <img src="{selected_artist_image}" class = "artist_pic">
-    <div>
+    <div padding=5px>
     {genre_html}
     <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
     <p>Pareto Score:   30%</p>
