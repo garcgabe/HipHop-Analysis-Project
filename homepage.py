@@ -40,6 +40,9 @@ if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
 else:
     for i in range(0, number_genres, 2):
+      if i > 6:
+        break
+      else:
         genre_html += " --- ".join(selected_artist_genres[i:i+2])
         genre_html += "<br>"
 genre_html += "</h5>"
