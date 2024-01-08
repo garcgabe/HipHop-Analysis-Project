@@ -34,7 +34,16 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = ""
+genre_html = "<p>"
+number_genres = len(selected_artist_genres)
+if number_genres <= 2:
+    genre_html += " -|- ".join(genres)
+else:
+    for i in range(0, number_genres, 2):
+        html += " -|- ".join(selected_artist_genres[i:i+2])
+        html += "<br>"
+genre_html += "</p>"
+
 
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
@@ -62,10 +71,9 @@ card_front.markdown(f"""
   <div class="card-header">
     <h3>{selected_name}</h3>
     <img src="{selected_artist_image}" class = "artist_pic">
-    <p>{"---".join(genre for genre in selected_artist_genres)}</p>
-  
+    {genre_html}
   <div class="dotted-line"><p>                   </p></div>
-    <p padding=5px >Pareto Score</p>
+    <p padding=10px >Pareto Score</p>
     <p>30%</p>
   </div>
   </div>
@@ -78,7 +86,7 @@ topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
 card_back.markdown(f"""
   <div class="card">
     <div>
-      <p>{topsongs[0]} - 91</p>
+      <p>{topsongs[0]}</p>
       <p>{topsongs[1]} - 86%</p>
       <p>{topsongs[2]} - 88%</p>
       <p>{topsongs[3]} - 87%</p>
