@@ -34,7 +34,7 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = "<p>"
+genre_html = "<p> margin-top: 0; margin-bottom: 0;"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
@@ -62,10 +62,10 @@ st.markdown("""
     flex:1
     }
   .card-header { text-align: center; justify-content: center; }
-  .card-content { text-align: center; justify-content: center; }
+  .card-content { text-align: center; justify-content: center; margin-bottom: 10px; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
   .front_info { font-family: Helvetica, sans-serif; word-wrap: break-word; max-width: 275px; margin: 0 auto;}
-
+  h4{margin-top: 0; margin-bottom: 0; }
   .top-songs {
     display: flex;
     flex-direction: column;
