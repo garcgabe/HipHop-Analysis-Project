@@ -44,15 +44,16 @@ else:
         genre_html += "<br>"
 genre_html += "</p>"
 
+topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
+
 
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
-card_front, card_back = st.columns([1,1])
-
-card_front.markdown("""
+st.markdown("""
 <style>
   body { font-family: Helvetica, sans-serif; }
+
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
    background-image: linear-gradient(to bottom right, #133832, #552506);
     border-image: linear-gradient(to right, #F1E1A4, #FFFFFF);
@@ -72,7 +73,7 @@ card_front.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-card_front.markdown(f"""
+st.markdown(f"""
 <body>
 <div class="card">
   <div class="card-header">
@@ -87,14 +88,7 @@ card_front.markdown(f"""
     </div>
   </div>
 </div>
-</body>
-""", unsafe_allow_html=True)
 
-
-topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
-
-
-card_back.markdown(f"""
 <div class="card">
     <div class="card-header">
         <h3>Artist Top 5</h3>
@@ -105,7 +99,7 @@ card_back.markdown(f"""
         <h4>❂ {topsongs[2]} --- 88%</h4>
         <h4>❂ {topsongs[3]} --- 87%</h4>
         <h4>❂ {topsongs[4]} --- 79%</h4>
-      <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6>
+      <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
       <div class="metrics">
         <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
         <div class="metric"><strong>Danceability</strong> 20 - 70 - 90</div>
@@ -113,8 +107,9 @@ card_back.markdown(f"""
       </div>
     </div>
 </div>
-""", unsafe_allow_html=True)
 
+</body>
+""", unsafe_allow_html=True)
 
 # # centered artist image
 # st.markdown(
