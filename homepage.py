@@ -46,21 +46,6 @@ card_front.markdown("""
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .card-top5 {}
-  .line {
-  width: 100%;
-  height: 1px;
-  background: #000;
-  position: relative;
-  }
-  .line::before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  top: 0;
-  background: repeating-linear-gradient(to right, #000, #000 3px, transparent 3px, transparent 6px);
-}
-
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
 </style>
@@ -69,7 +54,7 @@ card_front.markdown("""
 card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
-    <h2>{selected_name}</h2>
+    <h3>{selected_name}</h3>
     <img src="{selected_artist_image}" width="175" height="175" border-radius: 50% padding: 50px>
     <p>{"---".join(genre for genre in selected_artist_genres)}</p>
     <p>Pareto Score</p>
