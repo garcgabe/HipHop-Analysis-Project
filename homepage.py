@@ -73,6 +73,7 @@ card_front.markdown("""
 """, unsafe_allow_html=True)
 
 card_front.markdown(f"""
+<body>
 <div class="card">
   <div class="card-header">
     <h3>{selected_name}</h3>
@@ -82,11 +83,12 @@ card_front.markdown(f"""
     <div padding=5px>
     {genre_html}
     <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
-    <h2 font-size: 20px font-weight: bold:;>Pareto Score:   30%</h2>
+    <h2 font-size: 12px font-weight: bold;>Pareto Score:   30%</h2>
     </div>
     
   </div>
   </div>
+</body>
 """, unsafe_allow_html=True)
 
 
