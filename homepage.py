@@ -53,7 +53,7 @@ card_front, card_back = st.columns([1,1])
 card_front.markdown("""
 <style>
   body { font-family: Helvetica, sans-serif; }
-  .card { width: 300px; height: 500px; border: 2px; 
+  .card { width: 300px; height: 500px; border: 2px solid $AAA; 
     border-image: linear-gradient(to right, #FFD700, #FF8C00);
     border-image-slice: 1;
     border-radius: 15px; padding: 10px; }
