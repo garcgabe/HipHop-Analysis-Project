@@ -45,6 +45,8 @@ card_front.markdown("""
   .card { width: 300px; height: 500px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
+  .artist_pic { width:175px; height:175px; border-radius:50%; padding: 50px }
+
   .card-top5 {}
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
@@ -55,7 +57,7 @@ card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
     <h3>{selected_name}</h3>
-    <img src="{selected_artist_image}" width="175" height="175" border-radius: 50% padding: 50px>
+    <img src="{selected_artist_image}" class = "artist_pic">
     <p>{"---".join(genre for genre in selected_artist_genres)}</p>
     <p>Pareto Score</p>
     <p>30%</p>
