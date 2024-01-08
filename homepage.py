@@ -60,14 +60,13 @@ card_front.markdown("""
     border-radius: 15px ; padding: 10px; 
     background-radius: 15px;}
   .card-header { text-align: center; justify-content: center; 
-    background-image: linear-gradient(to bottom right, #133832, #552506);
+    background-image: linear-gradient(to bottom right, #F1E1A4, #FFFFFF);
   }
-  .card-content { display: flex; text-align: center; justify-content: center; }
+  .card-content { text-align: center; justify-content: center; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
     );
   }
   .genres { font-family: Helvetica, sans-serif; text-align: bottom; padding: 10px;}
-  .dotted-line {width: 100%; height: 2px; }
 
   .card-top5 {}
   .metrics { text-align: bottom; }
