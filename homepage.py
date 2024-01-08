@@ -58,9 +58,10 @@ st.markdown("""
    background-image: linear-gradient(to bottom right, #133832, #552506);
     border-image: linear-gradient(to right, #F1E1A4, #FFFFFF);
     border-image-slice: 1;
-    border-radius: 15px ; padding: 10px; 
+    padding: 10px; 
     background-radius: 15px;
     flex:1
+    padding-right: 5px
     }
   .card-header { text-align: center; justify-content: center; }
   .card-content { text-align: center; justify-content: center; }
