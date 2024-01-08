@@ -87,7 +87,7 @@ card_front.markdown(f"""
     </div>
     
   </div>
-  </div>
+</div>
 </body>
 """, unsafe_allow_html=True)
 
