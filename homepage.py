@@ -37,10 +37,10 @@ selected_artist_genres = result.loc[result['artist_name'] == selected_name]['gen
 genre_html = "<p>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
-    genre_html += " -|- ".join(selected_artist_genres)
+    genre_html += " --- ".join(selected_artist_genres)
 else:
     for i in range(0, number_genres, 2):
-        genre_html += " -|- ".join(selected_artist_genres[i:i+2])
+        genre_html += " --- ".join(selected_artist_genres[i:i+2])
         genre_html += "<br>"
 genre_html += "</p>"
 
@@ -52,12 +52,12 @@ card_front, card_back = st.columns([1,1])
 
 card_front.markdown("""
 <style>
-  body { font-family: Arial, sans-serif; }
+  body { font-family: Helvetica, sans-serif; }
   .card { width: 300px; height: 500px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
-  .genres { text-align: bottom; }
+  .genres { font-family: Helvetica, sans-serif; text-align: bottom; padding: 10px;}
   .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC; }
 
   .card-top5 {}
