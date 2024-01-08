@@ -56,11 +56,12 @@ card_front.markdown("""
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
    background-image: linear-gradient(to bottom right, #133832, #552506);
     border-image: linear-gradient(to right, #FFD700, #FF8C00);
+    border-image-slice: 35%;
     border-radius: 15px ; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
-    border-image: linear-gradient(to right, #FFD700, #FF8C00);
+    border-image: linear-gradient(to right, #F1E1A4, #000000);
   }
   .genres { font-family: Helvetica, sans-serif; text-align: bottom; padding: 10px;}
   .dotted-line {width: 100%; height: 2px; }
