@@ -105,7 +105,7 @@ card_back.markdown(f"""
         <h4>❂ {topsongs[2]} --- 88%</h4>
         <h4>❂ {topsongs[3]} --- 87%</h4>
         <h4>❂ {topsongs[4]} --- 79%</h4>
-      <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
+      <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6>
       <div class="metrics">
         <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
         <div class="metric"><strong>Danceability</strong> 20 - 70 - 90</div>
