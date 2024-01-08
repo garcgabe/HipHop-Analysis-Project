@@ -68,7 +68,23 @@ st.markdown("""
   }
   .genres { font-family: Helvetica, sans-serif; text-align: bottom; padding: 10px;}
 
-  .card-top5 {}
+  .top-songs {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .song {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .title {
+    text-align: left;
+  }
+  
+  .percentage {
+    text-align: right;
+  }
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
 </style>
@@ -96,11 +112,28 @@ st.markdown(f"""
         <h3>Artist Top 5</h3>
     </div>
     <div class="card-content">
-        <h4>❂ {topsongs[0]} --- 87%</h4>
-        <h4>❂ {topsongs[1]} --- 86%</h4>
-        <h4>❂ {topsongs[2]} --- 88%</h4>
-        <h4>❂ {topsongs[3]} --- 87%</h4>
-        <h4>❂ {topsongs[4]} --- 79%</h4>
+      <div class="top-songs">
+        <div class="song">
+          <span class="title">{topsongs[0]}</span>
+          <span class="percentage">87%</span>
+        </div>
+        <div class="song">
+          <span class="title">{topsongs[1]}</span>
+          <span class="percentage">86%</span>
+        </div>
+        <div class="song">
+          <span class="title">{topsongs[2]}</span>
+          <span class="percentage">88%</span>
+        </div>
+        <div class="song">
+          <span class="title">{topsongs[3]}</span>
+          <span class="percentage">87%</span>
+        </div>
+        <div class="song">
+          <span class="title">{topsongs[4]}</span>
+          <span class="percentage">79%</span>
+        </div>
+      </div>
       <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
       <div class="metrics">
         <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
