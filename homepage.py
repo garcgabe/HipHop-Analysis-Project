@@ -78,7 +78,7 @@ card_front.markdown(f"""
     <img src="{selected_artist_image}" class = "artist_pic">
     {genre_html}
   <div class="dotted-line"><p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p></div>
-    <p padding=5px >Pareto Score <br>30%</p>
+    <p>Pareto Score <br>30%</p>
   </div>
   </div>
 """, unsafe_allow_html=True)
