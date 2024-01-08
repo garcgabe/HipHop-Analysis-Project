@@ -34,7 +34,7 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = "<p padding-top: 5px>"
+genre_html = "<p>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
@@ -62,27 +62,22 @@ st.markdown("""
     flex:1
     }
   .card-header { text-align: center; justify-content: center; }
-  .card-content { text-align: center; justify-content: center; }
-  .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
-    );
-  }
-  .genres { font-family: Helvetica, sans-serif; text-align: bottom; padding: 10px;}
+  .card-content { text-align: center; justify-content: center; display: flex; }
+  .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
+  .front_info { font-family: Helvetica, sans-serif; padding: 5px; word-wrap: break-word; max-width: 275px; }
 
   .top-songs {
     display: flex;
     flex-direction: column;
   }
-  
   .song {
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
   }
-  
   .title {
     text-align: left;
   }
-  
   .percentage {
     text-align: right;
     padding-right: 10px;
