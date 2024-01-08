@@ -36,7 +36,7 @@ def get_song_metrics(uris):
         
         if (audio_features[0] is None or track_data is None):
             print(f"{song_name} not found. skipping...")
-        elif (audio_features[0] is not None and track_data is not None):
+        else:
             duration_sec = track_data['duration_ms'] * 0.001
             popularity = track_data['popularity']
 
