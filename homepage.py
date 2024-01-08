@@ -56,7 +56,6 @@ card_front.markdown("""
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
    background-image: linear-gradient(to bottom right, #133832, #552506);
     border-image: linear-gradient(to right, #FFD700, #FF8C00);
-    border-image-slice: 1;
     border-radius: 15px ; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
