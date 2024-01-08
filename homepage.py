@@ -34,7 +34,7 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = "<p>"
+genre_html = "<p padding: 5px>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
     genre_html += " --- ".join(selected_artist_genres)
@@ -63,7 +63,7 @@ card_front.markdown("""
     border-image: linear-gradient(to right, #FFD700, #FF8C00);
   }
   .genres { font-family: Helvetica, sans-serif; text-align: bottom; padding: 10px;}
-  .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC; }
+  .dotted-line {width: 100%; height: 2px; }
 
   .card-top5 {}
   .metrics { text-align: bottom; }
