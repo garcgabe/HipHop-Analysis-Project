@@ -61,6 +61,7 @@ card_front.markdown(f"""
     <h3>{selected_name}</h3>
     <img src="{selected_artist_image}" class = "artist_pic">
     <p>{"---".join(genre for genre in selected_artist_genres)}</p>
+  </div>
   <div class="dotted-line"></div>
     <p>Pareto Score</p>
     <p>30%</p>
