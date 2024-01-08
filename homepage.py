@@ -100,11 +100,12 @@ card_back.markdown(f"""
         <h3>Artist Top 5</h3>
     </div>
     <div class="card-content">
-        <p>❂ {topsongs[0]}</p>
-        <p>❂ {topsongs[1]} - 86%</p>
-        <p>❂ {topsongs[2]} - 88%</p>
-        <p>❂ {topsongs[3]} - 87%</p>
-        <p>❂ {topsongs[4]} - 79%</p>
+        <h4>❂ {topsongs[0]} --- 87%</h4>
+        <h4>❂ {topsongs[1]} --- 86%</h4>
+        <h4>❂ {topsongs[2]} --- 88%</h4>
+        <h4>❂ {topsongs[3]} --- 87%</h4>
+        <h4>❂ {topsongs[4]} --- 79%</h4>
+      <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
       <div class="metrics">
         <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
         <div class="metric"><strong>Danceability</strong> 20 - 70 - 90</div>
