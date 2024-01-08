@@ -59,7 +59,9 @@ card_front.markdown("""
     border-image-slice: 1;
     border-radius: 15px ; padding: 10px; 
     background-radius: 15px;}
-  .card-header { text-align: center; justify-content: center; }
+  .card-header { text-align: center; justify-content: center; 
+    background-image: linear-gradient(to bottom right, #133832, #552506);
+  }
   .card-content { display: flex; text-align: center; justify-content: center; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
     );
@@ -78,6 +80,7 @@ card_front.markdown(f"""
   <div class="card-header">
     <h3 >{selected_name}</h3>
   </div>
+  <div class="card-content">
     <img src="{selected_artist_image}" class = "artist_pic">
     <div padding=5px>
     {genre_html}
@@ -85,7 +88,7 @@ card_front.markdown(f"""
     <p>Pareto Score:   30%</p>
     </div>
     
-  
+  </div>
   </div>
 """, unsafe_allow_html=True)
 
