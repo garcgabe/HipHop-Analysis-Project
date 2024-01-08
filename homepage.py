@@ -34,6 +34,8 @@ selected_artist_image = result.loc[result['artist_name'] == selected_name]['imag
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
+genre_html = ""
+
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
@@ -45,10 +47,10 @@ card_front.markdown("""
   .card { width: 300px; height: 500px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
-  .artist_pic { width:300px; height:300px; border-radius:50%; padding: 25px }
+  .artist_pic { width:300px; height:300px; border-radius:50%; }
   .genres { text-align: bottom; }
+  .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC; }
 
-  .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC; padding: 25px; }
   .card-top5 {}
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
@@ -60,10 +62,11 @@ card_front.markdown(f"""
   <div class="card-header">
     <h3>{selected_name}</h3>
     <img src="{selected_artist_image}" class = "artist_pic">
-    <p>{"---".join(genre for genre in selected_artist_genres)}</p>
+    <p>{"---".join(genre for genre in selected_artist_genres)}
+    {"---".join(genre for genre in selected_artist_genres)}</p>
   
   <div class="dotted-line"><p>                   </p></div>
-    <p>Pareto Score</p>
+    <p padding=5px >Pareto Score</p>
     <p>30%</p>
   </div>
   </div>
