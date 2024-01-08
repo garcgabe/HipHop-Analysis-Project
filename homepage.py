@@ -59,7 +59,8 @@ card_front.markdown("""
     border-image-slice: 1;
     border-radius: 15px ; padding: 10px; 
     background-radius: 15px;}
-  .card-header { text-align: center; justify-content: center; }
+  .card-header { text-align: center; justify-content: center; 
+  background-image: linear-gradient(to bottom right, #F1E1A4, #FFFFFF);}
   .card-content { display: flex; justify-content: center; position: relative; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
     );
