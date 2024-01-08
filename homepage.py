@@ -93,11 +93,11 @@ topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
 card_back.markdown(f"""
   <div class="card">
     <div>
-      <p>{topsongs[0]}</p>
-      <p>{topsongs[1]} - 86%</p>
-      <p>{topsongs[2]} - 88%</p>
-      <p>{topsongs[3]} - 87%</p>
-      <p>{topsongs[4]} - 79%</p>
+      <p>❂ {topsongs[0]}</p>
+      <p>❂ {topsongs[1]} - 86%</p>
+      <p>❂ {topsongs[2]} - 88%</p>
+      <p>❂ {topsongs[3]} - 87%</p>
+      <p>❂ {topsongs[4]} - 79%</p>
     </div>
     <div class="dots-line">
     </div>
