@@ -53,10 +53,15 @@ card_front, card_back = st.columns([1,1])
 card_front.markdown("""
 <style>
   body { font-family: Helvetica, sans-serif; }
-  .card { width: 300px; height: 500px; border: 2px solid #AAA; border-radius: 10px; padding: 10px; }
+  .card { width: 300px; height: 500px; border: 2px solid #AAA; 
+    border-image: linear-gradient(to right, #FFD700, #FF8C00);
+    border-image-slice: 1;
+    border-radius: 10px; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
-  .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;}
+  .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
+    border-image: linear-gradient(to right, #FFD700, #FF8C00);
+  }
   .genres { font-family: Helvetica, sans-serif; text-align: bottom; padding: 10px;}
   .dotted-line {width: 100%; height: 2px; border-bottom: 2px dotted #CCC; }
 
@@ -73,8 +78,7 @@ card_front.markdown(f"""
     <img src="{selected_artist_image}" class = "artist_pic">
     {genre_html}
   <div class="dotted-line"><p>                   </p></div>
-    <p padding=5px >Pareto Score</p>
-    <p>30%</p>
+    <p padding=5px >Pareto Score <br>{30%}</p>
   </div>
   </div>
 """, unsafe_allow_html=True)
