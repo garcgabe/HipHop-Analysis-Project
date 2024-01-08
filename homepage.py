@@ -83,9 +83,8 @@ card_front.markdown(f"""
     <div padding=5px>
     {genre_html}
     <p>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</p>
-    <h3>Pareto Score:   30%</h3>
+    <h4>Pareto Score:   30%</h4>
     </div>
-    
   </div>
 </div>
 </body>
