@@ -53,13 +53,15 @@ result = result.drop(['artist_uri','images'], axis=1)
 st.markdown("""
 <style>
   body { font-family: Helvetica, sans-serif; }
-
+  .container { display: flex; }
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
    background-image: linear-gradient(to bottom right, #133832, #552506);
     border-image: linear-gradient(to right, #F1E1A4, #FFFFFF);
     border-image-slice: 1;
     border-radius: 15px ; padding: 10px; 
-    background-radius: 15px;}
+    background-radius: 15px;
+    flex:1
+    }
   .card-header { text-align: center; justify-content: center; }
   .card-content { text-align: center; justify-content: center; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
@@ -75,6 +77,7 @@ st.markdown("""
 
 st.markdown(f"""
 <body>
+<div class="container"> 
 <div class="card">
   <div class="card-header">
     <h3>{selected_name}</h3>
@@ -106,6 +109,7 @@ st.markdown(f"""
         <div class="metric"><strong>Emotion</strong> 20 - 60 - 80</div>
       </div>
     </div>
+</div>
 </div>
 
 </body>
