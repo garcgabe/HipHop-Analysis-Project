@@ -99,7 +99,7 @@ st.markdown(f"""
     <img src="{selected_artist_image}" class = "artist_pic">
     <div class="front_info">
       {genre_html}
-      <h4>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h4>
+      <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6>
       <h4>Pareto Score:   30%</h4>
     </div>
   </div>
