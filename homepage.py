@@ -56,7 +56,7 @@ card_front.markdown("""
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
     border-image: linear-gradient(to right, #FFD700, #FF8C00);
     border-image-slice: 1;
-    border-radius: 10px; padding: 10px; }
+    border-radius: 10%; padding: 10px; }
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
