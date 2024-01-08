@@ -59,8 +59,7 @@ card_front.markdown("""
     border-image-slice: 1;
     border-radius: 15px ; padding: 10px; 
     background-radius: 15px;}
-  .card-header { text-align: center; justify-content: center; 
-  background-image: linear-gradient(to bottom right, #F1E1A4, #FFFFFF);}
+  .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
     );
@@ -77,7 +76,7 @@ card_front.markdown("""
 card_front.markdown(f"""
 <div class="card">
   <div class="card-header">
-    <h3>{selected_name}</h3>
+    <h3 background-image: linear-gradient(to bottom right, #F1E1A4, #FFFFFF); >{selected_name}</h3>
     <img src="{selected_artist_image}" class = "artist_pic">
     <div padding=5px>
     {genre_html}
