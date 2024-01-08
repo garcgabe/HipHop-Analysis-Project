@@ -76,6 +76,7 @@ st.markdown("""
   .song {
     display: flex;
     justify-content: space-between;
+    padding-left: 10px;
   }
   
   .title {
@@ -84,6 +85,7 @@ st.markdown("""
   
   .percentage {
     text-align: right;
+    padding-right: 10px;
   }
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
