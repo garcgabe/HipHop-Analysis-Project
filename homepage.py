@@ -37,11 +37,11 @@ selected_artist_genres = result.loc[result['artist_name'] == selected_name]['gen
 genre_html = "<p>"
 number_genres = len(selected_artist_genres)
 if number_genres <= 2:
-    genre_html += " -|- ".join(genres)
+    genre_html += " -|- ".join(selected_artist_genres)
 else:
     for i in range(0, number_genres, 2):
-        html += " -|- ".join(selected_artist_genres[i:i+2])
-        html += "<br>"
+        genre_html += " -|- ".join(selected_artist_genres[i:i+2])
+        genre_html += "<br>"
 genre_html += "</p>"
 
 
