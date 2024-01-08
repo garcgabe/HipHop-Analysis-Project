@@ -60,6 +60,7 @@ card_front.markdown("""
     border-radius: 15px ; padding: 10px; 
     background-radius: 15px;}
   .card-header { text-align: center; justify-content: center; 
+    width: 100%; height: 100px;
     background-image: linear-gradient(to bottom right, #F1E1A4, #FFFFFF);
   }
   .card-content { text-align: center; justify-content: center; }
