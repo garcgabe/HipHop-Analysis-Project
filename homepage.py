@@ -57,7 +57,8 @@ card_front.markdown("""
    background-image: linear-gradient(to bottom right, #133832, #552506);
     border-image: linear-gradient(to right, #F1E1A4, #FFFFFF);
     border-image-slice: 1;
-    border-radius: 15px ; padding: 10px; }
+    border-radius: 15px ; padding: 10px; 
+    background-radius: 15px;}
   .card-header { text-align: center; justify-content: center; }
   .card-content { display: flex; justify-content: center; position: relative; }
   .artist_pic { width:275px; height:275px; border-radius:50%; justify-content: center;
