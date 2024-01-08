@@ -48,7 +48,7 @@ card_front.markdown("""
   .artist_pic { width:300px; height:300px; border-radius:50%; padding: 25px }
   .genres { text-align: bottom; }
 
-  .dotted-line {width: 100%; height: 1px; border-bottom: 1px dotted #000 }
+  .dotted-line {width: 100%; height: 1px; border-bottom: 1px dotted #0A0 }
   .card-top5 {}
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
@@ -62,7 +62,7 @@ card_front.markdown(f"""
     <img src="{selected_artist_image}" class = "artist_pic">
     <p>{"---".join(genre for genre in selected_artist_genres)}</p>
   
-  <div class="dotted-line">xxxxxxxxxx</div>
+  <div class="dotted-line"><p>xxxxxxxxxxxxxxxxxx</p></div>
     <p>Pareto Score</p>
     <p>30%</p>
   </div>
