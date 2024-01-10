@@ -24,7 +24,7 @@ def _get_top_songs(artist, number):
     filter_response = supabase.table("songs")\
         .select("song_name, popularity")\
         .eq('artist_name', f'{artist}')\
-        .order("popularity", ascending=False)\
+        .order("popularity", desc=True)\
         .limit(number)\
         .execute()
     print(f"DEBUG:{filter_response.data}")
