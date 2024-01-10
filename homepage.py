@@ -132,10 +132,10 @@ st.markdown(f"""
       </div>
       <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
       <div class="metrics">
-        <div class="metric"><strong>Popularity</strong> {" - ".join(popularity_distribution)}</div>
-        <div class="metric"><strong>Energy</strong>{" - ".join(energy_distribution)}</div>
-        <div class="metric"><strong>Danceability</strong>{" - ".join(danceability_distribution)}</div>
-        <div class="metric"><strong>Emotion</strong>{" - ".join(emotion_distribution)}</div>
+        <div class="metric"><strong>Popularity</strong> {" - ".join(str(x) for x in popularity_distribution)}</div>
+        <div class="metric"><strong>Energy</strong>{" - ".join(str(x) for x in energy_distribution)}</div>
+        <div class="metric"><strong>Danceability</strong>{" - ".join(str (x) for x in danceability_distribution)}</div>
+        <div class="metric"><strong>Emotion</strong>{" - ".join(str(x) for x in emotion_distribution)}</div>
       </div>
     </div>
 </div>
