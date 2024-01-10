@@ -5,11 +5,6 @@ from utils import queries
 from supabase import create_client
 from streamlit_extras.metric_cards import style_metric_cards
 
-# url = st.secrets["supabase_url"].SUPABASE_URL
-# key = st.secrets["supabase_key"].SUPABASE_KEY
-
-# supabase = create_client(url, key)
-
 ##
 def _generate_genre_html(genres):
   genre_html = "<h5>"
@@ -48,10 +43,10 @@ result = result.drop(['artist_uri','images'], axis=1)
 genre_html = _generate_genre_html(selected_artist_genres)
 
 topsongs = queries._get_top_songs(selected_name, 5)
-# popularity_distribution = queries._get_popularity_distribution(selected_name)
-# dance_distribution = queries._get_danceability_distribution(selected_name)
-# emotion_distribution = queries._get_emotion_distribution(selected_name)
-# energy_distribution = queries._get_energy_distribution(selected_name)
+popularity_distribution = queries._get_distribution(selected_name, 'popularity')
+dance_distribution = queries._get_distribution(selected_name, 'danceability')
+emotion_distribution = queries._get_distribution(selected_name, 'valence')
+energy_distribution = queries._get_distribution(selected_name, 'energy')    
 
 st.markdown("""
 <style>
@@ -137,9 +132,10 @@ st.markdown(f"""
       </div>
       <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
       <div class="metrics">
-        <div class="metric"><strong>Popularity</strong> 50 - 75 - 90</div>
-        <div class="metric"><strong>Danceability</strong> 20 - 70 - 90</div>
-        <div class="metric"><strong>Emotion</strong> 20 - 60 - 80</div>
+        <div class="metric"><strong>Popularity</strong> {" - ".join(popularity_distribution)}</div>
+        <div class="metric"><strong>Energy</strong>{" - ".join(energy_distribution)}</div>
+        <div class="metric"><strong>Danceability</strong>{" - ".join(danceability_distribution)}</div>
+        <div class="metric"><strong>Emotion</strong>{" - ".join(emotion_distribution)}</div>
       </div>
     </div>
 </div>
