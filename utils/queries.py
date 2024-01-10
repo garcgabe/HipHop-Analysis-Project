@@ -44,4 +44,4 @@ def _get_distribution(artist, column):
         .like('artist_names', f'%{artist}%')\
         .execute()
     results = [x.get('metrics').get(f'{column}') for x in filter_response.data]
-    return (min(results), round(sum(results)/len(results)), max(results))
+    return (min(results), sum(results)/len(results), max(results))
