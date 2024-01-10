@@ -48,10 +48,10 @@ result = result.drop(['artist_uri','images'], axis=1)
 genre_html = _generate_genre_html(selected_artist_genres)
 
 topsongs = queries._get_top_songs(selected_name, 5)
-popularity_distribution = queries._get_popularity_distribution(selected_name)
-dance_distribution = queries._get_danceability_distribution(selected_name)
-emotion_distribution = queries._get_emotion_distribution(selected_name)
-energy_distribution = queries._get_energy_distribution(selected_name)
+# popularity_distribution = queries._get_popularity_distribution(selected_name)
+# dance_distribution = queries._get_danceability_distribution(selected_name)
+# emotion_distribution = queries._get_emotion_distribution(selected_name)
+# energy_distribution = queries._get_energy_distribution(selected_name)
 
 st.markdown("""
 <style>
