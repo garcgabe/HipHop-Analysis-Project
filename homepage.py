@@ -1,58 +1,57 @@
 import streamlit as st
 import os
 import pandas as pd
+from utils import metrics
 from supabase import create_client
 from streamlit_extras.metric_cards import style_metric_cards
 
-url = st.secrets["supabase_url"].SUPABASE_URL
-key = st.secrets["supabase_key"].SUPABASE_KEY
+# url = st.secrets["supabase_url"].SUPABASE_URL
+# key = st.secrets["supabase_key"].SUPABASE_KEY
 
-supabase = create_client(url, key)
+# supabase = create_client(url, key)
+
+##
+def _generate_genre_html(genres):
+  genre_html = "<h5>"
+  number_genres = len(selected_artist_genres)
+  if number_genres <= 2:
+      genre_html += " --- ".join(selected_artist_genres)
+  elif(number_genres <=6):
+      for i in range(0, number_genres, 2):
+          genre_html += " --- ".join(selected_artist_genres[i:i+2])
+          genre_html += "<br>"
+  else:
+      for i in range(0, 6, 2):
+        genre_html += " --- ".join(selected_artist_genres[i:i+2])
+        genre_html += "<br>"
+  genre_html += "</h5>"
+  return genre_html
 
 ###################################################
-# get artist options from DB
-response = supabase.table("artists")\
-    .select("artist_name")\
-    .execute()
-artists = [x.get('artist_name') for x in response.data]
+# get all artist options from DB
+artists = queries._get_artists()
 
 # SELECT ARTIST FROM FRONTEND
-selected_name = st.selectbox("select an artist", \
-    options=artists)
+selected_name = st.selectbox("select an artist", options=artists)
 
-# querying all artists and info
-filter_response = supabase.table("artists")\
-    .select("*")\
-    .eq('artist_name', f'{selected_name}')\
-    .execute()
-
-# convert all data to DF; then 
-result = pd.DataFrame(filter_response.data)
+# get selected artist's info
+result = queries._get_artist_info(selected_name)
 
 # identify image and uri we will use going ahead
 selected_artist_image = result.loc[result['artist_name'] == selected_name]['images'][0]
 selected_artist_uri = result.loc[result['artist_name'] == selected_name]['artist_uri'][0]
 selected_artist_genres = result.loc[result['artist_name'] == selected_name]['genres'][0].split("-")
 
-genre_html = "<h5>"
-number_genres = len(selected_artist_genres)
-if number_genres <= 2:
-    genre_html += " --- ".join(selected_artist_genres)
-elif(number_genres <=6):
-    for i in range(0, number_genres, 2):
-        genre_html += " --- ".join(selected_artist_genres[i:i+2])
-        genre_html += "<br>"
-else:
-    for i in range(0, 6, 2):
-      genre_html += " --- ".join(selected_artist_genres[i:i+2])
-      genre_html += "<br>"
-genre_html += "</h5>"
-
-topsongs = ['Artist1', 'Artist2', 'Artist3', 'Artist4', 'Artist5']
-
-
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
+
+genre_html = _generate_genre_html(selected_artist_genres)
+
+topsongs = queries._get_top_songs(selected_name, 5)
+popularity_distribution = queries._get_popularity_distribution(selected_name)
+dance_distribution = queries._get_danceability_distribution(selected_name)
+emotion_distribution = queries._get_emotion_distribution(selected_name)
+energy_distribution = queries._get_energy_distribution(selected_name)
 
 st.markdown("""
 <style>
@@ -83,7 +82,7 @@ st.markdown("""
   .title {
     text-align: left;
   }
-  .percentage {
+  .popularity {
     text-align: right;
     padding-right: 10px;
   }
@@ -116,24 +115,24 @@ st.markdown(f"""
     <div class="card-content">
       <div class="top-songs">
         <div class="song">
-          <span class="title">{topsongs[0]}</span>
-          <span class="percentage">87%</span>
+          <span class="title">{topsongs[0][0]}</span>
+          <span class="popularity">{topsongs[0][1]}</span>
         </div>
         <div class="song">
-          <span class="title">{topsongs[1]}</span>
-          <span class="percentage">86%</span>
+          <span class="title">{topsongs[1][0]}</span>
+          <span class="popularity">{topsongs[1][1]}</span>
         </div>
         <div class="song">
-          <span class="title">{topsongs[2]}</span>
-          <span class="percentage">88%</span>
+          <span class="title">{topsongs[2][0]}</span>
+          <span class="popularity">{topsongs[2][1]}</span>
         </div>
         <div class="song">
-          <span class="title">{topsongs[3]}</span>
-          <span class="percentage">87%</span>
+          <span class="title">{topsongs[3][0]}</span>
+          <span class="popularity">{topsongs[3][1]}</span>
         </div>
         <div class="song">
-          <span class="title">{topsongs[4]}</span>
-          <span class="percentage">79%</span>
+          <span class="title">{topsongs[4][0]}</span>
+          <span class="popularity">{topsongs[4][1]}</span>
         </div>
       </div>
       <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
