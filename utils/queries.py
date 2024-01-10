@@ -1,5 +1,6 @@
 from supabase import create_client
 import streamlit as st
+import pandas as pd
 
 url = st.secrets["supabase_url"].SUPABASE_URL
 key = st.secrets["supabase_key"].SUPABASE_KEY
