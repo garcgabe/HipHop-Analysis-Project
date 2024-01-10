@@ -20,6 +20,14 @@ def _get_artist_info(artist):
         .execute()
     return pd.DataFrame(filter_response.data)
 
+def _get_albums(artist_uri):
+    album_response = supabase.table("albums")\
+        .select("*")\
+        .like('artist_uris', f'%{artist_uri}%')\
+        .execute()
+    # convert all data to DF; then return
+    return pd.DataFrame(album_response.data)
+
 def _get_top_songs(artist, number):
     filter_response = supabase.table("songs")\
         .select("song_name, metrics(popularity)")\

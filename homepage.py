@@ -189,13 +189,10 @@ style_metric_cards(background_color="#000000",
 #
 #
 
-album_response = supabase.table("albums")\
-    .select("*")\
-    .like('artist_uris', f'%{selected_artist_uri}%')\
-    .execute()
-# convert all data to DF; then 
-album_result = pd.DataFrame(album_response.data)
-# reordering columns
+# get all album data for artist
+album_result = queries._get_albums(selected_artist_uri)
+
+# reordering columns for visualization
 album_result = album_result[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
 
 st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
