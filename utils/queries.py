@@ -21,37 +21,36 @@ def _get_artist_info(artist):
     return pd.DataFrame(filter_response.data)
 
 def _get_top_songs(artist, number):
-    filter_response = supabase.table("metrics")\
-        .select("song_name, popularity")\
-        .eq('artist_name', f'{artist}')\
-        .order("popularity", desc=True)\
+    filter_response = supabase.table("songs")\
+        .select("song_name, metrics(popularity)")\
+        .like('artist_names', f'%{artist}%')\
+        .order("metrics(popularity)", desc=True)\
         .limit(number)\
         .execute()
-    print(f"DEBUG:{filter_response.data}")
-    return [(x.get('song_name'), x.get('popularity')) for x in filter_response.data]
+    return [(x.get('song_name'), x.get('metrics').get('popularity')) for x in filter_response.data]
 
-def _get_popularity_distribution(artist):
+
+#def _get_popularity_distribution(artist):
     filter_response = supabase.table("metrics")\
         .select("popularity")\
         .eq('artist_name', f'{artist}')\
         .execute()
     return filter_response.data
-
-def _get_energy_distribution(artist):
+#def _get_energy_distribution(artist):
     filter_response = supabase.table("metrics")\
         .select("energy")\
         .eq('artist_name', f'{artist}')\
         .execute()
     return filter_response.data
 
-def _get_emotion_distribution(artist):
+#def _get_emotion_distribution(artist):
     filter_response = supabase.table("metrics")\
         .select("valence")\
         .eq('artist_name', f'{artist}')\
         .execute()
     return filter_response.data
 
-def _get_danceability_distribution(artist):
+#def _get_danceability_distribution(artist):
     filter_response = supabase.table("metrics")\
         .select("danceability")\
         .eq('artist_name', f'{artist}')\
