@@ -26,8 +26,8 @@ result = result.drop(['artist_uri','images'], axis=1)
 
 card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
 
-st.markdown(card[0], unsafe_allow_html=True)
-st.markdown(card[1], unsafe_allow_html=True)
+# st.markdown(card[0], unsafe_allow_html=True)
+# st.markdown(card[1], unsafe_allow_html=True)
 
 st.divider()
 # column layout
