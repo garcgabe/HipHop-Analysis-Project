@@ -1,4 +1,6 @@
+import queries
 
+queries = Queries()
 
 def _generate_genre_html(genres):
   genre_html = "<h5>"
