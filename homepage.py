@@ -74,7 +74,7 @@ album_uris = list(album_result['album_uri'])
 ###########################################
 #
 #
-
+st.markdown("<h1>Album Breakdown</h1>", unsafe_allow_html=True)
 # TODO: bring in album metrics
 #        - number of albums
 #
