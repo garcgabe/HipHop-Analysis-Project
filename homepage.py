@@ -59,7 +59,8 @@ st.markdown("""
     border-image: linear-gradient(to right, #F1E1A4, #FFFFFF);
     border-image-slice: 1;
     background-radius: 15px;
-    flex:1
+    flex:None;
+    margin: 10px;
     }
   .card-header { text-align: center; justify-content: center; }
   .card-content { text-align: center; justify-content: center; margin-bottom: 10px; }
@@ -85,6 +86,13 @@ st.markdown("""
   }
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
+
+  /* Responsive design */
+  @media (max-width: 610px) {
+    .container {
+      flex-direction: column;
+      align-items: center; /* This will center the cards when stacked */
+    }
   }
 </style>
 """, unsafe_allow_html=True)
