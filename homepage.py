@@ -24,10 +24,10 @@ selected_artist_genres = result.loc[result['artist_name'] == selected_name]['gen
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
-pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
+card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
 
-st.markdown(pareto_card[0], unsafe_allow_html=True)
-st.markdown(pareto_card[1], unsafe_allow_html=True)
+st.markdown(card[0], unsafe_allow_html=True)
+st.markdown(card[1], unsafe_allow_html=True)
 
 st.divider()
 # column layout
