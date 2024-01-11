@@ -51,7 +51,7 @@ energy_distribution = queries._get_distribution(selected_name, 'energy')
 st.markdown("""
 <style>
   body { font-family: Helvetica, sans-serif; }
-  .container { display: flex; flex-direction: column;
+  .container { display: flex; flex-wrap: wrap;
     max-width: 700px; 
     margin: auto;}
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
@@ -85,10 +85,6 @@ st.markdown("""
   }
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
-    }
   }
 </style>
 """, unsafe_allow_html=True)
