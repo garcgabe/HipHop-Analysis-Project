@@ -1,4 +1,3 @@
-import queries
 
 
 def _generate_genre_html(genres):

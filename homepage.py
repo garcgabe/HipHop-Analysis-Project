@@ -29,23 +29,6 @@ pareto_card.generate(artist, selected_artist_genres, selected_artist_image)
 st.markdown(pareto_card[0], unsafe_allow_html=True)
 st.markdown(pareto_card[1], unsafe_allow_html=True)
 
-# # centered artist image
-# st.markdown(
-#     """
-#     <style>
-#     .center {
-#         display: flex;
-#         justify-content: center;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-# st.markdown(
-#     f'<div class="center"><img src="{selected_artist_image}" width="300"></div>',
-#      unsafe_allow_html=True
-# )
-
 st.divider()
 # column layout
 col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
