@@ -1,4 +1,4 @@
-from utils.queries import queries
+from utils import queries
 
 def _generate_genre_html(genres):
   genre_html = "<h5>"
