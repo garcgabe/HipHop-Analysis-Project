@@ -85,6 +85,11 @@ st.markdown("""
   }
   .metrics { text-align: bottom; }
   .metric { margin-bottom: 5px; }
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  }
 </style>
 """, unsafe_allow_html=True)
 
