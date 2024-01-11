@@ -50,7 +50,9 @@ energy_distribution = queries._get_distribution(selected_name, 'energy')
 
 st.markdown("""
 <style>
-  body { font-family: Helvetica, sans-serif; }
+  body { font-family: Helvetica, sans-serif ;
+  color: white;
+   }
   .container { display: flex; flex-wrap: wrap;
     max-width: 700px; 
     margin: auto;}
