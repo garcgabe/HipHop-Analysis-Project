@@ -51,7 +51,9 @@ energy_distribution = queries._get_distribution(selected_name, 'energy')
 st.markdown("""
 <style>
   body { font-family: Helvetica, sans-serif; }
-  .container { display: flex; }
+  .container { display: flex; flex-direction: column;
+    max-width: 600px; 
+    margin: auto;}
   .card { width: 300px; height: 500px; border: 2px solid #AAA; 
    background-image: linear-gradient(to bottom right, #133832, #552506);
     border-image: linear-gradient(to right, #F1E1A4, #FFFFFF);
