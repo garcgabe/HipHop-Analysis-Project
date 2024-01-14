@@ -7,7 +7,6 @@ key = st.secrets["supabase_key"].SUPABASE_KEY
 
 supabase = create_client(url, key)
 
-
 def _get_artists():
     response = supabase.table("artists")\
         .select("artist_name")\
