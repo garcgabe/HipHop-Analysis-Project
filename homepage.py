@@ -39,7 +39,7 @@ genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
 
 st.markdown("""
     <style>
-    .container { text-align: center; justify-content: center; margin-bottom: 10px; }
+    .container { text-align: center; justify-content: center; margin-bottom: 5px; }
     .metric_holder { background-color: #000000;
                 border: 2px solid #9AD8E1;
                 padding: 5%;
@@ -47,8 +47,8 @@ st.markdown("""
                 border-left: 0.5rem solid #9AD8E1;}
     .metric { display: flex; justify-content: space-between; padding-left: 5px;}
 
-    .metric_label { text-align: left; font-sie: 20px; font-weight: bold; color: #9AD8E1; padding-left: 25px;}
-    .metric_value { text-align: right; padding-right: 25px; color: white; font-size: 16px}
+    .metric_label { text-align: left; font-size: 20px; font-weight: bold; color: #9AD8E1; padding-left: 20px;}
+    .metric_value { text-align: right; padding-right: 20px; color: white; font-size: 16px}
 
     </style>
 """, unsafe_allow_html=True)
@@ -76,40 +76,27 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 st.divider()
-
-
-###
-###
 #   3 metric cards b4
-
-
-
 # column layout
-# col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
-# selection = result.loc[result['artist_name'] == selected_name]
-# col1.metric('popularity', selection['popularity'][0])
-# col2.metric('followers', f"{int(selection['followers'][0]):,}")
-# st.metric('genres', \
-#     ", ".join(genre for genre in selection['genres'][0].split('-')),\
-#         )
-# style_metric_cards(background_color="#000000",
-#     border_size_px = 0,
-#     border_color= "#9AD8E1",
-#     border_radius_px = 0,
-#     border_left_color = "#9AD8E1",
-#     box_shadow= False)
-
-
-
-
-
-#
+    # col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
+    # selection = result.loc[result['artist_name'] == selected_name]
+    # col1.metric('popularity', selection['popularity'][0])
+    # col2.metric('followers', f"{int(selection['followers'][0]):,}")
+    # st.metric('genres', \
+    #     ", ".join(genre for genre in selection['genres'][0].split('-')),\
+    #         )
+    # style_metric_cards(background_color="#000000",
+    #     border_size_px = 0,
+    #     border_color= "#9AD8E1",
+    #     border_radius_px = 0,
+    #     border_left_color = "#9AD8E1",
+    #     box_shadow= False)
 #
 ###########################################
 ###               ALBUM DATA            ###
 ###########################################
 #
-#
+
 
 # get all album data for artist
 album_result = queries._get_albums(selected_artist_uri)
@@ -117,7 +104,9 @@ album_result = queries._get_albums(selected_artist_uri)
 # reordering columns for visualization
 album_result = album_result[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
 
-st.dataframe(album_result.drop(['album_uri', 'artist_uris'], axis=1),
+
+
+st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
     column_config={
         "images": st.column_config.ImageColumn("image", width=50)
     },
