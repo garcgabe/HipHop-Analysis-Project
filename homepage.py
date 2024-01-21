@@ -37,9 +37,9 @@ genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
 st.markdown("""
     <style>
     .container { text-align: center; justify-content: center; margin-bottom: 5px; }
-    .metric_holder { background-color: #000000;
+    .metric_holder { background-color: #000000; padding-top: 10px;
                 border: 2px solid #9AD8E1;
-                padding: 5%;
+                padding: 2%;
                 border-radius: 2px;
                 border-left: 0.5rem solid #9AD8E1;}
     .metric { padding-top: 3px; display: flex; justify-content: space-between;}
@@ -49,9 +49,9 @@ st.markdown("""
     .title {text-align: left; }
     .popularity { text-align: right; padding-right: 20px; }
     .metrics { text-align: bottom; }
-    .metric_title { display: flex; justify-content: space-between; 
+    .metric_title { display: flex; justify-content: space-between;font-size: 20px; font-weight: bold; color: #9AD8E1; 
             border-bottom: 2px solid white; padding-bottom: 3px; transition: border-width 0.3s;}
-    .metric_title:hover {border-bottom-width: 20px;}
+    .metric_title:hover {border-bottom-width: 5px;}
 
     h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
 
