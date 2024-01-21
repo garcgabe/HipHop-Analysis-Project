@@ -45,8 +45,8 @@ st.markdown("""
                 padding: 5%;
                 border-radius: 2px;
                 border-left: 0.5rem solid #9AD8E1;}
-    .metric_label {text-align: left; }
-    .metric_value { text-align: right; padding-right: 10px; }
+    .metric_label { text-align: left; font-weight: bold; font-size: 20px; color: #3366ff; }
+    .metric_value { text-align: right; }
 
     </style>
 """, unsafe_allow_html=True)
