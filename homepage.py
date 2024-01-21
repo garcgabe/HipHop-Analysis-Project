@@ -27,6 +27,12 @@ selected_artist_genres = result.loc[result['artist_name'] == selected_name]['gen
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
+selection = result.loc[result['artist_name'] == selected_name]
+popularity = selection['popularity'][0]
+followers = f"{int(selection['followers'][0]):,}"
+genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
+
+
 #card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
 # st.markdown(card[0], unsafe_allow_html=True)
 # st.markdown(card[1], unsafe_allow_html=True)
@@ -56,18 +62,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 st.divider()
-
-selection = result.loc[result['artist_name'] == selected_name]
-popularity = selection['popularity'][0]
-followers = f"{int(selection['followers'][0]):,}"
-genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
-
-st.markdown(f"""
-
-""", unsafe_allow_html=True)
-
-
-
 
 
 ###
