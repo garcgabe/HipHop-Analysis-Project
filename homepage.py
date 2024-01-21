@@ -4,8 +4,6 @@ import pandas as pd
 from utils import queries
 from utils import pareto_card
 from supabase import create_client
-
-
 # did not end up using; took code for own usage below
 #from streamlit_extras.metric_cards import style_metric_cards
 
@@ -32,7 +30,6 @@ popularity = selection['popularity'][0]
 followers = f"{int(selection['followers'][0]):,}"
 genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
 
-
 #card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
 # st.markdown(card[0], unsafe_allow_html=True)
 # st.markdown(card[1], unsafe_allow_html=True)
@@ -49,7 +46,6 @@ st.markdown("""
 
     .metric_label { text-align: left; font-size: 20px; font-weight: bold; color: #9AD8E1; padding-left: 20px;}
     .metric_value { text-align: right; padding-right: 20px; color: white; font-size: 16px}
-
     .song { display: flex; justify-content: space-between; padding-left: 20px;}
     .title {text-align: left; }
     .popularity { text-align: right; padding-right: 20px; }
@@ -66,6 +62,9 @@ st.markdown(f"""
     </div>
     <div class="container">
         <div class="metric_holder">
+          <div class="metric">
+            <span class="metric_value">Min | Avg | Max</span>
+          </div>
           <div class="metric">
             <span class="metric_label">followers:</span>
             <span class="metric_value">{followers}</span>
