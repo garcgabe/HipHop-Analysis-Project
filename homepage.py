@@ -63,9 +63,6 @@ st.markdown(f"""
     <div class="container">
         <div class="metric_holder">
           <div class="metric">
-            <span class="metric_value">Min | Avg | Max</span>
-          </div>
-          <div class="metric">
             <span class="metric_label">followers:</span>
             <span class="metric_value">{followers}</span>
           </div>
@@ -93,6 +90,9 @@ st.markdown(f"""
 <body>
     <div class="container">
         <div class="metric_holder">
+            <div class="song">
+                <span class="popularity">Min | Avg | Max</span>
+            </div>
             <div class="song">
                 <span class="metric_label">{topsongs[0][0]}</span>
                 <span class="popularity">{topsongs[0][1]}</span>
