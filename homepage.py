@@ -50,7 +50,7 @@ st.markdown("""
     .popularity { text-align: right; padding-right: 20px; }
     .metrics { text-align: bottom; }
     .metric_title { display: flex; justify-content: space-between; border-bottom: 2px solid white; padding-bottom: 3px; }
-    h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; }
+    h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
 
     </style>
 """, unsafe_allow_html=True)
