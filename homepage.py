@@ -40,11 +40,13 @@ genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
 st.markdown("""
     <style>
     .container { text-align: center; justify-content: center; margin-bottom: 10px; }
-    .metric { background-color: #000000;
+    .metric_holder { background-color: #000000;
                 border: 2px solid #9AD8E1;
                 padding: 5%;
                 border-radius: 2px;
                 border-left: 0.5rem solid #9AD8E1;}
+    .metric { display: flex; justify-content: space-between; padding-left: 5px;}
+
     .metric_label { text-align: left; font-weight: bold; color: #9AD8E1; }
     .metric_value { text-align: right; padding: 5px; color: white; font-size: 16px}
 
@@ -56,13 +58,19 @@ st.markdown(f"""
         <img src={selected_artist_image} width="300" height="300"></img>
     </div>
     <div class="container">
-        <div class="metric">
+        <div class="metric_holder">
+          <div class="metric">
             <span class="metric_label">followers:</span>
             <span class="metric_value">{followers}</span>
+          </div>
+          <div class="metric">
             <span class="metric_label">popularity:</span>
             <span class="metric_value">{popularity}</span>
+          </div>
+          <div class="metric">
             <span class="metric_label">genres:</span>
             <span class="metric_value">{genre_list}</span>
+          </div>
         </div>
 </body>
 """, unsafe_allow_html=True)
