@@ -34,9 +34,11 @@ st.markdown("""
     </style>
 """)
 st.markdown(f"""
+<body>
 <div class="container">
     <img src={selected_artist_image} width="300" height="300"></img>
 </div>
+</body>
 """)
 
 st.divider()
