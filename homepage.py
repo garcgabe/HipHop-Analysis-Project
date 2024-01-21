@@ -24,18 +24,28 @@ selected_artist_genres = result.loc[result['artist_name'] == selected_name]['gen
 # remove uri and image from data table
 result = result.drop(['artist_uri','images'], axis=1)
 
-card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
-
+#card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
 # st.markdown(card[0], unsafe_allow_html=True)
 # st.markdown(card[1], unsafe_allow_html=True)
+
+st.markdown("""
+    <style>
+    .container { text-align: center; justify-content: center; margin-bottom: 10px; }
+    </style>
+""")
+st.markdown(f"""
+<div class="container">
+    <img src={selected_artist_image} width="300" height="300"></img>
+</div>
+""")
 
 st.divider()
 # column layout
 col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
 selection = result.loc[result['artist_name'] == selected_name]
-col1.metric('popularity!', selection['popularity'][0])
-col2.metric('followers!', f"{int(selection['followers'][0]):,}")
-st.metric('genres!', \
+col1.metric('popularity', selection['popularity'][0])
+col2.metric('followers', f"{int(selection['followers'][0]):,}")
+st.metric('genres', \
     ", ".join(genre for genre in selection['genres'][0].split('-')),\
         )
 style_metric_cards(background_color="#000000",
