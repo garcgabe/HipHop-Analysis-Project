@@ -115,7 +115,7 @@ st.markdown(f"""
           <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
           <div class="metrics">
             <div class="metric_title"><strong>Song Metrics </strong>Min | Avg | Max</div>
-            <div class="metric"><strong>Popularity: </strong>{" - - ".join(str(round(x)) for x in popularity_distribution)}</div>
+            <div class="metric"><strong>Popularity: </strong>{" - - - ".join(str(round(x)) for x in popularity_distribution)}</div>
             <div class="metric"><strong>Energy: </strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
             <div class="metric"><strong>Danceability: </strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
             <div class="metric"><strong>Emotion: </strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
