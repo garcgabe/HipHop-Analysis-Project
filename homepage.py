@@ -32,14 +32,14 @@ st.markdown("""
     <style>
     .container { text-align: center; justify-content: center; margin-bottom: 10px; }
     </style>
-""")
+""", unsafe_allow_html=True)
 st.markdown(f"""
 <body>
     <div class="container">
         <img src={selected_artist_image} width="300" height="300"></img>
     </div>
 </body>
-""")
+""", unsafe_allow_html=True)
 
 st.divider()
 # column layout
