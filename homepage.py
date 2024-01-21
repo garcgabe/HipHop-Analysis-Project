@@ -50,6 +50,12 @@ st.markdown("""
     .metric_label { text-align: left; font-size: 20px; font-weight: bold; color: #9AD8E1; padding-left: 20px;}
     .metric_value { text-align: right; padding-right: 20px; color: white; font-size: 16px}
 
+    .song { display: flex; justify-content: space-between; padding-left: 10px;}
+    .title {text-align: left; }
+    .popularity { text-align: right; padding-right: 10px; }
+    .metrics { text-align: bottom; }
+    .metric { margin-bottom: 5px; }
+
     </style>
 """, unsafe_allow_html=True)
 st.markdown(f"""
@@ -74,6 +80,70 @@ st.markdown(f"""
         </div>
 </body>
 """, unsafe_allow_html=True)
+
+st.divider()
+
+topsongs = queries._get_top_songs(artist, 5)
+popularity_distribution = queries._get_distribution(artist, 'popularity')
+dance_distribution = queries._get_distribution(artist, 'danceability')
+emotion_distribution = queries._get_distribution(artist,'valence')
+energy_distribution = queries._get_distribution(artist, 'energy') 
+
+
+
+st.markdown(f"""
+<body>
+    <div class="container">
+        <div class="metric_holder">
+          <div class="metric">
+            <span class="metric_label">followers:</span>
+            <span class="metric_value">{followers}</span>
+          </div>
+          <div class="metric">
+            <span class="metric_label">popularity:</span>
+            <span class="metric_value">{popularity}</span>
+          </div>
+          <div class="metric">
+            <span class="metric_label">genres:</span>
+            <span class="metric_value">{genre_list}</span>
+          </div>
+        </div>
+        <div class="song">
+            <span class="title">{topsongs[0][0]}</span>
+            <span class="popularity">{topsongs[0][1]}</span>
+        </div>
+        <div class="song">
+            <span class="title">{topsongs[1][0]}</span>
+            <span class="popularity">{topsongs[1][1]}</span>
+        </div>
+        <div class="song">
+            <span class="title">{topsongs[2][0]}</span>
+            <span class="popularity">{topsongs[2][1]}</span>
+        </div>
+        <div class="song">
+            <span class="title">{topsongs[3][0]}</span>
+            <span class="popularity">{topsongs[3][1]}</span>
+        </div>
+        <div class="song">
+            <span class="title">{topsongs[4][0]}</span>
+            <span class="popularity">{topsongs[4][1]}</span>
+        </div>
+        </div>
+        <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
+        <div class="metrics">
+        <div class="metric"><strong>Popularity: </strong>{" - ".join(str(round(x)) for x in popularity_distribution)}</div>
+        <div class="metric"><strong>Energy: </strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
+        <div class="metric"><strong>Danceability: </strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
+        <div class="metric"><strong>Emotion: </strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
+        </div>
+    </div>
+</body>
+""", unsafe_allow_html=True)
+
+
+
+
+
 
 st.divider()
 #   3 metric cards b4
