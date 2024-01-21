@@ -42,15 +42,14 @@ st.markdown("""
                 padding: 5%;
                 border-radius: 2px;
                 border-left: 0.5rem solid #9AD8E1;}
-    .metric { display: flex; justify-content: space-between;}
-
+    .metric { padding-top: 3px; display: flex; justify-content: space-between;}
     .metric_label { text-align: left; font-size: 20px; font-weight: bold; color: #9AD8E1; padding-left: 20px;}
     .metric_value { text-align: right; padding-right: 20px; color: white; font-size: 16px}
     .song { display: flex; justify-content: space-between; padding-left: 20px;}
     .title {text-align: left; }
     .popularity { text-align: right; padding-right: 20px; }
     .metrics { text-align: bottom; }
-    .metric_title { display: flex; justify-content: space-between; border-bottom: 2px solid white; padding-bottom: 10px; }
+    .metric_title { display: flex; justify-content: space-between; border-bottom: 2px solid white; padding-bottom: 3px; }
     h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; }
 
     </style>
