@@ -89,8 +89,6 @@ dance_distribution = queries._get_distribution(selected_name, 'danceability')
 emotion_distribution = queries._get_distribution(selected_name,'valence')
 energy_distribution = queries._get_distribution(selected_name, 'energy') 
 
-
-
 st.markdown(f"""
 <body>
     <div class="container">
@@ -108,33 +106,34 @@ st.markdown(f"""
             <span class="metric_value">{genre_list}</span>
           </div>
         </div>
-        <div class="song">
-            <span class="title">{topsongs[0][0]}</span>
-            <span class="popularity">{topsongs[0][1]}</span>
-        </div>
-        <div class="song">
-            <span class="title">{topsongs[1][0]}</span>
-            <span class="popularity">{topsongs[1][1]}</span>
-        </div>
-        <div class="song">
-            <span class="title">{topsongs[2][0]}</span>
-            <span class="popularity">{topsongs[2][1]}</span>
-        </div>
-        <div class="song">
-            <span class="title">{topsongs[3][0]}</span>
-            <span class="popularity">{topsongs[3][1]}</span>
-        </div>
-        <div class="song">
-            <span class="title">{topsongs[4][0]}</span>
-            <span class="popularity">{topsongs[4][1]}</span>
-        </div>
-        </div>
-        <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
-        <div class="metrics">
-        <div class="metric"><strong>Popularity: </strong>{" - ".join(str(round(x)) for x in popularity_distribution)}</div>
-        <div class="metric"><strong>Energy: </strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
-        <div class="metric"><strong>Danceability: </strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
-        <div class="metric"><strong>Emotion: </strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
+        <div class="metric_holder">
+            <div class="song">
+                <span class="metric_label">{topsongs[0][0]}</span>
+                <span class="popularity">{topsongs[0][1]}</span>
+            </div>
+            <div class="song">
+                <span class="metric_label">{topsongs[1][0]}</span>
+                <span class="popularity">{topsongs[1][1]}</span>
+            </div>
+            <div class="song">
+                <span class="metric_label">{topsongs[2][0]}</span>
+                <span class="popularity">{topsongs[2][1]}</span>
+            </div>
+            <div class="song">
+                <span class="metric_label">{topsongs[3][0]}</span>
+                <span class="popularity">{topsongs[3][1]}</span>
+            </div>
+            <div class="song">
+                <span class="metric_label">{topsongs[4][0]}</span>
+                <span class="popularity">{topsongs[4][1]}</span>
+            </div>
+          <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
+          <div class="metrics">
+            <div class="metric"><strong>Popularity: </strong>{" - ".join(str(round(x)) for x in popularity_distribution)}</div>
+            <div class="metric"><strong>Energy: </strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
+            <div class="metric"><strong>Danceability: </strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
+            <div class="metric"><strong>Emotion: </strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
+          </div>
         </div>
     </div>
 </body>
