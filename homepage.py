@@ -42,7 +42,7 @@ st.markdown("""
                 padding: 2%;
                 border-radius: 2px;
                 border-left: 0.5rem solid #9AD8E1;}
-    .metric { padding-top: 3px; display: flex; justify-content: space-between;}
+    .metric { padding-top: 3px; display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px; }
     .metric_label { text-align: left; font-size: 20px; font-weight: bold; color: #9AD8E1; padding-left: 20px;}
     .metric_value { text-align: right; padding-right: 20px; color: white; font-size: 16px}
     .song { display: flex; justify-content: space-between; padding-left: 20px;}
@@ -114,11 +114,11 @@ st.markdown(f"""
             </div>
           <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
           <div class="metrics">
-            <div class="metric_title"><strong>Song Metrics </strong>Min | Avg | Max</div>
-            <div class="metric"><strong>Popularity: </strong>{" - - - ".join(str(round(x)) for x in popularity_distribution)}</div>
-            <div class="metric"><strong>Energy: </strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
-            <div class="metric"><strong>Danceability: </strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
-            <div class="metric"><strong>Emotion: </strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
+            <div class="metric_title"><strong>Metric </strong>Min | Avg | Max</div>
+            <div class="metric"><strong>Popularity</strong>{" - - - ".join(str(round(x)) for x in popularity_distribution)}</div>
+            <div class="metric"><strong>Energy</strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
+            <div class="metric"><strong>Danceability</strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
+            <div class="metric"><strong>Emotion</strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
           </div>
         </div>
     </div>
