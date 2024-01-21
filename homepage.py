@@ -4,7 +4,10 @@ import pandas as pd
 from utils import queries
 from utils import pareto_card
 from supabase import create_client
-from streamlit_extras.metric_cards import style_metric_cards
+
+
+# did not end up using; took code for own usage below
+#from streamlit_extras.metric_cards import style_metric_cards
 
 ###################################################
 # get all artist options from DB
@@ -31,6 +34,11 @@ result = result.drop(['artist_uri','images'], axis=1)
 st.markdown("""
     <style>
     .container { text-align: center; justify-content: center; margin-bottom: 10px; }
+    .metric { background-color: #000000;
+                border: 2px solid #9AD8E1;
+                padding: 5%;
+                border-radius: 2px;
+                border-left: 0.5rem solid #9AD8E1;}
     </style>
 """, unsafe_allow_html=True)
 st.markdown(f"""
@@ -38,24 +46,54 @@ st.markdown(f"""
     <div class="container">
         <img src={selected_artist_image} width="300" height="300"></img>
     </div>
+    <div class="container">
+        <div class="metric">
+            <h4>followers: {followers}</h4>
+            <h4>popularity: {popularity}</h4>
+            <h4>genres: {genre_list}</h4>
+        </div>
 </body>
 """, unsafe_allow_html=True)
 
 st.divider()
-# column layout
-col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
+
 selection = result.loc[result['artist_name'] == selected_name]
-col1.metric('popularity', selection['popularity'][0])
-col2.metric('followers', f"{int(selection['followers'][0]):,}")
-st.metric('genres', \
-    ", ".join(genre for genre in selection['genres'][0].split('-')),\
-        )
-style_metric_cards(background_color="#000000",
-    border_size_px = 0,
-    border_color= "#9AD8E1",
-    border_radius_px = 0,
-    border_left_color = "#9AD8E1",
-    box_shadow= False)
+popularity = selection['popularity'][0]
+followers = f"{int(selection['followers'][0]):,}"
+genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
+
+st.markdown(f"""
+
+""", unsafe_allow_html=True)
+
+
+
+
+
+###
+###
+#   3 metric cards b4
+
+
+
+# column layout
+# col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
+# selection = result.loc[result['artist_name'] == selected_name]
+# col1.metric('popularity', selection['popularity'][0])
+# col2.metric('followers', f"{int(selection['followers'][0]):,}")
+# st.metric('genres', \
+#     ", ".join(genre for genre in selection['genres'][0].split('-')),\
+#         )
+# style_metric_cards(background_color="#000000",
+#     border_size_px = 0,
+#     border_color= "#9AD8E1",
+#     border_radius_px = 0,
+#     border_left_color = "#9AD8E1",
+#     box_shadow= False)
+
+
+
+
 
 #
 #
