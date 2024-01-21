@@ -46,7 +46,7 @@ st.markdown("""
                 border-radius: 2px;
                 border-left: 0.5rem solid #9AD8E1;}
     .metric_label { text-align: left; font-weight: bold; color: #9AD8E1; }
-    .metric_value { text-align: right; padding: 5px; color: white; }
+    .metric_value { text-align: right; padding: 5px; color: white; font-size: 12px}
 
     </style>
 """, unsafe_allow_html=True)
@@ -57,11 +57,11 @@ st.markdown(f"""
     </div>
     <div class="container">
         <div class="metric">
-            <span class="metric_label">followers: </span>
+            <span class="metric_label">followers:</span>
             <span class="metric_value">{followers}</span>
-            <span class="metric_label">    popularity: </span>
+            <span class="metric_label">popularity:</span>
             <span class="metric_value">{popularity}</span>
-            <span class="metric_label">    genres: </span>
+            <span class="metric_label">genres:</span>
             <span class="metric_value">{genre_list}</span>
         </div>
 </body>
