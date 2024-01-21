@@ -83,11 +83,11 @@ st.markdown(f"""
 
 st.divider()
 
-topsongs = queries._get_top_songs(artist, 5)
-popularity_distribution = queries._get_distribution(artist, 'popularity')
-dance_distribution = queries._get_distribution(artist, 'danceability')
-emotion_distribution = queries._get_distribution(artist,'valence')
-energy_distribution = queries._get_distribution(artist, 'energy') 
+topsongs = queries._get_top_songs(selected_name, 5)
+popularity_distribution = queries._get_distribution(selected_name, 'popularity')
+dance_distribution = queries._get_distribution(selected_name, 'danceability')
+emotion_distribution = queries._get_distribution(selected_name,'valence')
+energy_distribution = queries._get_distribution(selected_name, 'energy') 
 
 
 
