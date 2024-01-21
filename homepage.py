@@ -54,7 +54,7 @@ st.markdown("""
     .title {text-align: left; }
     .popularity { text-align: right; padding-right: 10px; }
     .metrics { text-align: bottom; }
-    .metric { margin-bottom: 5px; }
+    .metric { padding-left: 30px; margin-bottom: 5px; }
     h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; }
 
     </style>
