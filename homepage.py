@@ -45,16 +45,16 @@ st.markdown("""
                 padding: 5%;
                 border-radius: 2px;
                 border-left: 0.5rem solid #9AD8E1;}
-    .metric { display: flex; justify-content: space-between; padding-left: 5px;}
+    .metric { display: flex; justify-content: space-between;}
 
     .metric_label { text-align: left; font-size: 20px; font-weight: bold; color: #9AD8E1; padding-left: 20px;}
     .metric_value { text-align: right; padding-right: 20px; color: white; font-size: 16px}
 
-    .song { display: flex; justify-content: space-between; padding-left: 10px;}
+    .song { display: flex; justify-content: space-between; padding-left: 20px;}
     .title {text-align: left; }
-    .popularity { text-align: right; padding-right: 10px; }
+    .popularity { text-align: right; padding-right: 20px; }
     .metrics { text-align: bottom; }
-    .metric { padding-left: 30px; pading-right: 30px; margin-bottom: 5px; }
+    .metric { padding-left: 20px; padding-right: 20px; margin-bottom: 5px; }
     h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; }
 
     </style>
