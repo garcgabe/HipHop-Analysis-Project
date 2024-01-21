@@ -91,9 +91,6 @@ st.markdown(f"""
     <div class="container">
         <div class="metric_holder">
             <div class="song">
-                <span class="popularity">Min | Avg | Max</span>
-            </div>
-            <div class="song">
                 <span class="metric_label">{topsongs[0][0]}</span>
                 <span class="popularity">{topsongs[0][1]}</span>
             </div>
@@ -115,6 +112,7 @@ st.markdown(f"""
             </div>
           <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
           <div class="metrics">
+            <div class="metric"><strong>Metrics: </strong>Min | Avg | Max</div>
             <div class="metric"><strong>Popularity: </strong>{" - ".join(str(round(x)) for x in popularity_distribution)}</div>
             <div class="metric"><strong>Energy: </strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
             <div class="metric"><strong>Danceability: </strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
