@@ -49,9 +49,9 @@ st.markdown("""
     .title {text-align: left; }
     .popularity { text-align: right; padding-right: 20px; }
     .metrics { text-align: bottom; }
-    .metric_title { display: flex; justify-content: space-between;font-size: 20px; font-weight: bold; color: #9AD8E1; 
+    .metric_title { display: flex; justify-content: space-between;font-size: 16px; font-weight: bold; color: #9AD8E1; 
             border-bottom: 2px solid white; padding-bottom: 3px; transition: border-width 0.3s;}
-    .metric_title:hover {border-bottom-width: 5px;}
+    .metric_title:hover {border-bottom-width: 8px;}
 
     h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
 
@@ -115,7 +115,7 @@ st.markdown(f"""
           <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
           <div class="metrics">
             <div class="metric_title"><strong>Song Metrics </strong>Min | Avg | Max</div>
-            <div class="metric"><strong>Popularity: </strong>{" --- ".join(str(round(x)) for x in popularity_distribution)}</div>
+            <div class="metric"><strong>Popularity: </strong>{" - - ".join(str(round(x)) for x in popularity_distribution)}</div>
             <div class="metric"><strong>Energy: </strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
             <div class="metric"><strong>Danceability: </strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
             <div class="metric"><strong>Emotion: </strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
