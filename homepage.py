@@ -55,6 +55,7 @@ st.markdown("""
     .popularity { text-align: right; padding-right: 10px; }
     .metrics { text-align: bottom; }
     .metric { margin-bottom: 5px; }
+    h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; }
 
     </style>
 """, unsafe_allow_html=True)
@@ -92,20 +93,6 @@ energy_distribution = queries._get_distribution(selected_name, 'energy')
 st.markdown(f"""
 <body>
     <div class="container">
-        <div class="metric_holder">
-          <div class="metric">
-            <span class="metric_label">followers:</span>
-            <span class="metric_value">{followers}</span>
-          </div>
-          <div class="metric">
-            <span class="metric_label">popularity:</span>
-            <span class="metric_value">{popularity}</span>
-          </div>
-          <div class="metric">
-            <span class="metric_label">genres:</span>
-            <span class="metric_value">{genre_list}</span>
-          </div>
-        </div>
         <div class="metric_holder">
             <div class="song">
                 <span class="metric_label">{topsongs[0][0]}</span>
