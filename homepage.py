@@ -59,12 +59,8 @@ st.markdown(f"""
         <div class="metric">
             <span class="metric_label">followers:</span>
             <span class="metric_value">{followers}</span>
-        </div>
-        <div class="metric">
             <span class="metric_label">popularity:</span>
             <span class="metric_value">{popularity}</span>
-        </div>
-        <div class="metric">
             <span class="metric_label">genres:</span>
             <span class="metric_value">{genre_list}</span>
         </div>
