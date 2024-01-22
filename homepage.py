@@ -36,7 +36,9 @@ genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
 
 st.markdown("""
     <style>
-    .container { text-align: center; justify-content: center; margin-bottom: 5px; }
+    .container { text-align: center; justify-content: center; margin-bottom: 5px; padding-top: 10px; }
+    .img_container { text-align: center; justify-content: center; margin-bottom: 5px; padding-bottom: 10px;}
+
     .metric_holder { background-color: #000000; padding-top: 10px;
                 border: 2px solid #9AD8E1;
                 padding: 2%;
@@ -63,7 +65,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.markdown(f"""
 <body>
-    <div class="container">
+    <div class="img_container">
         <img src={selected_artist_image} width="300" height="300"></img>
     </div>
     <div class="container">
