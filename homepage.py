@@ -36,7 +36,7 @@ genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
 
 st.markdown("""
     <style>
-    .container { text-align: center; justify-content: center; margin-bottom: 5px; padding-top: 10px; }
+    .container { text-align: center; justify-content: center; margin-bottom: 5px; }
     .metric_holder { background-color: #000000; padding-top: 10px;
                 border: 2px solid #9AD8E1;
                 padding: 2%;
