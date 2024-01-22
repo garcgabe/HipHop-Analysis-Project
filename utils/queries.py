@@ -48,7 +48,7 @@ def _get_distribution(artist, column):
 
 def _get_all_album_statistics(artist):
     album_response = supabase.table("albums")\
-        .select("* metrics(*)")\
+        .select("*, metrics(*)")\
         .like('artist_uris', f'%{artist_uri}%')\
         .execute()
     # convert all data to DF; then return
