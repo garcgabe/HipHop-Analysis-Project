@@ -52,4 +52,4 @@ def _get_all_album_statistics(artist_uri):
         .like('artist_uris', f'%{artist_uri}%')\
         .execute()
     # convert all data to DF; then return
-    return pd.DataFrame(album_response.data)
+    return [(x.get('album_name'), x.get('metrics')) for x in filter_response.data]
