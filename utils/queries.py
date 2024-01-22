@@ -50,7 +50,6 @@ def _get_all_album_statistics(artist_uri):
     album_response = supabase.table("albums")\
         .select("album_name, album_uri, metrics(popularity)")\
         .like('artist_uris', f'%{artist_uri}%')\
-        .order("metrics(popularity)", desc=True)\
         .execute()
     # convert all data to DF; then return
     return [(x.get('album_name'), x.get('metrics').get('popularity')) for x in album_response.data]

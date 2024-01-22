@@ -44,5 +44,7 @@ CREATE TABLE metrics(
     tempo decimal(5,1),
     instrumentalness decimal(4,4),
     speechiness decimal(4,3),
+    album_uri varchar(256),
     FOREIGN KEY (song_uri) REFERENCES songs (song_uri)
+    FOREIGN KEY (album_uri) REFERENCES albums (album_uri)
 );
