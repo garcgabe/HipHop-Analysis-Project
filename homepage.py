@@ -180,6 +180,8 @@ st.markdown("<h1>Album Breakdown</h1>", unsafe_allow_html=True)
 
 response = queries._get_all_album_statistics(selected_artist_uri)
 
+st.write(response)
+
 for idx, item in enumerate(response):
     entry = item[idx]
     st.write(f"""
