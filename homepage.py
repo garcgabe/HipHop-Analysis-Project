@@ -178,7 +178,13 @@ st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axi
 #
 st.markdown("<h1>Album Breakdown</h1>", unsafe_allow_html=True)
 
-st.write(queries._get_all_album_statistics(selected_artist_uri))
+response = queries._get_all_album_statistics(selected_artist_uri)
+
+for idx, item in enumerate(response):
+    entry = item[idx]
+    st.write(f"""
+        song:{entry[0]} - popularity: {entry[1]} - dance: {entry[2]} - energy: {entry[3]} - valence: {entry[4]}
+    """)
 #
 #
 # 
