@@ -178,7 +178,7 @@ st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axi
 #
 st.markdown("<h1>Album Breakdown</h1>", unsafe_allow_html=True)
 
-st.write(queries._get_all_album_statistics())
+st.write(queries._get_all_album_statistics(selected_artist_uri))
 #
 #
 # 
