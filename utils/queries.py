@@ -46,11 +46,10 @@ def _get_distribution(artist, column):
     results = [x.get('metrics').get(f'{column}') for x in filter_response.data]
     return (min(results), sum(results)/len(results), max(results))
 
-def _get_all_album_statistics(artist_uri):
+def _get_album_statistics(artist):
     album_response = supabase.table("albums")\
-        .select("album_name, album_uri, metrics(popularity)")\
+        .select("* metrics(*)")\
         .like('artist_uris', f'%{artist_uri}%')\
         .execute()
     # convert all data to DF; then return
-    return [(x.get('album_name'), x.get('metrics').get('popularity')) for x in album_response.data]
-
+    return pd.DataFrame(album_response.data)
