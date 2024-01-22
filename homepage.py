@@ -78,10 +78,10 @@ st.markdown(f"""
             <span class="metric_value">{genre_list}</span>
           </div>
         </div>
+        <div class="metric_title"> </div>
 </body>
 """, unsafe_allow_html=True)
 
-st.divider()
 
 topsongs = queries._get_top_songs(selected_name, 5)
 popularity_distribution = queries._get_distribution(selected_name, 'popularity')
