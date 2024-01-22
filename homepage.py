@@ -182,7 +182,7 @@ response = queries._get_all_album_statistics(selected_artist_uri)
 
 st.write(response)
 
-for idx, item in enumerate(response):
+for entry in enumerate(response):
     entry = item[idx]
     st.write(f"""
         song:{entry[0]} - popularity: {entry[1]} - dance: {entry[2]} - energy: {entry[3]} - valence: {entry[4]}
