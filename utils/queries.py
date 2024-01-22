@@ -52,7 +52,8 @@ def _get_all_album_statistics(artist_uri):
         .like('artist_uris', f'%{artist_uri}%')\
         .execute()
     # convert all data to DF; then return
-    return [(x.get('album_name'), \
-        x.get('metrics').get('popularity'), x.get('metrics').get('danceability'), \
-        x.get('metrics').get('energy'),     x.get('metrics').get('valence')) \
-        for x in album_response.data]
+    return album_response.data
+    # [(x.get('album_name'), \
+    #     x.get('metrics').get('popularity'), x.get('metrics').get('danceability'), \
+    #     x.get('metrics').get('energy'),     x.get('metrics').get('valence')) \
+    #     for x in album_response.data]
