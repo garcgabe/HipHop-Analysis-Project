@@ -53,6 +53,9 @@ st.markdown("""
             border-bottom: 2px solid white; padding-bottom: 3px; transition: border-width 0.3s;
             padding-left: 20px; padding-right: 20px;}
     .metric_title:hover {border-bottom-width: 8px;}
+    .divider {border-bottom: 2px solid #9AD8E1; padding-bottom: 3px; transition: border-width 0.3s;
+            padding_top: 10px; padding-bottom: 5px; }
+    .divider:hover {border-bottom-width: 8px;}
 
     h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
 
@@ -78,7 +81,7 @@ st.markdown(f"""
             <span class="metric_value">{genre_list}</span>
           </div>
         </div>
-        <div class="metric_title"> </div>
+        <div class="divider"></div>
 </body>
 """, unsafe_allow_html=True)
 
