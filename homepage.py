@@ -45,7 +45,7 @@ st.markdown("""
     .metric { padding-top: 3px; display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px; }
     .metric_label { text-align: left; font-size: 20px; font-weight: bold; color: #9AD8E1; padding-left: 20px;}
     .metric_value { text-align: right; padding-right: 20px; color: white; font-size: 16px}
-    .song { display: flex; justify-content: space-between; padding-left: 20px;}
+    .song { display: flex; justify-content: space-between; padding-left: 10px;}
     .title {text-align: left; }
     .popularity { text-align: right; padding-right: 20px; }
     .metrics { text-align: bottom; }
@@ -93,7 +93,7 @@ st.markdown(f"""
 <body>
     <div class="container">
         <div class="metric_holder">
-          <div class="metric_title"><strong>Song </strong>Popularityß</div>
+          <div class="metric_title"><strong>Song </strong>Popularity</div>
             <div class="song">
                 <span class="metric_label">{topsongs[0][0]}</span>
                 <span class="popularity">{topsongs[0][1]}</span>
