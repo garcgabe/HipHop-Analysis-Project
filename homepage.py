@@ -133,10 +133,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 
-
-
-
-
 st.divider()
 #   3 metric cards b4
 # column layout
@@ -159,13 +155,10 @@ st.divider()
 ###########################################
 #
 
-
-# get all album data for artist
-album_result = queries._get_albums(selected_artist_uri)
+albums = queries._get_albums(selected_artist_uri)
 
 # reordering columns for visualization
-album_result = album_result[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
-
+album_result = albums[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
 
 
 st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
@@ -175,7 +168,7 @@ st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axi
 )
 
 
-album_uris = list(album_result['album_uri'])
+#album_uris = list(album_result['album_uri'])
 #
 #
 ###########################################
@@ -184,8 +177,8 @@ album_uris = list(album_result['album_uri'])
 #
 #
 st.markdown("<h1>Album Breakdown</h1>", unsafe_allow_html=True)
-# TODO: bring in album metrics
-#        - number of albums
+
+st.write(queries._get_all_album_statistics())
 #
 #
 # 
