@@ -53,9 +53,9 @@ st.markdown("""
             border-bottom: 2px solid white; padding-bottom: 3px; transition: border-width 0.3s;
             padding-left: 20px; padding-right: 20px;}
     .metric_title:hover {border-bottom-width: 8px;}
-    .divider {border-bottom: 2px solid #9AD8E1; padding-bottom: 3px; transition: border-width 0.3s;
-            padding_top: 10px; padding-bottom: 5px; }
-    .divider:hover {border-bottom-width: 8px;}
+    .divider {border-bottom: 4px solid #9AD8E1; padding-bottom: 3px; transition: border-width 0.3s;
+            padding_top: 20px; }
+    .divider:hover {border-bottom-width: 12px;}
 
     h6 { color: #9AD8E1; font-size: 20px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
 
