@@ -35,6 +35,9 @@ popularity_distribution = queries._get_distribution(selected_name, 'popularity')
 dance_distribution = queries._get_distribution(selected_name, 'danceability')
 emotion_distribution = queries._get_distribution(selected_name,'valence')
 energy_distribution = queries._get_distribution(selected_name, 'energy') 
+
+all_songs_statistics = queries._get_all_song_statistics(selected_artist_uri)
+
 #card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
 # st.markdown(card[0], unsafe_allow_html=True)
 # st.markdown(card[1], unsafe_allow_html=True)
@@ -87,7 +90,7 @@ with home_tab:
     album_result = albums[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
     st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
         column_config={
-            "images": st.column_config.ImageColumn("image", width=10)
+            "images": st.column_config.ImageColumn("image", width=100)
         }, use_container_width=True, hide_index=True)
 
 with artist:
@@ -156,10 +159,11 @@ with artist:
 
 with albums:
     ### ALBUMS
-
-    all_songs_statistics = queries._get_all_song_statistics(selected_artist_uri)
     album_averages = all_songs_statistics.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
     st.dataframe(album_averages, use_container_width=True, hide_index=True)
+
+with songs:
+    st.dataframe(all_songs_statistics, use_container_width=True, hide_index=True)
 
 #
 #
