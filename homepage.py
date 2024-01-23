@@ -90,7 +90,10 @@ with home_tab:
     album_result = albums[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
     st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
         column_config={
-            "images": st.column_config.ImageColumn("image", width="large")
+            "images": st.column_config.ImageColumn("image"),
+            "album_name": st.column_config.TextColumn("album"),
+            "release_date": st.column_config.TextColumn("release date"),
+            "total_tracks": st.column_config.TextColumn("album length"),
         }, use_container_width=True, hide_index=True)
 
 with artist:
