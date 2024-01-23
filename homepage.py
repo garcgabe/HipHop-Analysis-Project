@@ -179,7 +179,7 @@ st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axi
 st.markdown("<h1>Album Overview</h1>", unsafe_allow_html=True)
 
 all_songs_statistics = queries._get_all_song_statistics(selected_artist_uri)
-album_averages = resp.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
+album_averages = all_songs_statistics.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
 st.dataframe(album_averages)
 
 #
