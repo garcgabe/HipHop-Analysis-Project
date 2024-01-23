@@ -87,10 +87,10 @@ with home_tab:
     album_result = albums[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
     st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
         column_config={
-            "images": st.column_config.ImageColumn("image", width=50)
+            "images": st.column_config.ImageColumn("image", width=10)
         }, use_container_width=True, hide_index=True)
 
-with artist_tab:
+with artist:
     ### ARTIST_INFO
     st.markdown(f"""
     <body>
@@ -154,7 +154,7 @@ with artist_tab:
     </body>
     """, unsafe_allow_html=True)
 
-with albums_tab:
+with albums:
     ### ALBUMS
 
     all_songs_statistics = queries._get_all_song_statistics(selected_artist_uri)
