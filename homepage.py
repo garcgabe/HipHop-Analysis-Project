@@ -30,11 +30,15 @@ popularity = selection['popularity'][0]
 followers = f"{int(selection['followers'][0]):,}"
 genre_list =  ", ".join(genre for genre in selection['genres'][0].split('-'))
 
+topsongs = queries._get_top_songs(selected_name, 5)
+popularity_distribution = queries._get_distribution(selected_name, 'popularity')
+dance_distribution = queries._get_distribution(selected_name, 'danceability')
+emotion_distribution = queries._get_distribution(selected_name,'valence')
+energy_distribution = queries._get_distribution(selected_name, 'energy') 
 #card = pareto_card.generate(selected_name, selected_artist_genres, selected_artist_image)
 # st.markdown(card[0], unsafe_allow_html=True)
 # st.markdown(card[1], unsafe_allow_html=True)
-
-st.markdown("""
+CSS_STYLES = st.markdown("""
     <style>
     .container { text-align: center; justify-content: center; margin-bottom: 5px; padding-top: 10px; }
     .img_container { text-align: center; justify-content: center; margin-bottom: 5px; padding-bottom: 10px;}
@@ -63,124 +67,100 @@ st.markdown("""
 
     </style>
 """, unsafe_allow_html=True)
-st.markdown(f"""
-<body>
-    <div class="img_container">
-        <img src={selected_artist_image} width="300" height="300"></img>
-    </div>
-    <div class="container">
-        <div class="metric_holder">
-          <div class="metric">
-            <span class="metric_label">followers:</span>
-            <span class="metric_value">{followers}</span>
-          </div>
-          <div class="metric">
-            <span class="metric_label">popularity:</span>
-            <span class="metric_value">{popularity}</span>
-          </div>
-          <div class="metric">
-            <span class="metric_label">genres:</span>
-            <span class="metric_value">{genre_list}</span>
-          </div>
+
+
+home_tab, artist_tab, albums_tab = st.tabs([":white[home]", ":red[artist info]", ":red[album info]"])
+
+with home_tab:
+    ### ARTIST pic
+    st.markdown(f"""
+        <body>
+        <div class="img_container">
+            <img src={selected_artist_image} width="300" height="300"></img>
         </div>
-        <div class="divider"></div>
-</body>
-""", unsafe_allow_html=True)
+    </body>
+    """, unsafe_allow_html=True)
 
+    albums = queries._get_albums(selected_artist_uri)
 
-topsongs = queries._get_top_songs(selected_name, 5)
-popularity_distribution = queries._get_distribution(selected_name, 'popularity')
-dance_distribution = queries._get_distribution(selected_name, 'danceability')
-emotion_distribution = queries._get_distribution(selected_name,'valence')
-energy_distribution = queries._get_distribution(selected_name, 'energy') 
+    # reordering columns for visualization
+    album_result = albums[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
+    st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
+        column_config={
+            "images": st.column_config.ImageColumn("image", width=50)
+        },)
 
-st.markdown(f"""
-<body>
-    <div class="container">
-        <div class="metric_holder">
-          <div class="metric_title"><strong>Song </strong>Popularity</div>
-            <div class="song">
-                <span class="metric_label">{topsongs[0][0]}</span>
-                <span class="popularity">{topsongs[0][1]}</span>
-            </div>
-            <div class="song">
-                <span class="metric_label">{topsongs[1][0]}</span>
-                <span class="popularity">{topsongs[1][1]}</span>
-            </div>
-            <div class="song">
-                <span class="metric_label">{topsongs[2][0]}</span>
-                <span class="popularity">{topsongs[2][1]}</span>
-            </div>
-            <div class="song">
-                <span class="metric_label">{topsongs[3][0]}</span>
-                <span class="popularity">{topsongs[3][1]}</span>
-            </div>
-            <div class="song">
-                <span class="metric_label">{topsongs[4][0]}</span>
-                <span class="popularity">{topsongs[4][1]}</span>
-            </div>
-          <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
-          <div class="metrics">
-            <div class="metric_title"><strong>Metric </strong>Min | Avg | Max</div>
-            <div class="metric"><strong>Popularity</strong>{" - - - ".join(str(round(x)) for x in popularity_distribution)}</div>
-            <div class="metric"><strong>Energy</strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
-            <div class="metric"><strong>Danceability</strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
-            <div class="metric"><strong>Emotion</strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
-          </div>
+with artist_tab:
+    ### ARTIST_INFO
+    st.markdown(f"""
+    <body>
+        <div class="img_container">
+            <img src={selected_artist_image} width="200" height="200"></img>
         </div>
-    </div>
-</body>
-""", unsafe_allow_html=True)
+        <div class="container">
+            <div class="metric_holder">
+            <div class="metric">
+                <span class="metric_label">followers:</span>
+                <span class="metric_value">{followers}</span>
+            </div>
+            <div class="metric">
+                <span class="metric_label">popularity:</span>
+                <span class="metric_value">{popularity}</span>
+            </div>
+            <div class="metric">
+                <span class="metric_label">genres:</span>
+                <span class="metric_value">{genre_list}</span>
+            </div>
+            </div>
+            <div class="divider"></div>
+    </body>
+    """, unsafe_allow_html=True)
+    ### METRICS_TABLE 
+    st.markdown(f"""
+    <body>
+        <div class="container">
+            <div class="metric_holder">
+            <div class="metric_title"><strong>Song </strong>Popularity</div>
+                <div class="song">
+                    <span class="metric_label">{topsongs[0][0]}</span>
+                    <span class="popularity">{topsongs[0][1]}</span>
+                </div>
+                <div class="song">
+                    <span class="metric_label">{topsongs[1][0]}</span>
+                    <span class="popularity">{topsongs[1][1]}</span>
+                </div>
+                <div class="song">
+                    <span class="metric_label">{topsongs[2][0]}</span>
+                    <span class="popularity">{topsongs[2][1]}</span>
+                </div>
+                <div class="song">
+                    <span class="metric_label">{topsongs[3][0]}</span>
+                    <span class="popularity">{topsongs[3][1]}</span>
+                </div>
+                <div class="song">
+                    <span class="metric_label">{topsongs[4][0]}</span>
+                    <span class="popularity">{topsongs[4][1]}</span>
+                </div>
+            <h6>◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍ - ◍</h6 >
+            <div class="metrics">
+                <div class="metric_title"><strong>Metric </strong>Min | Avg | Max</div>
+                <div class="metric"><strong>Popularity</strong>{" - - - ".join(str(round(x)) for x in popularity_distribution)}</div>
+                <div class="metric"><strong>Energy</strong>{" - ".join(str(round(x,2)) for x in energy_distribution)}</div>
+                <div class="metric"><strong>Danceability</strong>{" - ".join(str(round(x,2)) for x in dance_distribution)}</div>
+                <div class="metric"><strong>Emotion</strong>{" - ".join(str(round(x,2)) for x in emotion_distribution)}</div>
+            </div>
+            </div>
+        </div>
+    </body>
+    """, unsafe_allow_html=True)
 
+with albums_tab:
+    ### ALBUMS
+    st.markdown("<h1>Album Overview</h1>", unsafe_allow_html=True)
 
-st.divider()
-#   3 metric cards b4
-# column layout
-    # col1, col2 = st.columns([1,1])  # Adjust the column widths as needed
-    # selection = result.loc[result['artist_name'] == selected_name]
-    # col1.metric('popularity', selection['popularity'][0])
-    # col2.metric('followers', f"{int(selection['followers'][0]):,}")
-    # st.metric('genres', \
-    #     ", ".join(genre for genre in selection['genres'][0].split('-')),\
-    #         )
-    # style_metric_cards(background_color="#000000",
-    #     border_size_px = 0,
-    #     border_color= "#9AD8E1",
-    #     border_radius_px = 0,
-    #     border_left_color = "#9AD8E1",
-    #     box_shadow= False)
-#
-###########################################
-###               ALBUM DATA            ###
-###########################################
-#
-
-albums = queries._get_albums(selected_artist_uri)
-
-# reordering columns for visualization
-album_result = albums[['images', 'album_uri', 'artist_uris', 'artist_names', 'album_name', 'release_date', 'total_tracks']]
-
-
-st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
-    column_config={
-        "images": st.column_config.ImageColumn("image", width=50)
-    },
-)
-
-
-#album_uris = list(album_result['album_uri'])
-#
-#
-###########################################
-###               SONG DATA             ###
-###########################################
-#
-#
-st.markdown("<h1>Album Overview</h1>", unsafe_allow_html=True)
-
-all_songs_statistics = queries._get_all_song_statistics(selected_artist_uri)
-album_averages = all_songs_statistics.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
-st.dataframe(album_averages)
+    all_songs_statistics = queries._get_all_song_statistics(selected_artist_uri)
+    album_averages = all_songs_statistics.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
+    st.dataframe(album_averages)
 
 #
 #
