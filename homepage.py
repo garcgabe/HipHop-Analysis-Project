@@ -69,14 +69,14 @@ CSS_STYLES = st.markdown("""
 """, unsafe_allow_html=True)
 
 
-home_tab, artist_tab, albums_tab = st.tabs([":white[home]", ":red[artist info]", ":red[album info]"])
+home_tab, artist, albums, songs = st.tabs([":white[home]", ":red[artist]", ":red[albums]", ":red[songs]"])
 
 with home_tab:
     ### ARTIST pic
     st.markdown(f"""
         <body>
         <div class="img_container">
-            <img src={selected_artist_image} width="300" height="300"></img>
+            <img src={selected_artist_image} height="300"></img>
         </div>
     </body>
     """, unsafe_allow_html=True)
@@ -88,7 +88,7 @@ with home_tab:
     st.dataframe(album_result.drop(['album_uri', 'artist_uris', 'artist_names'], axis=1),
         column_config={
             "images": st.column_config.ImageColumn("image", width=50)
-        },)
+        }, use_container_width=True, hide_index=True)
 
 with artist_tab:
     ### ARTIST_INFO
@@ -156,11 +156,10 @@ with artist_tab:
 
 with albums_tab:
     ### ALBUMS
-    st.markdown("<h1>Album Overview</h1>", unsafe_allow_html=True)
 
     all_songs_statistics = queries._get_all_song_statistics(selected_artist_uri)
     album_averages = all_songs_statistics.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
-    st.dataframe(album_averages)
+    st.dataframe(album_averages, use_container_width=True, hide_index=True)
 
 #
 #
