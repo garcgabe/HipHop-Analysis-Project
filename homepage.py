@@ -163,7 +163,7 @@ with artist_tab:
 with albums_tab:
     ### ALBUMS
     album_averages = all_songs_statistics.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
-    st.dataframe(album_averages, use_container_width=True, hide_index=True)
+    st.dataframe(album_averages, use_container_width=True)
 
 with songs_tab:
     st.dataframe(all_songs_statistics, use_container_width=True, hide_index=True)
