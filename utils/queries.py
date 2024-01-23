@@ -46,14 +46,25 @@ def _get_distribution(artist, column):
     results = [x.get('metrics').get(f'{column}') for x in filter_response.data]
     return (min(results), sum(results)/len(results), max(results))
 
-def _get_all_album_statistics(artist_uri):
+def _get_all_song_statistics(artist_uri):
+    rows_list = []
+
     album_response = supabase.table("albums")\
-        .select("album_name, metrics(popularity, danceability, energy, valence)")\
+        .select("album_name, metrics(song_name, popularity, danceability, energy, valence)")\
         .like('artist_uris', f'%{artist_uri}%')\
         .execute()
-    # convert all data to DF; then return
-    return album_response.data
-    # [(x.get('album_name'), \
-    #     x.get('metrics').get('popularity'), x.get('metrics').get('danceability'), \
-    #     x.get('metrics').get('energy'),     x.get('metrics').get('valence')) \
-    #     for x in album_response.data]
+    all_album_data = album_response.data
+
+    # enumerate through album LIST, each album is dict
+    for idx, album in enumerate(all_album_data):
+        album_name = {"album_name": album.get('album_name')}
+        metrics = album.get('metrics')
+        # # enumerate through song LIST, each song is dict of metrics
+        for song_idx, song_metrics in enumerate(metrics):
+            new_row = album_name.copy()
+            new_row.update(song_metrics)
+            rows_list.append(new_row)
+
+    # reorder for viewing
+    return_df = pd.DataFrame(rows_list)
+    return return_df[["song_name", "album_name", "popularity", "danceability", "energy", "valence"]]
