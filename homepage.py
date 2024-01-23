@@ -72,7 +72,7 @@ CSS_STYLES = st.markdown("""
 """, unsafe_allow_html=True)
 
 
-home_tab, artist, albums, songs = st.tabs([":white[home]", ":red[artist]", ":red[albums]", ":red[songs]"])
+home_tab, artist_tab, albums_tab, songs_tab = st.tabs([":white[home]", ":red[artist]", ":red[albums]", ":red[songs]"])
 
 with home_tab:
     ### ARTIST pic
@@ -96,7 +96,7 @@ with home_tab:
             "total_tracks": st.column_config.TextColumn("album length"),
         }, use_container_width=True, hide_index=True)
 
-with artist:
+with artist_tab:
     ### ARTIST_INFO
     st.markdown(f"""
     <body>
@@ -160,12 +160,12 @@ with artist:
     </body>
     """, unsafe_allow_html=True)
 
-with albums:
+with albums_tab:
     ### ALBUMS
     album_averages = all_songs_statistics.groupby("album_name")[["popularity", "danceability", "energy", "valence"]].mean().round(2)
     st.dataframe(album_averages, use_container_width=True, hide_index=True)
 
-with songs:
+with songs_tab:
     st.dataframe(all_songs_statistics, use_container_width=True, hide_index=True)
 
 #
