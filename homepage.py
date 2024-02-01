@@ -167,9 +167,8 @@ with albums_tab:
     st.dataframe(album_averages[["album name", "popularity", "danceability", "energy", "valence"]], use_container_width=True, hide_index=True)
 
 with songs_tab:
-    st.write("debug")
     albums = queries._get_albums(selected_artist_uri)
-    selected_album = st.selectbox("select an album to view", options=albums)
+    selected_album = st.selectbox("select an album to view", options=albums["album_name"])
     st.dataframe(all_songs_statistics, use_container_width=True, hide_index=True)
 
 #
