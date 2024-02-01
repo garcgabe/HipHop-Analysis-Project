@@ -169,7 +169,7 @@ with albums_tab:
 with songs_tab:
     albums = queries._get_albums(selected_artist_uri)
     selected_album = st.selectbox("select an album to view", options=albums["album_name"])
-    st.dataframe(all_songs_statistics, use_container_width=True, hide_index=True)
+    st.dataframe(all_songs_statistics[all_songs_statistics["album_name"] == selected_album], use_container_width=True, hide_index=True)
 
 #
 #
