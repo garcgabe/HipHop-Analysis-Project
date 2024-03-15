@@ -1,10 +1,17 @@
 # tools
-import requests, base64
+import requests, base64, json
 
 # resources
 from utils.env import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
+from utils.constants import artists
 
-def _post_credentials():
+# title of each column
+columns = ["artist_uri", "artist_name", "spotify_name", 
+            "popularity", "followers",
+            "genres", "images"]
+
+# can split this out into a utility later
+def _token_client_credentials():
     # Encode the client ID and client secret
     credentials = f"{SPOTIFY_CLIENT_ID}:{SPOTIFY_CLIENT_SECRET}"
     credentials_bytes = credentials.encode('ascii')
@@ -26,9 +33,42 @@ def _post_credentials():
         print(f"Failed request: {response.status_code}")
 
 
-if __name__=="__main__":
-    access_token = _post_credentials()
+def fetch_artist_data(access_token: str):
+    params = {
+        "q" : None,
+        "type" : "artist",
+        "market" : "US",
+        "limit" : 1
+    }
+    headers = {'Authorization' : f"Bearer {access_token}"}
+    
 
+    for counter, artist in enumerate(artists[:2]):
+       # if counter%5==0: 
+        print(counter, artist)
+        params["q"]=artist
+
+        response = requests.get("https://api.spotify.com/v1/search",
+                                headers=headers, params=params
+                                )
+        if response.status_code != 200: print(f"Error getting request: {response.status_code}")
+        else:
+            #print(json.dumps(response.json()))
+            json_obj = response.json()["artists"]["items"][0]
+            print(json_obj)
+            artist_uri = json_obj["uri"]
+            artist_name = artist.replace(",", "")
+            spotify_name = json_obj["name"].replace(",", "")
+            popularity = json_obj["popularity"]
+            followers = json_obj["followers"]["total"]
+            genres = "-".join([_ for _ in json_obj["genres"]])
+            images = json_obj["images"][0]["url"]
+
+
+if __name__=="__main__":
+    access_token = _token_client_credentials()
+
+    fetch_artist_data(access_token)
 
 
 
