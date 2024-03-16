@@ -31,7 +31,7 @@ def _token_client_credentials():
                              )
     if response.status_code == 200:
         token = response.json()['access_token']
-        print(f"Access Token received as: {token}")
+        print(f"Access Token received successfully.")#as: {token}")
         return token
     else:
         print(f"Failed request: {response.status_code}")
@@ -47,7 +47,7 @@ def fetch_artist_data(access_token: str):
     headers = {'Authorization' : f"Bearer {access_token}"}
     
 
-    for counter, artist in enumerate(artists[:2]):
+    for counter, artist in enumerate(artists):
        # if counter%5==0: 
         print(counter, artist)
         params["q"]=artist

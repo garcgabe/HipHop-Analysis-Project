@@ -19,8 +19,8 @@ class SpotifyWrapper():
     def getTrack(self, song_uri):
         return self.spot.track(song_uri)
     
-    def searchArtist(self, artist):
-        return self.spot.search(q=artist, type="artist")
+    #def searchArtist(self, artist):
+    #    return self.spot.search(q=artist, type="artist")
     
     def getAlbums(self, artist_uri):
         return self.spot.artist_albums(artist_uri, album_type="album")
