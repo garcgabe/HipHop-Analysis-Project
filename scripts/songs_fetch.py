@@ -9,8 +9,8 @@ from utils.postgres import Postgres
 
 db = Postgres()
 # title of each column
-columns = ["album_uri", "album_name", "total_tracks", "release_date", 
-        "artist_uris", "artist_names", "images", "type"]
+columns = ["song_uri", "song_name", "album_uri", "artist_names", \
+            "explicit", "preview_url"]
 
 # can split this out into a utility later
 def _token_client_credentials():
@@ -35,19 +35,11 @@ def _token_client_credentials():
         print(f"Failed request: {response.status_code}")
 
 
-def fetch_album_data(access_token: str, artists_df):
+def get_songs_from_albums(access_token: str, album_uris: set):
     params = {
-        "include_groups" : "album,single,appears_on",
-        "market" : "US",
-        "limit" : 50
+        "include_groups" : "album,single,appears_on"
     }
     headers = {'Authorization' : f"Bearer {access_token}"}
-
-    # testing
-    #artists_df =artists_df[:2]
-
-    artist_names = list(artists_df["spotify_name"])
-    artist_uris = list(artists_df["artist_uri"])
 
     for counter, (name, uri) in enumerate(zip(artist_names, artist_uris)):
         print(f"Searching for albums by {name}...")
@@ -103,13 +95,15 @@ def fetch_album_data(access_token: str, artists_df):
 
             
 if __name__=="__main__":
-    artists = pd.DataFrame( db.fetch_data(f"""
-    SELECT artist_uri, spotify_name FROM artists;
-    """), columns = ("artist_uri", "spotify_name") )
-
+    # Read from album table in DB
+    album_uris = pd.DataFrame(db.fetch_data(f"""
+            SELECT album_uri FROM albums;
+            """), columns = ["album_uri"]
+    )
     access_token = _token_client_credentials()
 
-    fetch_album_data(access_token, artists)
+    # extraction of songs for storage into DB
+    get_songs_from_albums(access_token, set(album_uris))
 
 
 
