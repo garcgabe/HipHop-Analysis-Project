@@ -1,6 +1,9 @@
 import psycopg2 as pg
 from utils.env import host, database, user, password, port
 
+
+## refactor to use with x as .... to close within the execute statement
+
 class Postgres():
     # holds two attributes:
     #   connection to the database
