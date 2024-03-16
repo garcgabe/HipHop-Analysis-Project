@@ -1,7 +1,7 @@
 # tools
 import requests, base64, json
 import pandas as pd
-import sys
+import sys, time
 
 # resources
 from utils.env import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
@@ -37,63 +37,56 @@ def _token_client_credentials():
 
 def get_songs_from_albums(access_token: str, album_uris: set):
     params = {
-        "include_groups" : "album,single,appears_on"
+        "market" : "US",
+        "limit" : 50
     }
     headers = {'Authorization' : f"Bearer {access_token}"}
-
-    for counter, (name, uri) in enumerate(zip(artist_names, artist_uris)):
-        print(f"Searching for albums by {name}...")
-        print(counter, name, uri)
+    length = len(album_uris)
+    for counter, uri in enumerate(album_uris):
         uri_id = uri.split(":")[-1] # API only takes ID not full URI
-
-        response = requests.get(f"https://api.spotify.com/v1/artists/{uri_id}/albums",
+        if counter%25 == 0: print(f"{counter} of {length}")
+        response = requests.get(f"https://api.spotify.com/v1/albums/{uri_id}/tracks",
                                 headers=headers, params=params
                                 )
-        if response.status_code != 200: print(f"Error getting request: {response.status_code}")
+        if response.status_code == 429: 
+            print(f"Cleanup! {uri}")
+            time.sleep(30)
+        elif response.status_code != 200: print(f"Error getting request: {response.status_code}")
         else:
-            print(json.dumps(response.json()["items"], indent=4))
+            #print(json.dumps(response.json()["items"], indent=4))
             json_obj = response.json()["items"]
-            for _, json_tree_split in enumerate(json_obj):
-                all_artists, all_uris = ([] for x in range(2))
-                number_of_artists = len(json_tree_split["artists"])
-                
-                # for all artists, check if they exist in our list
-                # if they do exist, we have their URI and can assign them to the album properly
-                # if not, pass a 0 and keep their name for future addition if needed
-                for artist_num in range(0,number_of_artists):
-                    artist_name_in_list = json_tree_split["artists"][artist_num]["name"].replace(",", "")
-                    try:
-                        artist_uri_in_list = artists_df.loc[artists_df["spotify_name"] == artist_name_in_list, "artist_uri"].iloc[0]
-                    except:
-                        artist_uri_in_list = "0"
-                    all_uris.append(artist_uri_in_list)
-                    all_artists.append(artist_name_in_list)
-                
-                album_uri = json_tree_split["uri"]
-                album_name = json_tree_split["name"].strip().split("\n")[0].replace(",", "")
-                album_type = json_tree_split["album_type"]
-                total_tracks = str(json_tree_split["total_tracks"])
+            # temp arrays to hold multiple artist names
+            temp_artists = []
+            number_of_artists = len(json_obj[0]["artists"])
+            # search for cases where there are multiple artists and artist_uris
+            # need to parse and add as a list instead of a single value
+            for count in range(0,number_of_artists):
+                artist_name_in_list = json_obj[0]["artists"][count]["name"]
+                temp_artists.append(artist_name_in_list.replace(",", ""))
 
-                # if length is above 8 it has daily accuracy. if not, just yearly and we take the first date of it
-                # NOTE: check this in data to see if it's only yearly and daily. monthly would need more logic
-                release_date = json_tree_split["release_date"] if len(json_tree_split["release_date"]) > 8 \
-                                                               else json_tree_split["release_date"] + "-01-01"
-                # joining
-                artist_uris = "-".join(all_uris)
-                artist_names = "-".join(all_artists)
-                images = json_tree_split["images"][0]["url"]
+            # join these lists into one variables to append to list for DF addition
+            # each song within this loop iteration will share these 2 variables since same album
+            album_artists = "-".join(temp_artists)
 
+            # populate lists with song data
+            for song_count in range(0,len(json_obj)): 
+                song_uri =  json_obj[song_count]["uri"]
+                song_name = json_obj[song_count]["name"].replace(",", "")
+                explicit = json_obj[song_count]["explicit"]
+                preview_url = json_obj[song_count]["preview_url"]
+
+                # commit to DB
                 ## NOTE: this data is static, therefore on conflicts we do nothing to the existing rows
                 ## on conflict do nothing - album already accounted for by prior artist
 
                 db.execute_query(f"""
-                    INSERT INTO albums (album_uri, album_name, total_tracks, release_date, artist_uris, artist_names, images, type)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                        ON CONFLICT (album_uri)
+                    INSERT INTO songs (song_uri, song_name, album_uri, artist_names, explicit, preview_url)
+                        VALUES (%s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (song_uri)
                         DO NOTHING
-                    """, (album_uri, album_name, total_tracks, release_date, artist_uris, artist_names, images, album_type))
+                    """, (song_uri, song_name, uri, album_artists, explicit, preview_url))
 
-            
+
 if __name__=="__main__":
     # Read from album table in DB
     album_uris = pd.DataFrame(db.fetch_data(f"""
@@ -103,7 +96,7 @@ if __name__=="__main__":
     access_token = _token_client_credentials()
 
     # extraction of songs for storage into DB
-    get_songs_from_albums(access_token, set(album_uris))
+    get_songs_from_albums(access_token, set(album_uris["album_uri"]))
 
 
 

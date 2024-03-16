@@ -59,7 +59,7 @@ def fetch_album_data(access_token: str, artists_df):
                                 )
         if response.status_code != 200: print(f"Error getting request: {response.status_code}")
         else:
-            print(json.dumps(response.json()["items"], indent=4))
+            #print(json.dumps(response.json()["items"], indent=4))
             json_obj = response.json()["items"]
             for _, json_tree_split in enumerate(json_obj):
                 all_artists, all_uris = ([] for x in range(2))
