@@ -22,6 +22,8 @@ CREATE TABLE albums(
 CREATE TABLE album_artists(
     album_uri varchar(255) not null,
     artist_uri varchar(255) not null,
+    album_name varchar(255) not null,
+    artist_name varchar(255) not null,
     PRIMARY KEY (album_uri, artist_uri),
     FOREIGN KEY (album_uri) REFERENCES albums (album_uri) ON DELETE CASCADE,
     FOREIGN KEY (artist_uri) REFERENCES artists (artist_uri) ON DELETE CASCADE

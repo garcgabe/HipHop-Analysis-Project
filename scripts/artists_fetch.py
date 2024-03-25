@@ -46,7 +46,7 @@ def fetch_artist_data(access_token: str):
     for counter, artist in enumerate(artists):
        # if counter%5==0: 
         print(counter, artist)
-        params["q"]="artist"
+        params["q"]=artist
 
         response = requests.get("https://api.spotify.com/v1/search",
                                 headers=headers, params=params

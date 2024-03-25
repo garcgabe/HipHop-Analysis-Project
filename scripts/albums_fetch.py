@@ -8,9 +8,6 @@ from utils.env import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
 from utils.postgres import Postgres
 
 db = Postgres()
-# title of each column
-columns = ["album_uri", "album_name", "total_tracks", "release_date", 
-        "artist_uris", "artist_names", "images", "type"]
 
 # can split this out into a utility later
 def _token_client_credentials():
@@ -46,20 +43,24 @@ def fetch_album_data(access_token: str, artists_df):
     # testing
     #artists_df =artists_df[:2]
 
-    artist_names = list(artists_df["spotify_name"])
+    artist_names = list(artists_df["artist_name"])
     artist_uris = list(artists_df["artist_uri"])
 
+    # separate set for checking if the have data for the given artist URI
+    # new artist URIs will be found in helper function and added to -artists- table
+    artist_uri_check = set(artists_df["artist_uri"])
     for counter, (name, uri) in enumerate(zip(artist_names, artist_uris)):
         print(f"Searching for albums by {name}...")
         print(counter, name, uri)
         uri_id = uri.split(":")[-1] # API only takes ID not full URI
-
         response = requests.get(f"https://api.spotify.com/v1/artists/{uri_id}/albums",
                                 headers=headers, params=params
                                 )
         if response.status_code != 200: print(f"Error getting request: {response.status_code}")
+
         else:
             #print(json.dumps(response.json()["items"], indent=4))
+            #sys.exit(0)
             json_obj = response.json()["items"]
             for _, json_tree_split in enumerate(json_obj):
                 all_artists, all_uris = ([] for x in range(2))
@@ -80,15 +81,12 @@ def fetch_album_data(access_token: str, artists_df):
                 album_uri = json_tree_split["uri"]
                 album_name = json_tree_split["name"].strip().split("\n")[0].replace(",", "")
                 album_type = json_tree_split["album_type"]
-                total_tracks = str(json_tree_split["total_tracks"])
 
                 # if length is above 8 it has daily accuracy. if not, just yearly and we take the first date of it
                 # NOTE: check this in data to see if it's only yearly and daily. monthly would need more logic
                 release_date = json_tree_split["release_date"] if len(json_tree_split["release_date"]) > 8 \
                                                                else json_tree_split["release_date"] + "-01-01"
-                # joining
-                artist_uris = "-".join(all_uris)
-                artist_names = "-".join(all_artists)
+                total_tracks = str(json_tree_split["total_tracks"])
                 images = json_tree_split["images"][0]["url"]
 
                 ## NOTE: this data is static, therefore on conflicts we do nothing to the existing rows
@@ -100,16 +98,24 @@ def fetch_album_data(access_token: str, artists_df):
                         ON CONFLICT (album_uri)
                         DO NOTHING
                     """, (album_uri, album_name, album_type, release_date, total_tracks, images))
+                
+                # query to insert 
+                db.execute_query(f"""
+                    INSERT INTO album_artists (album_uri, artist_uri, album_name, artist_name)
+                        VALUES(%s, %s, %s, %s)
+                        ON CONFLICT (album_uri, artist_uri)
+                        DO NOTHING
+                    """, (album_uri, uri, album_name, name))
 
             
 if __name__=="__main__":
     artists = pd.DataFrame( db.fetch_data(f"""
-    SELECT artist_uri, spotify_name FROM artists;
-    """), columns = ("artist_uri", "spotify_name") )
+    SELECT artist_uri, artist_name FROM artists;
+    """), columns = ("artist_uri", "artist_name") )
 
     access_token = _token_client_credentials()
-
-    fetch_album_data(access_token, artists)
-
+    print(pd.DataFrame([{"artist_uri":"spotify:artist:4O15NlyKLIASxsJ0PrXPfz", "artist_name":"Lil Uzi Vert"}] ,columns=("artist_uri", "artist_name")))
+    #fetch_album_data(access_token, artists)
+    #fetch_album_data(access_token, pd.DataFrame({1, "test"} ,columns=("artist_uri", "artist_name")))
 
 
