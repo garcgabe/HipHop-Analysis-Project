@@ -50,7 +50,7 @@ def get_songs_from_albums(access_token: str, album_uris: set):
                                 headers=headers, params=params
                                 )
         if response.status_code == 429: 
-            print(f"Cleanup! {uri}")
+            print(f"Triage {uri} at a later time; was called during rate limit")
             time.sleep(30)
         elif response.status_code != 200: print(f"Error getting request: {response.status_code}")
         else:
