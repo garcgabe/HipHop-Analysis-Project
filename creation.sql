@@ -12,6 +12,7 @@ CREATE TABLE artists(
 CREATE TABLE albums(
     album_uri varchar(255) primary key,
     album_name varchar(255) not null,
+    type varchar(255) not null,
     release_date date,
     total_tracks integer,
     images varchar(500)

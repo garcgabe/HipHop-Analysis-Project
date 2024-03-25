@@ -95,11 +95,11 @@ def fetch_album_data(access_token: str, artists_df):
                 ## on conflict do nothing - album already accounted for by prior artist
 
                 db.execute_query(f"""
-                    INSERT INTO albums (album_uri, album_name, total_tracks, release_date, artist_uris, artist_names, images, type)
+                    INSERT INTO albums (album_uri, album_name, type, release_date, total_tracks, images)
                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                         ON CONFLICT (album_uri)
                         DO NOTHING
-                    """, (album_uri, album_name, total_tracks, release_date, artist_uris, artist_names, images, album_type))
+                    """, (album_uri, album_name, album_type, release_date, total_tracks, images))
 
             
 if __name__=="__main__":
