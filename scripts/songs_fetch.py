@@ -44,6 +44,7 @@ def get_songs_from_albums(access_token: str, album_uris: set):
     length = len(album_uris)
     for counter, uri in enumerate(album_uris):
         uri_id = uri.split(":")[-1] # API only takes ID not full URI
+        # logging
         if counter%25 == 0: print(f"{counter} of {length}")
         response = requests.get(f"https://api.spotify.com/v1/albums/{uri_id}/tracks",
                                 headers=headers, params=params

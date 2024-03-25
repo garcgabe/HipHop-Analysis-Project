@@ -3,7 +3,15 @@ refactor and expansion of Spotify Pipeline. Extraction from Genius and Spotify A
 
 --- supabase doesn't have support for performing aggregates in their queries, so had to mess around a little bit to perform the joins i wanted. 
 
+-- todo:
+--  - add timestamps for all tables
+
 Broad Overview of Goals:
+
+db redesign:
+fact: (song_uri, )
+albums: (PK album_id)
+album_artist_relations: (PK )
 
 
 extraction:
