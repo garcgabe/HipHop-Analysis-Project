@@ -32,7 +32,36 @@ def _token_client_credentials():
         print(f"Failed request: {response.status_code}")
 
 
-def fetch_album_data(access_token: str, artists_df):
+def _add_new_artist(access_token, uri) -> tuple:
+    headers = {'Authorization' : f"Bearer {access_token}"}
+    uri_id = uri.split(":")[-1] # API only takes ID not full URI
+    response = requests.get(f"https://api.spotify.com/v1/artists/{uri_id}",
+                            headers=headers
+                            )
+    if response.status_code != 200: 
+        print(f"Error getting request for adding new artist: {response.status_code}") 
+        return
+    #print(json.dumps(response.json(), indent=4))
+    json_obj = response.json()
+    artist_name = json_obj["name"].replace(",", "")
+    print(f"adding {artist_name}")
+    popularity = json_obj["popularity"]
+    followers = json_obj["followers"]["total"]
+    genres = "-".join([_ for _ in json_obj["genres"]])
+    # 3 of the same image at various sizes; take first
+    image = json_obj["images"][0]["url"]
+    
+    # performs an insert for new artist information
+    db.execute_query(f"""
+        INSERT INTO artists (artist_uri, artist_name, popularity, followers, genres, images)
+                VALUES (%s, %s, %s,%s, %s, %s)
+                ON CONFLICT (artist_uri)
+                DO UPDATE SET popularity = EXCLUDED.popularity, followers = EXCLUDED.followers, genres = EXCLUDED.genres, images = EXCLUDED.images
+        """, (uri, artist_name, popularity, followers, genres, image))
+    return (uri, artist_name)
+
+
+def fetch_album_data(access_token: str, artists_df) -> None:
     params = {
         "include_groups" : "album,single,appears_on",
         "market" : "US",
@@ -58,55 +87,50 @@ def fetch_album_data(access_token: str, artists_df):
                                 )
         if response.status_code != 200: print(f"Error getting request: {response.status_code}")
 
-        else:
-            #print(json.dumps(response.json()["items"], indent=4))
-            #sys.exit(0)
-            json_obj = response.json()["items"]
-            for _, json_tree_split in enumerate(json_obj):
-                all_artists, all_uris = ([] for x in range(2))
-                number_of_artists = len(json_tree_split["artists"])
-                
-                # for all artists, check if they exist in our list
-                # if they do exist, we have their URI and can assign them to the album properly
-                # if not, pass a 0 and keep their name for future addition if needed
-                for artist_num in range(0,number_of_artists):
-                    artist_name_in_list = json_tree_split["artists"][artist_num]["name"].replace(",", "")
-                    try:
-                        artist_uri_in_list = artists_df.loc[artists_df["spotify_name"] == artist_name_in_list, "artist_uri"].iloc[0]
-                    except:
-                        artist_uri_in_list = "0"
-                    all_uris.append(artist_uri_in_list)
-                    all_artists.append(artist_name_in_list)
-                
-                album_uri = json_tree_split["uri"]
-                album_name = json_tree_split["name"].strip().split("\n")[0].replace(",", "")
-                album_type = json_tree_split["album_type"]
+        #print(json.dumps(response.json()["items"], indent=4))
+        #sys.exit(0)
+        json_obj = response.json()["items"]
+        for item in json_obj:
+            album_uri = item["uri"]
+            album_name = item["name"].strip().split("\n")[0].replace(",", "")
+            album_type = item["album_type"]
 
-                # if length is above 8 it has daily accuracy. if not, just yearly and we take the first date of it
-                # NOTE: check this in data to see if it's only yearly and daily. monthly would need more logic
-                release_date = json_tree_split["release_date"] if len(json_tree_split["release_date"]) > 8 \
-                                                               else json_tree_split["release_date"] + "-01-01"
-                total_tracks = str(json_tree_split["total_tracks"])
-                images = json_tree_split["images"][0]["url"]
+            # if length is above 8 it has daily accuracy. if not, just yearly and we take the first date of it
+            # NOTE: check this in data to see if it's only yearly and daily. monthly would need more logic
+            release_date = item["release_date"] if len(item["release_date"]) > 8 \
+                                                else item["release_date"] + "-01-01"
+            total_tracks = str(item["total_tracks"])
+            images = item["images"][0]["url"]
 
-                ## NOTE: this data is static, therefore on conflicts we do nothing to the existing rows
-                ## on conflict do nothing - album already accounted for by prior artist
+            ## NOTE: this data is static, therefore on conflicts we do nothing to the existing rows
+            ## on conflict do nothing - album already accounted for by prior artist
 
-                db.execute_query(f"""
-                    INSERT INTO albums (album_uri, album_name, type, release_date, total_tracks, images)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                        ON CONFLICT (album_uri)
-                        DO NOTHING
-                    """, (album_uri, album_name, album_type, release_date, total_tracks, images))
-                
-                # query to insert 
+            db.execute_query(f"""
+                INSERT INTO albums (album_uri, album_name, type, release_date, total_tracks, images)
+                    VALUES (%s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (album_uri)
+                    DO NOTHING
+                """, (album_uri, album_name, album_type, release_date, total_tracks, images))
+            
+            # OUTER: add to album_artist relation table
+            # INNER: add artist if they're not seen yet
+            # first add to memory set (for future checking); then persist
+            for artist in item["artists"]:
+                insertion = (uri, name) #base case is base artist
+                temp_uri = artist["uri"]
+                if temp_uri not in artist_uri_check:
+                    # add new URI to in-mem set
+                    artist_uri_check.add(temp_uri)
+                    # persist to DB in artists list; return artist tuple
+                    insertion = _add_new_artist(access_token, temp_uri)
+                #insert alum/artist relation
                 db.execute_query(f"""
                     INSERT INTO album_artists (album_uri, artist_uri, album_name, artist_name)
                         VALUES(%s, %s, %s, %s)
                         ON CONFLICT (album_uri, artist_uri)
                         DO NOTHING
-                    """, (album_uri, uri, album_name, name))
-
+                    """, (album_uri, insertion[0], album_name, insertion[1]))
+    db.close()
             
 if __name__=="__main__":
     artists = pd.DataFrame( db.fetch_data(f"""
@@ -114,8 +138,9 @@ if __name__=="__main__":
     """), columns = ("artist_uri", "artist_name") )
 
     access_token = _token_client_credentials()
-    print(pd.DataFrame([{"artist_uri":"spotify:artist:4O15NlyKLIASxsJ0PrXPfz", "artist_name":"Lil Uzi Vert"}] ,columns=("artist_uri", "artist_name")))
+    uzi_test_df = pd.DataFrame([{"artist_uri":"spotify:artist:4O15NlyKLIASxsJ0PrXPfz", "artist_name":"Lil Uzi Vert"}] ,columns=("artist_uri", "artist_name"))
+    #print(uzi_test_df)
     #fetch_album_data(access_token, artists)
-    #fetch_album_data(access_token, pd.DataFrame({1, "test"} ,columns=("artist_uri", "artist_name")))
+    fetch_album_data(access_token, uzi_test_df)
 
 
