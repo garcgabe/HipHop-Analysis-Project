@@ -130,6 +130,7 @@ def fetch_album_data(access_token: str, artists_df) -> None:
                         ON CONFLICT (album_uri, artist_uri)
                         DO NOTHING
                     """, (album_uri, insertion[0], album_name, insertion[1]))
+                print(f"added {insertion[1]} to artists")
     db.close()
             
 if __name__=="__main__":
