@@ -130,7 +130,6 @@ def fetch_album_data(access_token: str, artists_df) -> None:
                         ON CONFLICT (album_uri, artist_uri)
                         DO NOTHING
                     """, (album_uri, insertion[0], album_name, insertion[1]))
-                print(f"added {insertion[1]} to artists")
     db.close()
             
 if __name__=="__main__":
@@ -138,10 +137,12 @@ if __name__=="__main__":
     SELECT artist_uri, artist_name FROM artists;
     """), columns = ("artist_uri", "artist_name") )
 
+    #print(artists)
     access_token = _token_client_credentials()
-    uzi_test_df = pd.DataFrame([{"artist_uri":"spotify:artist:4O15NlyKLIASxsJ0PrXPfz", "artist_name":"Lil Uzi Vert"}] ,columns=("artist_uri", "artist_name"))
+    #uzi_test_df = pd.DataFrame([{"artist_uri":"spotify:artist:4O15NlyKLIASxsJ0PrXPfz", "artist_name":"Lil Uzi Vert"}] ,columns=("artist_uri", "artist_name"))
     #print(uzi_test_df)
-    #fetch_album_data(access_token, artists)
-    fetch_album_data(access_token, uzi_test_df)
+    #fetch_album_data(access_token, uzi_test_df)
+    fetch_album_data(access_token, artists)
+    
 
 
