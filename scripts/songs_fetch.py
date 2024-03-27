@@ -62,9 +62,7 @@ def _add_new_artist(access_token, uri) -> tuple:
         """, (uri, artist_name, popularity, followers, genres, image))
     return (uri, artist_name)
 
-def get_songs_from_albums(access_token: str, album_uris: set, 
-                          artist_dict: dict):
-    artist_check = set(artist_dict.keys())
+def get_songs_from_albums(access_token: str, album_uris: set, artist_check: set):
     params = {
         "market" : "US",
         "limit" : 50
@@ -88,7 +86,7 @@ def get_songs_from_albums(access_token: str, album_uris: set,
 
             # populate lists with song data
             for song in json_obj: 
-                print(json.dumps(song, indent=4))
+                #print(json.dumps(song, indent=4))
                 song_uri =  song["uri"]
                 song_name = song["name"].replace(",", "")
                 explicit = song["explicit"]
@@ -123,13 +121,11 @@ def get_songs_from_albums(access_token: str, album_uris: set,
 
 
 if __name__=="__main__":
-    # Read artist data so we know if we can concat or not
+
     artist_uris = pd.DataFrame( db.fetch_data(f"""
     SELECT artist_uri, artist_name FROM artists;
     """), columns = ("artist_uri", "artist_name") )
 
-    artist_dict = artist_uris.set_index("artist_uri")["artist_name"].to_dict()
-    print(artist_dict)
     # Read from album table in DB
     album_uris = pd.DataFrame(db.fetch_data(f"""
             SELECT album_uri FROM albums;
@@ -140,7 +136,7 @@ if __name__=="__main__":
     # extraction of songs for storage into DB
     #get_songs_from_albums(access_token, set(album_uris["album_uri"]))
     get_songs_from_albums(access_token, set(["spotify:album:0fEO7g2c5onkaXsybEtuD2", "ok"]),
-                          set(artist_uris["artist_uris"]))
+                          set(artist_uris["artist_uri"]))
 
 
 

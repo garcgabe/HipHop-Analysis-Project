@@ -39,6 +39,17 @@ CREATE TABLE songs(
     FOREIGN KEY (album_uri) REFERENCES albums (album_uri) ON DELETE CASCADE
 );
 
+-- create song-artists relations table
+CREATE TABLE song_artists(
+    song_uri varchar(255) not null,
+    artist_uri varchar(255) not null,
+    song_name varchar(255) not null,
+    artist_name varchar(255) not null,
+    PRIMARY KEY (song_uri, artist_uri),
+    FOREIGN KEY (song_uri) REFERENCES songs (song_uri) ON DELETE CASCADE,
+    FOREIGN KEY (artist_uri) REFERENCES artists (artist_uri) ON DELETE CASCADE
+);
+
 -- create song metrics table
 CREATE TABLE metrics(
     song_uri varchar(255) primary key,
