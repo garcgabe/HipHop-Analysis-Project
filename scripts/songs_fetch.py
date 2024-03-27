@@ -34,8 +34,37 @@ def _token_client_credentials():
     else:
         print(f"Failed request: {response.status_code}")
 
+def _add_new_artist(access_token, uri) -> tuple:
+    headers = {'Authorization' : f"Bearer {access_token}"}
+    uri_id = uri.split(":")[-1] # API only takes ID not full URI
+    response = requests.get(f"https://api.spotify.com/v1/artists/{uri_id}",
+                            headers=headers
+                            )
+    if response.status_code != 200: 
+        print(f"Error getting request for adding new artist: {response.status_code}") 
+        return
+    #print(json.dumps(response.json(), indent=4))
+    json_obj = response.json()
+    artist_name = json_obj["name"].replace(",", "")
+    print(f"adding {artist_name}")
+    popularity = json_obj["popularity"]
+    followers = json_obj["followers"]["total"]
+    genres = "-".join([_ for _ in json_obj["genres"]])
+    # 3 of the same image at various sizes; take first
+    image = json_obj["images"][0]["url"]
+    
+    # performs an insert for new artist information
+    db.execute_query(f"""
+        INSERT INTO artists (artist_uri, artist_name, popularity, followers, genres, images)
+                VALUES (%s, %s, %s,%s, %s, %s)
+                ON CONFLICT (artist_uri)
+                DO UPDATE SET popularity = EXCLUDED.popularity, followers = EXCLUDED.followers, genres = EXCLUDED.genres, images = EXCLUDED.images
+        """, (uri, artist_name, popularity, followers, genres, image))
+    return (uri, artist_name)
 
-def get_songs_from_albums(access_token: str, album_uris: set):
+def get_songs_from_albums(access_token: str, album_uris: set, 
+                          artist_dict: dict):
+    artist_check = set(artist_dict.keys())
     params = {
         "market" : "US",
         "limit" : 50
@@ -56,39 +85,51 @@ def get_songs_from_albums(access_token: str, album_uris: set):
         else:
             #print(json.dumps(response.json()["items"], indent=4))
             json_obj = response.json()["items"]
-            # temp arrays to hold multiple artist names
-            temp_artists = []
-            number_of_artists = len(json_obj[0]["artists"])
-            # search for cases where there are multiple artists and artist_uris
-            # need to parse and add as a list instead of a single value
-            for count in range(0,number_of_artists):
-                artist_name_in_list = json_obj[0]["artists"][count]["name"]
-                temp_artists.append(artist_name_in_list.replace(",", ""))
-
-            # join these lists into one variables to append to list for DF addition
-            # each song within this loop iteration will share these 2 variables since same album
-            album_artists = "-".join(temp_artists)
 
             # populate lists with song data
-            for song_count in range(0,len(json_obj)): 
-                song_uri =  json_obj[song_count]["uri"]
-                song_name = json_obj[song_count]["name"].replace(",", "")
-                explicit = json_obj[song_count]["explicit"]
-                preview_url = json_obj[song_count]["preview_url"]
+            for song in json_obj: 
+                print(json.dumps(song, indent=4))
+                song_uri =  song["uri"]
+                song_name = song["name"].replace(",", "")
+                explicit = song["explicit"]
+                preview_url = song["preview_url"]
 
-                # commit to DB
                 ## NOTE: this data is static, therefore on conflicts we do nothing to the existing rows
-                ## on conflict do nothing - album already accounted for by prior artist
-
+                ## on conflict do nothing - song already accounted for
                 db.execute_query(f"""
-                    INSERT INTO songs (song_uri, song_name, album_uri, artist_names, explicit, preview_url)
-                        VALUES (%s, %s, %s, %s, %s, %s)
+                    INSERT INTO songs (song_uri, song_name, album_uri, explicit, preview_url)
+                        VALUES (%s, %s, %s, %s, %s)
                         ON CONFLICT (song_uri)
                         DO NOTHING
-                    """, (song_uri, song_name, uri, album_artists, explicit, preview_url))
+                    """, (song_uri, song_name, uri, explicit, preview_url))
+                            # OUTER: add to album_artist relation table
+                # INNER: add artist if they're not seen yet
+                # first add to memory set (for future checking); then persist
+                for artist in song["artists"]:
+                    temp_artist_uri = artist["uri"]
+                    if temp_artist_uri not in artist_check:
+                        # add new URI to in-mem set
+                        artist_check.add(temp_artist_uri)
+                        # persist to DB in artists list; return artist tuple
+                        _add_new_artist(access_token, temp_artist_uri)
+                    #insert song/artist relation
+                    db.execute_query(f"""
+                        INSERT INTO song_artists (song_uri, artist_uri, song_name, artist_name)
+                            VALUES(%s, %s, %s, %s)
+                            ON CONFLICT (song_uri, artist_uri)
+                            DO NOTHING
+                        """, (song_uri, artist["uri"], song_name, artist["name"]))
+    db.close()
 
 
 if __name__=="__main__":
+    # Read artist data so we know if we can concat or not
+    artist_uris = pd.DataFrame( db.fetch_data(f"""
+    SELECT artist_uri, artist_name FROM artists;
+    """), columns = ("artist_uri", "artist_name") )
+
+    artist_dict = artist_uris.set_index("artist_uri")["artist_name"].to_dict()
+    print(artist_dict)
     # Read from album table in DB
     album_uris = pd.DataFrame(db.fetch_data(f"""
             SELECT album_uri FROM albums;
@@ -97,7 +138,9 @@ if __name__=="__main__":
     access_token = _token_client_credentials()
 
     # extraction of songs for storage into DB
-    get_songs_from_albums(access_token, set(album_uris["album_uri"]))
+    #get_songs_from_albums(access_token, set(album_uris["album_uri"]))
+    get_songs_from_albums(access_token, set(["spotify:album:0fEO7g2c5onkaXsybEtuD2", "ok"]),
+                          set(artist_uris["artist_uris"]))
 
 
 
