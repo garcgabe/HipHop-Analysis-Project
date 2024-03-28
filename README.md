@@ -34,4 +34,4 @@ ROLE OF SUPABASE:
 
 ## Database Design
 
-[Design](https://github.com/garcgabe/HipHop-Analysis-Project/blob/main/hh_db_design.png "Storage of Albums, Artists, Songs, and Relationships")
+![Design](https://github.com/garcgabe/HipHop-Analysis-Project/blob/main/hh_db_design.png "Storage of Albums, Artists, Songs, and Relationships")
