@@ -30,3 +30,8 @@ ROLE OF SUPABASE:
 - initially, all data is pushed into supabase. this is done since it's a free tier cloud DB and i'd like to have this up
 - supabase's db abstraction is limiting, especially for analytics querying (aggregates limited, annoying) and I have to write weirdly translated code instead of simple SQL
 - due to this - going to have to set up direct connection in datagrip w the supabase db underlying. no abstractions if i can get away with it
+
+
+## Database Design
+
+[Design](https://github.com/garcgabe/HipHop-Analysis-Project/blob/main/hh_db_design.png "Storage of Albums, Artists, Songs, and Relationships")
