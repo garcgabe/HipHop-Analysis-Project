@@ -8,9 +8,6 @@ from utils.env import SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
 from utils.postgres import Postgres
 
 db = Postgres()
-# title of each column
-columns = ["song_uri", "song_name", "album_uri", "artist_names", \
-            "explicit", "preview_url"]
 
 # can split this out into a utility later
 def _token_client_credentials():
@@ -50,8 +47,10 @@ def _add_new_artist(access_token, uri) -> tuple:
     popularity = json_obj["popularity"]
     followers = json_obj["followers"]["total"]
     genres = "-".join([_ for _ in json_obj["genres"]])
+    try:
     # 3 of the same image at various sizes; take first
-    image = json_obj["images"][0]["url"]
+        image = json_obj["images"][0]["url"]
+    except: image = ""
     
     # performs an insert for new artist information
     db.execute_query(f"""
@@ -72,7 +71,7 @@ def get_songs_from_albums(access_token: str, album_uris: set, artist_check: set)
     for counter, uri in enumerate(album_uris):
         uri_id = uri.split(":")[-1] # API only takes ID not full URI
         # logging
-        if counter%25 == 0: print(f"{counter} of {length}")
+        if counter%25 == 0: print(f"{counter} of {length} albums")
         response = requests.get(f"https://api.spotify.com/v1/albums/{uri_id}/tracks",
                                 headers=headers, params=params
                                 )
@@ -100,7 +99,7 @@ def get_songs_from_albums(access_token: str, album_uris: set, artist_check: set)
                         ON CONFLICT (song_uri)
                         DO NOTHING
                     """, (song_uri, song_name, uri, explicit, preview_url))
-                            # OUTER: add to album_artist relation table
+                # OUTER: add to album_artist relation table
                 # INNER: add artist if they're not seen yet
                 # first add to memory set (for future checking); then persist
                 for artist in song["artists"]:
@@ -134,9 +133,10 @@ if __name__=="__main__":
     access_token = _token_client_credentials()
 
     # extraction of songs for storage into DB
-    #get_songs_from_albums(access_token, set(album_uris["album_uri"]))
-    get_songs_from_albums(access_token, set(["spotify:album:0fEO7g2c5onkaXsybEtuD2", "ok"]),
-                          set(artist_uris["artist_uri"]))
+    get_songs_from_albums(access_token, set(album_uris["album_uri"]), set(artist_uris["artist_uri"]))
+    #get_songs_from_albums(access_token, set(["spotify:album:0fEO7g2c5onkaXsybEtuD2", \
+    #                                         "spotify:album:48xpWR8K6CGpy3ETAym3pt"]),
+    #                      set(artist_uris["artist_uri"]))
 
 
 
