@@ -63,7 +63,5 @@ CREATE TABLE metrics(
     tempo decimal(5,1),
     instrumentalness decimal(4,4),
     speechiness decimal(4,3),
-    album_uri varchar(255) not null ,
-    FOREIGN KEY (song_uri) REFERENCES songs (song_uri) ON DELETE CASCADE,
-    FOREIGN KEY (album_uri) REFERENCES albums (album_uri) ON DELETE CASCADE
+    FOREIGN KEY (song_uri) REFERENCES songs (song_uri) ON DELETE CASCADE
 );
