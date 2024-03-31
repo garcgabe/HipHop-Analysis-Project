@@ -57,13 +57,18 @@ def get_metrics(access_token: str, songs: pd.DataFrame):
 
     for partition_index, partition in enumerate(partitions):
         print(f"Processing partition {partition_index} of {len(partitions)}")
-        song_names = partition["song_name"]
-        song_uris = partition["song_uri"]
-        joined_uris = ','.join(uri for uri in song_uris)            
+
+        partition.set_index('song_uri', inplace=True)
+
+        # for name lookup given uri when parsing API response
+        song_dict = partition['song_name'].to_dict()
+
+        song_uris = partition.index
+        joined_uris = ','.join(uri.split(":")[-1] for uri in song_uris)   
 
         if partition_index%5== 0: # reset access token periodically
             headers = {'Authorization' : f"Bearer {_token_client_credentials()}"}
-        response = requests.get(f"https://api.spotify.com/v1/audio-features/{joined_uris}",
+        response = requests.get(f"https://api.spotify.com/v1/audio-features?ids={joined_uris}",
                                 headers=headers
                                 )
         if response.status_code == 429: 
@@ -71,26 +76,29 @@ def get_metrics(access_token: str, songs: pd.DataFrame):
             time.sleep(30)
         elif response.status_code != 200: print(f"Error getting request: {response.status_code}")
         else:
-            print(json.dumps(response.json(), indent=4))
-            json_obj = response.json()
-            sys.exit(0)
-                # duration_sec = json_obj['duration_ms'] * 0.001
-                # popularity = _get_popularity(headers, uri_id)
-                # danceability = json_obj['danceability']
-                # energy = json_obj['energy']
-                # loudness = json_obj['loudness']
-                # valence = json_obj['valence']
-                # tempo = json_obj['tempo']
-                # instrumentalness = json_obj['instrumentalness']
-                # speechiness = json_obj['speechiness']
-
-                # db.execute_query(f"""
-                #     INSERT INTO metrics (song_uri, song_name, duration, popularity, danceability, energy, loudness, valence, tempo, instrumentalness, speechiness)
-                #         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                #         ON CONFLICT (song_uri)
-                #         DO NOTHING
-                #     """, (uri, name, duration_sec, popularity, danceability, energy, loudness, valence, tempo, instrumentalness, speechiness))                                        
-        db.close()
+            #print(json.dumps(response.json()["audio_features"], indent=4))
+            json_obj = response.json()["audio_features"]
+            for item in json_obj:
+                uri = item["uri"]
+                name = song_dict[uri]
+                duration_sec = item["duration_ms"] * 0.001
+                popularity = _get_popularity(headers, uri.split(":")[-1])
+                danceability = item['danceability']
+                energy = item['energy']
+                loudness = item['loudness']
+                valence = item['valence']
+                tempo = item['tempo']
+                instrumentalness = item['instrumentalness']
+                speechiness = item['speechiness']
+                db.execute_query(f"""
+                    INSERT INTO metrics (song_uri, song_name, duration, popularity, danceability, energy, loudness, \
+                                 valence, tempo, instrumentalness, speechiness)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (song_uri)
+                        DO UPDATE SET popularity = EXCLUDED.popularity
+                    """, (uri, name, duration_sec, popularity, danceability, energy, loudness, \
+                          valence, tempo, instrumentalness, speechiness))                                        
+    db.close()
 
 
 if __name__=="__main__":
