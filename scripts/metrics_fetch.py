@@ -47,6 +47,10 @@ def _get_popularity(headers, song_uri_id):
 
 
 def _preprocess(songs_df: pd.DataFrame):
+    '''
+    Splits up the entire relation of songs into sections of 100 songs
+    Allows for batch API calls 
+    '''
     return np.array_split(songs_df, np.ceil(len(songs_df) / 100)) 
 
 def get_metrics(access_token: str, songs: pd.DataFrame):
@@ -75,29 +79,35 @@ def get_metrics(access_token: str, songs: pd.DataFrame):
             print(f"Triage partition {partition_index} at a later time; was called during rate limit")
             time.sleep(30)
         elif response.status_code != 200: print(f"Error getting request: {response.status_code}")
-        else:
+        elif response.json():
             #print(json.dumps(response.json()["audio_features"], indent=4))
             json_obj = response.json()["audio_features"]
             for item in json_obj:
-                uri = item["uri"]
-                name = song_dict[uri]
-                duration_sec = item["duration_ms"] * 0.001
-                popularity = _get_popularity(headers, uri.split(":")[-1])
-                danceability = item['danceability']
-                energy = item['energy']
-                loudness = item['loudness']
-                valence = item['valence']
-                tempo = item['tempo']
-                instrumentalness = item['instrumentalness']
-                speechiness = item['speechiness']
-                db.execute_query(f"""
-                    INSERT INTO metrics (song_uri, song_name, duration, popularity, danceability, energy, loudness, \
-                                 valence, tempo, instrumentalness, speechiness)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                        ON CONFLICT (song_uri)
-                        DO UPDATE SET popularity = EXCLUDED.popularity
-                    """, (uri, name, duration_sec, popularity, danceability, energy, loudness, \
-                          valence, tempo, instrumentalness, speechiness))                                        
+                # Item object may be None 
+                if item:
+                    uri = item["uri"] 
+                    name = song_dict[uri]
+                    duration_sec = item["duration_ms"] * 0.001 
+                    popularity = _get_popularity(headers, uri.split(":")[-1]) 
+                    danceability = item['danceability']
+                    energy = item['energy']
+                    loudness = item['loudness']
+                    valence = item['valence']
+                    tempo = item['tempo']
+                    instrumentalness = item['instrumentalness']
+                    speechiness = item['speechiness']
+                    db.execute_query(f"""
+                        INSERT INTO metrics (song_uri, song_name, duration, popularity, danceability, energy, loudness, \
+                                    valence, tempo, instrumentalness, speechiness)
+                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                            ON CONFLICT (song_uri)
+                            DO UPDATE SET popularity = EXCLUDED.popularity
+                        """, (uri, name, duration_sec, popularity, danceability, energy, loudness, \
+                            valence, tempo, instrumentalness, speechiness)) 
+                    
+        else:
+            print(response.status_code, response.content)
+            print(f"No JSON field found?")                                      
     db.close()
 
 
@@ -105,7 +115,12 @@ if __name__=="__main__":
 
     # Read from album table in DB
     songs = pd.DataFrame(db.fetch_data(f"""
-            SELECT song_uri, song_name FROM songs;
+            SELECT
+                s.song_uri,
+                s.song_name
+            FROM songs s
+                LEFT JOIN public.metrics m ON s.song_uri = m.song_uri
+            WHERE m.song_uri IS null;
             """), columns = ["song_uri", "song_name"]
     )
     access_token = _token_client_credentials()
